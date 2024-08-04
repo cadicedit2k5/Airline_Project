@@ -7,3 +7,13 @@ File css, js, và hình ảnh lưu trong các thư mục đã tạo trong thư m
 Thanh Tiến: Tien
 Ngọc Linh: Linh
 
+Khi tạo ra một trang mới phải tạo thư mục để lưu file html. Chẳng hạn như mốn code trang chủ thì phải tạo thư mục trang chủ để lưu, khi code trang đăng nhập thì tạo thêm thư mục đăng nhập.
+
+Nội dung hiện tại cần thực hiện sẽ bao gồm (TẠM THỜI, sau này sẽ có bổ sung thêm):
+1. Trang chủ
+2. Đặt vé
+3. Quản lý vé và quản lý chuyến bay
+4. Phản hồi
+5. Đăng nhập/ Đăng ký
+
+Trước khi muốn code một trang web phải thảo luận trước về bố cục trang web để tránh bị ảnh hưởng lẫn nhau.
