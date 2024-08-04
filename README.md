@@ -4,10 +4,10 @@ Bài tập lớn thiết kế Web chủ đề "Website hãng máy bay"
 File css, js, và hình ảnh lưu trong các thư mục đã tạo trong thư mục static
 
 * Lưu ý làm việc trên đúng nhánh của mình không làm trên nhánh của người khác:
-Thanh Tiến: Tien
-Ngọc Linh: Linh
+ -Thanh Tiến: Tien
+ -Ngọc Linh: Linh
 
-Khi tạo ra một trang mới phải tạo thư mục để lưu file html. Chẳng hạn như mốn code trang chủ thì phải tạo thư mục trang chủ để lưu, khi code trang đăng nhập thì tạo thêm thư mục đăng nhập.
+Khi tạo ra một trang mới phải tạo thư mục để lưu file html. Chẳng hạn như muốn code trang chủ thì phải tạo thư mục trang chủ để lưu, khi code trang đăng nhập thì tạo thêm thư mục đăng nhập.
 
 Nội dung hiện tại cần thực hiện sẽ bao gồm (TẠM THỜI, sau này sẽ có bổ sung thêm):
 1. Trang chủ
