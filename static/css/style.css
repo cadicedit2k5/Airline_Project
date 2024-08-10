@@ -8,7 +8,6 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    height: 5000px;
     background-color: azure;
 }
 
@@ -16,9 +15,15 @@ img {
     width: 100%;
 }
 
+/* Class dùng để hiển thị item */
+.active {
+    display: block !important;
+}
+
 /* Tạo background cho header */
-header {
-    height: 100vh;
+.header {
+    min-height: 100vh;
+    background-position: center;
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url(../images/bg.avif);
     background-repeat: no-repeat;
     background-size: cover;
@@ -28,7 +33,8 @@ header {
 
 /* CSS cho thanh NavBar */
 nav {
-    width: 1200px;
+    max-width: 1200px;
+    width: 90%;
     display: flex;
     margin: 0 auto;
     align-items: center;
@@ -63,7 +69,7 @@ nav {
     font-weight: 600;
     position: relative;
     text-decoration: none;
-    color: #ccc;
+    color: #fff;
     transition: all .3s ease;
 }
 
@@ -82,41 +88,84 @@ nav {
     transition: all .3s ease;
 }
 
-.menu-item a:hover::after {
+.nav-menu .menu-item a:hover::after {
     width: 90%;
 }
 
+/* Nút ẩn hiện menu */
+.menu-btn{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    display: none;
+}
+
 /* User info */
-
-.info-item > i{
-    color: #ccc;
-    border: 2px solid #ccc;
-    padding: 0.5rem;
-    border-radius: 50%;
-    font-size: 1rem;
-    transition: all .3s ease;
+.nav-info {
+    list-style-type: none;
+    display: flex;
 }
 
-.info-item >i:hover {
-    border-color: #f39c12;
-    background-color: #f39c12;
-    color: #333;
+.nav-info li {
+    margin: 0 1rem;
 }
 
-/* CSS cho phần section */
-section {
-    width: 1200px;
+.info-item {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: all ease .3s;
+}
+.nav-info .info-item:hover {
+    color: #f39c12;
+}
+/* Ẩn menu phụ đi */
+#search {
+    position: relative;
+}
+.drop-menu {
+    display: none;
+}
+
+/* Tạo thanh search ẩn */
+.nav-info .search {
+    display: none;
+}
+.search {
+    width: 300px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 1rem;
+    background-color: #fff;
+    border-radius: 25px;
+    top: 2rem;
+}
+.search input {
+    border: none;
+    outline: none;
+}
+
+.search i {
+    color: #707070;
+}
+
+/* CSS cho phần section header */
+section.header-container {
+    max-width: 1200px;
+    width: 100%;
     margin: auto;
     padding: 7rem 2rem;
 }
 
-section > h4 {
+section.header-container > h4 {
     color: #fff;
     font-size: 2rem;
     margin-bottom: 2rem;
 }
 
-section > h1 {
+section.header-container > h1 {
     color: #fff;
     font-size: 5rem;
     letter-spacing: .2px;
@@ -125,12 +174,12 @@ section > h1 {
     font-weight: 700;
 }
 
-section > h1 > span {
+section.header-container > h1 > span {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 3px #f39c12;
 }
 
-section > p {
+section.header-container > p {
     color: #ccc;
     margin: 1.5rem 0 3rem 0;
 }
@@ -156,7 +205,8 @@ section > p {
 
 /* CSS cho phần main */
 main {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     font-family: "Oswald", sans-serif;
 }
@@ -165,19 +215,21 @@ main {
 .suggest-place {
     text-align: center;
     width: 100%;
-    margin: 4rem;
+    margin: 4rem 0;
 }
 
-/* Css chung cho thẻ tiêu đề của Điểm đến hàng đầu và Ưu đãi */
-.suggest-place .title, .deal-title {
+/* Css chung cho thẻ tiêu đề */
+.suggest-place .title, .deal-title, .benefit-title, .question-title, .rate-title {
     color: #333;
     font-weight: 500;
     font-size: 2rem;
     margin-bottom: 2rem;
     position:relative;
+    text-align: center;
 }
 
-.suggest-place .title::after, .deal-title::after {
+.suggest-place .title::after, .deal-title::after,
+.benefit-title::after, .question-title::after, .rate-title::after {
     content: "";
     position: absolute;
     bottom: -15%;
@@ -264,11 +316,9 @@ main {
 }
 
 /* CSS cho phần Ưu đãi */
-
-.deal-title {
-    text-align: center;
+.deal {
+    margin-bottom: 4rem;
 }
-
 .deal-list {
     display: flex;
     overflow-x: auto;
@@ -334,4 +384,289 @@ main {
 
 .deal-btn a:hover i {
     padding-right: .725rem;
+}
+
+/* CSS cho main benifit */
+.benefit {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.benefit-discription {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #707070;
+}
+
+.benefit-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem;
+}
+
+.benefit-banner {
+    width: 100%;
+    padding: 2rem;
+}
+
+.benefit-contents {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.benefit-content {
+    width: 46%;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(77, 77, 77, 0.2);
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 2rem 1rem;
+    margin: 2%;
+    transition: all ease .5s;
+}
+
+.benefit-content:hover {
+    transform: translateY(-1rem);
+}
+
+.benefit-content i {
+    font-size: 3rem;
+    color: #f1b14a;
+}
+
+.benefit-content h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+}
+
+.benefit-content p {
+    color: #707070;
+    font-size: .9rem;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* CSS cho phần câu hỏi*/
+.question {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.question-contents {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.question-contents > div {
+    width: 48%;
+}
+
+.question-content {
+    display: flex;
+    margin: 1% 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-color: rgb(248, 238, 223);
+    border-radius: 25px;
+    cursor: pointer;
+    position: relative;
+}
+
+.question-content h3{
+    padding-left: 2rem;
+}
+
+.question-content span {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #d5aa64;
+}
+
+.question-content span:last-child {
+    display: none;
+}
+
+.question-paragraph {
+    font-family: 'Poppins', sans-serif;
+    color: #808080;
+    padding: 1rem 2rem;
+    text-align: start;
+    /* display: none; */
+    visibility: hidden;
+    transform: translateY(-120px);
+    position: absolute;
+}
+
+/* class này dùng để javascript cho phần trượt sau */
+.paragraph-active {
+    position: relative;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* CSS cho phần đánh giá */
+.rate {
+    text-align: center;
+    /* background-image: url(../images/map-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%; */
+    background-color:  #1e2022;
+    height: 90vh;
+    margin-bottom: 4rem;
+}
+
+.rate-header {
+    padding-top: 4rem;
+}
+
+.rate-title {
+    color: #fff;
+    text-shadow: 0 0 10px #000;
+    font-weight: 7s00;
+    font-size: 2rem;
+}
+
+.slide {
+    width: 1200px;
+    margin: auto;
+    max-width: 100vw;
+    position: relative;
+}
+
+.rate-container {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    overflow-x: auto;
+}
+
+.rate-content {
+    min-width: 60%;
+    margin: 0 20%;
+    background-color: #fff;
+    padding: 4rem;
+    border-radius: 3rem;
+}
+
+.rate-content img {
+    width: 120px;
+    max-width:40%;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+}
+
+.rate-content p {
+    font-size: 0.975rem;
+    color: #707070;
+    margin-bottom: 2rem;
+}
+
+.rate-content i {
+    font-size: 2rem;
+    color: #0984e3;
+    margin-bottom: 2rem;
+}
+
+.rate-content h3 {
+    font-size: 1.2rem;
+}
+
+.slide-buttons {
+    width: 90%;
+    top: 30vh;
+    left: 5%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slide-buttons button {
+    padding: 1.5rem;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(112, 112, 112, 0.7);
+    color: #fff;
+    font-size: 1rem;
+    transition: all ease .5s;
+}
+
+.slide-buttons button:hover {
+    background-color: #333;
+}
+
+/* CSS cho footer */
+.footer {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e0b061;
+    text-align: center;
+}
+
+.footer-header {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 3rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.footer-list {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+.footer-item {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #FFF;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.footer-discription {
+    font-size: 1rem;
+    padding:  1rem 7rem;
+    color: #fff;
+}
+
+.footer-contact > ul {
+    list-style-type: none;
+    display: flex;
+    width: 20%;
+    margin: 0 auto;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.footer-contact > ul > li > a {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    transition: all ease .3s;
+}
+
+.footer-contact > ul > li > a:hover {
+    color: #e0b061;
+    background-color: #fff;
+}
+
+.footer-copyright {
+    color: #fff;
+    font-size: 1rem;
+    background-color: #a77c3c;
+    padding: 1.5rem;
 }
