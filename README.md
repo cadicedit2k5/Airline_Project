@@ -11,6 +11,7 @@ Khi tạo ra một trang mới phải tạo thư mục để lưu file html. Ch�
 
 Nội dung hiện tại cần thực hiện sẽ bao gồm (TẠM THỜI, sau này sẽ có bổ sung thêm):
 1. Trang chủ
+Trong trang chủ đã tạo sẵn header và footer. Phần này được dùng cho tất cả trang web, có thể custom thêm tùy theo trang.
 2. Đặt vé
 3. Quản lý vé và quản lý chuyến bay
 4. Phản hồi
