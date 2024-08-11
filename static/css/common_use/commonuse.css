@@ -1,0 +1,335 @@
+/* Nơi này dùng để lưu trữ CSS dùng chung cho toàn bộ trang web*/
+
+/* Thanh navbar */
+nav {
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    z-index: 999;
+}
+.navbar {
+    position: relative;
+    max-width: 1200px;
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    height: 6rem;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    justify-content: space-between;
+}
+
+/* Keyframe này dùng cho thanh navbar */
+@keyframes move {
+    from {
+        top: -6rem;
+    }to {
+        top: 0;
+    }
+}
+
+/* NavBar logo - WeBay=)) */
+.nav-logo > a {
+    font-size: 3rem;
+    font-weight: 900;
+    color: white;
+    letter-spacing: -2px;
+    text-decoration-color: #f39c12;
+}
+
+.nav-logo > a > span {
+    color: #f39c12;
+    text-shadow: 0 0  1px wheat;;
+}
+
+/* Navbar Menu */
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.menu-item a {
+    font-size: 1rem;
+    font-weight: 600;
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    transition: all .3s ease;
+}
+
+.menu-item a:hover, .menu-btn:hover {
+    color: #f39c12;
+}
+
+.menu-item a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    width: 0;
+    background-color: #f39c12;
+    transition: all .3s ease;
+}
+
+.nav-menu .menu-item a:hover::after {
+    width: 90%;
+}
+
+/* Nút ẩn hiện menu */
+.menu-btn{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+/* User info */
+.nav-info {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-info li {
+    margin: 0 1rem;
+}
+
+.info-item {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: all ease .3s;
+}
+.nav-info .info-item:hover {
+    color: #f39c12;
+}
+/* Ẩn menu phụ đi */
+#search {
+    position: relative;
+}
+.drop-menu {
+    display: none;
+}
+
+/* Tạo thanh search ẩn */
+.nav-info .search {
+    width: 2rem;
+    position: absolute;
+    top: 25%;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all .5s;
+    z-index: -1;
+}
+
+.show {
+    opacity: 1 !important;
+    width: 30rem !important;
+    z-index: 0 !important;
+}
+
+.search {
+    width: 30rem;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0.4rem 1rem;
+    background-color: #fff;
+    border-radius: 25px;
+    top: 2rem;
+}
+.search input {
+    margin-left: 0.5rem;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.search i {
+    color: #707070;
+}
+
+/* Phần footer */
+/* CSS cho footer */
+.footer {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e0b061;
+    text-align: center;
+}
+
+.footer-header {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 3rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.footer-list {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+.footer-item {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #FFF;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.footer-discription {
+    font-size: 1rem;
+    padding:  1rem 7rem;
+    color: #fff;
+}
+
+.footer-contact > ul {
+    list-style-type: none;
+    display: flex;
+    width: 25%;
+    margin: 0 auto;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.footer-contact > ul > li > a {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    transition: all ease .3s;
+}
+
+.footer-contact > ul > li > a:hover {
+    color: #e0b061;
+    background-color: #fff;
+}
+
+.footer-copyright {
+    color: #fff;
+    font-size: 1rem;
+    background-color: #a77c3c;
+    padding: 1.5rem;
+}
+
+
+/* Responsive cho tablet */
+@media screen and (min-width: 740px) and (max-width: 1023px) {
+    /* CSS cho nav */ 
+    /* Huỷ navbar cũ */
+    .navbar > .nav-info, .navbar > .nav-menu {
+        display: none;
+    }
+    /* Hiển thị lại nút menu */
+    .menu-btn {
+        display: block !important;
+    }
+    /* Hiển thị thanh search */
+    .search {
+        margin: 1rem 0;
+    }
+    
+    .drop-menu {
+        position: absolute;
+        right: 2rem;
+        top: 5rem;
+        width: 240px;
+        list-style-type: none;
+        background-color: rgba(255,255,255,.6);
+        backdrop-filter: blur(15px);
+        text-align: center;
+        padding: 1rem;
+        border-radius: 0.75rem;
+        border: 1px solid rgba(255,255,255,.3);
+    }
+
+    .drop-menu li {
+        padding: 0.6rem;
+    }
+
+    .drop-menu ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .drop-menu li a{
+        color: #333;
+    }
+
+    /* CSS lại phần footer */
+    .footer-contact > ul {
+        width: 40% !important;
+    }
+}
+
+/* Responsive cho mobile */
+@media screen and (max-width: 740px) {
+     /* CSS cho nav */ 
+    /* Huỷ navbar cũ */
+    .navbar > .nav-info, .navbar > .nav-menu {
+        display: none;
+    }
+    /* Hiển thị lại nút menu */
+    .menu-btn {
+        display: block !important;
+    }
+    /* Hiển thị thanh search */
+    .search {
+        width: 90% !important;
+        margin: auto;
+    }
+
+    .drop-menu {
+        position: absolute;
+        right: 5%;
+        top: 5rem;
+        width: 90%;
+        list-style-type: none;
+        background-color: rgba(255,255,255,.6);
+        backdrop-filter: blur(15px);
+        text-align: center;
+        padding: 1rem;
+        border-radius: 0.75rem;
+        border: 1px solid rgba(255,255,255,.3);
+        z-index: 1000;
+    }
+    .drop-menu li {
+        padding: 0.6rem;
+    }
+    .drop-menu li a {
+        color: #333;
+    }
+    .drop-menu ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+    }
+    /* CSS lại phần footer */
+    .footer-contact > ul {
+        width: 70% !important;
+    }
+    .footer-list {
+        flex-direction: column;
+    }
+    .footer-item {
+        padding: 1rem;
+    }
+    .footer-discription {
+        padding: 1rem 3rem !important;
+    }
+    .footer-copyright {
+        font-size: 0.85rem !important;
+    }
+}
