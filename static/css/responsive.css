@@ -4,17 +4,17 @@
     .header {
         min-height: 55vh !important;
     }
-    /* CSS cho nav */ 
+    /* CSS cho nav  */
     /* Huỷ navbar cũ */
-    .navbar > .nav-info, .navbar > .nav-menu {
+    /* .navbar > .nav-info, .navbar > .nav-menu {
         display: none;
-    }
+    } */
     /* Hiển thị lại nút menu */
-    .menu-btn {
+    /* .menu-btn {
         display: block !important;
-    }
+    } */
     /* Hiển thị thanh search */
-    .search {
+    /* .search {
         margin: 1rem 0;
     }
     
@@ -24,22 +24,27 @@
         top: 5rem;
         width: 240px;
         list-style-type: none;
-        background-color: rgba(255,255,255,.1);
+        background-color: rgba(255,255,255,.6);
         backdrop-filter: blur(15px);
         text-align: center;
         padding: 1rem;
         border-radius: 0.75rem;
         border: 1px solid rgba(255,255,255,.3);
-
     }
+
     .drop-menu li {
         padding: 0.6rem;
     }
+
     .drop-menu ul {
         list-style-type: none;
         display: flex;
         justify-content: space-around;
     }
+
+    .drop-menu li a{
+        color: #333;
+    } */
 
     /* CSS lại cho header */
     section.header-container {
@@ -73,9 +78,9 @@
         height: 105vh !important;
     }
     /* CSS lại phần footer */
-    .footer-contact > ul {
+    /* .footer-contact > ul {
         width: 40% !important;
-    }
+    } */
 }
 
 /* Responsive cho mobile */
@@ -86,41 +91,44 @@
     }
      /* CSS cho nav */ 
     /* Huỷ navbar cũ */
-    .navbar > .nav-info, .navbar > .nav-menu {
+    /* .navbar > .nav-info, .navbar > .nav-menu {
         display: none;
-    }
+    } */
     /* Hiển thị lại nút menu */
-    .menu-btn {
+    /* .menu-btn {
         display: block !important;
-    }
+    } */
     /* Hiển thị thanh search */
-    .search {
+    /* .search {
         width: 90% !important;
         margin: auto;
     }
-    
+
     .drop-menu {
         position: absolute;
         right: 5%;
         top: 5rem;
         width: 90%;
         list-style-type: none;
-        background-color: rgba(255,255,255,.1);
+        background-color: rgba(255,255,255,.6);
         backdrop-filter: blur(15px);
         text-align: center;
         padding: 1rem;
         border-radius: 0.75rem;
         border: 1px solid rgba(255,255,255,.3);
+        z-index: 1000;
     }
     .drop-menu li {
         padding: 0.6rem;
+    }
+    .drop-menu li a {
+        color: #333;
     }
     .drop-menu ul {
         list-style-type: none;
         display: flex;
         justify-content: space-around;
-    }
-    
+    } */
     /* CSS lại cho header */
     section.header-container {
         padding: 3rem 1rem !important;
@@ -180,7 +188,7 @@
         padding: 1rem !important;
     }
     /* CSS lại phần footer */
-    .footer-contact > ul {
+    /* .footer-contact > ul {
         width: 70% !important;
     }
     .footer-list {
@@ -194,5 +202,5 @@
     }
     .footer-copyright {
         font-size: 0.85rem !important;
-    }
+    } */
 }
