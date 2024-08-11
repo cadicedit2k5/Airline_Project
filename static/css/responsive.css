@@ -1,5 +1,5 @@
 /* Responsive cho tablet */
-@media only screen and (max-width: 1024px) and (min-width: 739px) {
+@media only screen and (max-width: 1023px) and (min-width: 740px) {
     /* Chỉnh lại chiều cao background */
     .header {
         min-height: 55vh !important;
@@ -70,7 +70,7 @@
     }
     /* CSS lại cho mục đánh giá */
     .rate  {
-        height: 70vh !important;
+        height: 105vh !important;
     }
     /* CSS lại phần footer */
     .footer-contact > ul {
@@ -175,6 +175,9 @@
     }
     .rate-content p {
         font-size: 0.75rem !important;
+    }
+    .slide-buttons {
+        padding: 1rem !important;
     }
     /* CSS lại phần footer */
     .footer-contact > ul {
