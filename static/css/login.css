@@ -1,0 +1,113 @@
+/* CSS cho file Đăng nhập và đăng ký */
+.box-forms {
+    width: 512px;
+    height: 400px;
+    max-width: 70%;
+    margin: 6.5rem auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.register-container, .login-container {
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    transition: .5s;
+}
+
+.login-container{
+    opacity: 1;
+}
+.register-container {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transform: translateX(100%);
+}
+
+.top {
+    text-align: center;
+}
+
+.top span {
+    font-size: 1rem;
+    color: #303030;
+    margin-bottom: 1rem;
+}
+
+
+.top span a {
+    text-decoration: none;
+    font-size: 0.925rem;
+}
+
+.top h1 {
+    font-size: rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+
+.two-forms {
+    display: flex;
+    width: 100%;
+}
+
+.input-box {
+    width: 100%;
+    padding: 0 1%;
+}
+
+.input-box .input-field {
+    color: #707070;
+    font-size: 15px;
+    padding: 0 10px 0 40px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #f39c12;
+    border-radius: 10px;
+    outline: none;
+    transition: all .3s ease;
+} 
+
+.input-box .input-field:focus {
+    color: #333;
+}
+
+.input-box i {
+    position: relative;
+    top: -38px;
+    left: 15px;
+}
+
+.input-field[type=submit] {
+    padding: 0;
+    background-color: #f6ba58;
+    color: #000;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.input-field[type=submit]:hover {
+    background-color: #fff;
+    color: #f6ba58;
+}
+
+.policy {
+    margin: 10px;
+    text-decoration: none;
+    color: #f6ba58;
+}
+
+.policy:hover {
+    color: #edac42;
+}
+
+/* Respoonsive cho mobile */
+@media screen and (max-width: 739px) {
+    .two-forms {
+        flex-direction: column;
+    }
+}

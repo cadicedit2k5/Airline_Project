@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeBay | Login and Registration</title>
+    <link rel="stylesheet" href="../static/css/common_use/commonuse.css">
+    <link rel="stylesheet" href="../static/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
+        integrity="sha512-MqL4+Io386IOPMKKyplKII0pVW5e+kb+PI/I3N87G3fHIfrgNNsRpzIXEi+0MQC0sR9xZNqZqCYVcC61fL5+Vg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- NavBar -->
+    <div class="overlay"></div>
+    <nav>
+        <div class="navbar">
+            <h1 class="nav-logo"><a href="#">We<span>Bay</span></a></h1>
+            <ul class="nav-menu">
+                <li class="menu-item"><a href="#">Trang chủ</a></li>
+                <li class="menu-item"><a href="javascrip:;">Về chúng tôi</a></li>
+                <li class="menu-item"><a href="javascrip:;">Tin tức</a></li>
+                <li class="menu-item"><a href="javascrip:;">Liên hệ</a></li>
+            </ul>
+            <ul class="nav-info">
+                <div class="search">
+                    <a href="javascrip:;" class="info-item"><i class="ri-search-2-line"></i></a>
+                    <input type="search" placeholder="Search">
+                </div>
+                <li>
+                    <a href="javascrip:;" class="info-item" id="search">
+                        <i class="ri-search-line"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascrip:;" class="info-item">
+                        <i class="ri-notification-line"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascrip:;" class="info-item">
+                        <i class="ri-user-3-line"></i>
+                    </a>
+                </li>
+            </ul>
+            <!-- icon sử dụng để thay đổi khi nhấp vào menu -->
+            <!-- <i class="ri-close-large-line"></i> -->
+            <a class="menu-btn">
+                <i class="ri-menu-3-fill"></i>
+            </a>
+            <div class="drop-menu">
+                <li class="menu-item"><a href="#">Trang chủ</a></li>
+                <li class="menu-item"><a href="#">Về chúng tôi</a></li>
+                <li class="menu-item"><a href="#">Tin tức</a></li>
+                <li class="menu-item"><a href="#">Liên hệ</a></li>
+                <ul>
+                    <li>
+                        <a href="#" class="info-item">
+                            <i class="ri-notification-line"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="info-item">
+                            <i class="ri-user-3-line"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="search">
+                    <a href="#" class="info-item"><i class="ri-search-2-line"></i></a>
+                    <input type="search" placeholder="Search">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Login & Registration -->
+    <div class="box-forms">
+        <!-- Phần đăng Ký -->
+        <div class="register-container" id="register">
+            <div class="top">
+                <span>Đã có tài khoản? <a href="#" class="registerToLogin">Đăng Nhập</a></span>
+                <h1>Đăng Ký Tài Khoản</h1>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Họ">
+                    <i class="ri-user-line"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Tên">
+                    <i class="ri-user-line"></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="email" class="input-field" placeholder="Email">
+                <i class="ri-mail-line"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password">
+                <i class="ri-lock-2-line"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="input-field" value="Đăng Ký">
+            </div>
+            <a href="#" class="policy">Điều Khoản và Dịch Vụ</a>
+        </div>
+        <!-- Phần Đăng nhập -->
+        <div class="login-container" id="login">
+            <div class="top">
+                <span>Chưa có tài khoản? <a href="#" class="loginToRegister">Đăng Ký</a></span>
+                <h1>Đăng Nhập</h1>
+            </div>
+            <div class="input-box">
+                <input type="email" class="input-field" id="login-email" placeholder="Email">
+                <i class="ri-mail-line"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" id="login-password" placeholder="Password">
+                <i class="ri-lock-2-line"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="input-field" id="login-btn" value="Đăng Nhập">
+            </div>
+            <a href="#" class="policy">Điều Khoản và Dịch Vụ</a>
+        </div>
+    </div>
+
+    <!-- HTML phần footer -->
+    <footer class="footer">
+        <header class="footer-header">
+            <ul class="footer-list">
+                <li class="footer-item">WeBay</li>
+                <li class="footer-item">Pháp Lý</li>
+                <li class="footer-item">Hỗ trợ</li>
+                <li class="footer-item">Vận tải hàng hóa</li>
+                <li class="footer-item">Thông tin hữu ích</li>
+            </ul>
+        </header>
+        <p class="footer-discription">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum atque fuga possimus
+            error accusantium, sapiente fugit adipisci, dolorum delectus corrupti, voluptatum quibusdam inventore
+            laboriosam ut provident eius similique culpa ipsum!</p>
+        <div class="footer-contact">
+            <ul>
+                <li>
+                    <a><i class="fa-brands fa-facebook-f"></i></a>
+                </li>
+                <li>
+                    <a><i class="fa-brands fa-github"></i></a>
+                </li>
+                <li>
+                    <a><i class="fa-brands fa-google"></i></a>
+                </li>
+                <li>
+                    <a><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a><i class="fa-brands fa-linkedin-in"></i></a>
+                </li>
+            </ul>
+        </div>
+        <p class="footer-copyright">&copy; 2024 Copyright: Nguyễn Ngọc Linh - Đàm Thanh Tiến</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/7b1fd1d3b9.js" crossorigin="anonymous"></script>
+    <script src="../static/js/Common_Use/commonuse.js"></script>
+    <script src="../static/js/login.js"></script>
+</body>
+
+</html>

@@ -21,6 +21,7 @@
     <!-- Tạo một header mục đích để tạo background chung cho cả navbar và phần nội dung mở đầu -->
     <header class="header">
         <!-- COPY TỪ PHẦN NÀY ĐỂ TẠO THANH NAVBAR DÙNG CHUNG ->> ĐẾN (BÊN DƯỚI)-->
+        <div class="overlay"></div>
         <nav>
             <div class="navbar">
                 <h1 class="nav-logo"><a href="#">We<span>Bay</span></a></h1>
@@ -40,15 +41,90 @@
                             <i class="ri-search-line"></i>
                         </a>
                     </li>
-                    <li>
+                    <li class="sign-in-btn">
+                        <a href="Login_Page/index.html">
+                            Đăng Nhập
+                        </a>
+                    </li>
+                    <li class="bell">
                         <a href="javascrip:;" class="info-item">
                             <i class="ri-notification-line"></i>
                         </a>
+                        <!-- Tạo menu thông báo -->
+                        <div class="noti-drop">
+                            <div class="noti-top">
+                                <h2>Thông Báo</h2>
+                            </div>
+                            <div class="noti-main">
+                                <ul class="noti-contents">
+                                    <li class="noti-content">
+                                        <div class="noti-text">
+                                            <a href="#"><span>Larel</span> is felling great and she say haha with your
+                                                blog</a>
+                                            <p>1 day ago</p>
+                                        </div>
+                                        <img src="static/images/bg.avif">
+                                    </li>
+                                    <li class="noti-content">
+                                        <div class="noti-text">
+                                            <a href="#"><span>Larel</span> is felling great and she say haha with your
+                                                blog</a>
+                                            <p>1 day ago</p>
+                                        </div>
+                                        <img src="static/images/bg.avif">
+                                    </li>
+                                    <li class="noti-content">
+                                        <div class="noti-text">
+                                            <a href="#"><span>Larel</span> is felling great and she say haha with your
+                                                blog</a>
+                                            <p>1 day ago</p>
+                                        </div>
+                                        <img src="static/images/bg.avif">
+                                    </li>
+                                    <li class="noti-content">
+                                        <div class="noti-text">
+                                            <a href="#"><span>Larel</span> is felling great and she say haha with your
+                                                blog</a>
+                                            <p>1 day ago</p>
+                                        </div>
+                                        <img src="static/images/bg.avif">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="noti-bottom"></div>
+                        </div>
                     </li>
-                    <li>
+                    <li class="user">
                         <a href="javascrip:;" class="info-item">
                             <i class="ri-user-3-line"></i>
                         </a>
+                        <!-- Tạo Menu Profile Người dùng -->
+                        <div class="user-drop">
+                            <div class="user-top">
+                                <img src="static/images/avatar1.avif">
+                                <span>Admin</span>
+                            </div>
+                            <div class="user-bottom">
+                                <ul class="user-features">
+                                    <li class="user-feature">
+                                        <i class="ri-logout-box-line"></i>
+                                        <a href="#">USER 001</a>
+                                    </li>
+                                    <li class="user-feature">
+                                        <i class="ri-logout-box-line"></i>
+                                        <a href="#">USER 002</a>
+                                    </li>
+                                    <li class="user-feature">
+                                        <i class="ri-logout-box-line"></i>
+                                        <a href="#">USER 003</a>
+                                    </li>
+                                    <li class="user-feature">
+                                        <i class="ri-logout-box-line"></i>
+                                        <a href="#">USER 004</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </li>
                 </ul>
                 <!-- icon sử dụng để thay đổi khi nhấp vào menu -->
@@ -558,7 +634,7 @@
     </footer>
     <script src="https://kit.fontawesome.com/7b1fd1d3b9.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="static/js/Common_Use/"></script>
+    <script src="static/js/script.js"></script>
     <script src="static/js/Common_Use/commonuse.js"></script>
 </body>
 
