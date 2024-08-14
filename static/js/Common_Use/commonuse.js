@@ -4,6 +4,7 @@ $(document).ready(function () {
     $(".menu-btn").click(function () {
         // Hiển thị menu khi responsive
         $("div.drop-menu").toggleClass("active")
+        $(".overlay").toggleClass("active")
         // Thay đổi icon menu
         $(".menu-btn i").toggleClass("ri-menu-3-fill")
         $(".menu-btn i").toggleClass("ri-close-large-line")
@@ -16,6 +17,15 @@ $(document).ready(function () {
         $("#search i").toggleClass("ri-search-line")
         $("#search i").toggleClass("ri-close-large-line")
     })
+    // Xử lý sự kiện khi nhấn vào user profile
+    $(".user").click(function () {
+        $(".user-drop").toggleClass("drop")
+    })
+    // Xử lý sự kiện khi nhấn vào nút thông báo
+    $(".bell").click(function () {
+        $(".noti-drop").toggleClass("drop")
+        $(".user-drop .user-bottom").toggleClass("drop")
+    })
 
     $(window).scroll(function () {
         // Fixed navbar khi scroll
@@ -23,7 +33,7 @@ $(document).ready(function () {
             $("nav").css({
                 "position": "fixed",
                 "top": 0,
-                "background-color": "rgba(0,0,0,0.6)",
+                "background-color": "rgba(0,0,0,0.8)",
                 "border": "none",
                 "animation": "move .3s"
             })
@@ -36,7 +46,7 @@ $(document).ready(function () {
         } else {
             $("nav").css({
                 "position": "relative",
-                "background-color": "transparent",
+                "background-color": "#19232d",
                 "backdrop-filter": "none",
                 "animation": "none"
             })
