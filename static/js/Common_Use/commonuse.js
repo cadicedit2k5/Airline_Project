@@ -17,6 +17,26 @@ $(document).ready(function () {
         $("#search i").toggleClass("ri-search-line")
         $("#search i").toggleClass("ri-close-large-line")
     })
+
+    //Lấy biến isLogin và firstname đã được lưu bên kia ra sử dụng
+    let isLogin = localStorage.getItem("isLogin");
+    let firstname = localStorage.getItem("firstname") ? localStorage.getItem("firstname") : "Admin";
+    if (isLogin === "true") { //Nếu true có nghĩa là đã đăng nhập rồi
+        $(".user, .bell").show();
+        $(".sign-in-btn").hide();
+        $(".user-top span").text(firstname);
+    } else {
+        $(".user, .bell").hide();
+        $(".sign-in-btn").show();
+    }
+
+    //Khi người dùng nhấn vào nút đăng xuất
+    $("#sign-out-btn").click(function () {
+        localStorage.setItem("isLogin", "false");
+        //Nhận thấy khi thay đổi không tự reset về lại nên dùng window reload lun
+        window.location.reload();
+    })
+
     // Xử lý sự kiện khi nhấn vào user profile
     $(".user").click(function () {
         $(".user-drop").toggleClass("drop")
@@ -33,15 +53,9 @@ $(document).ready(function () {
             $("nav").css({
                 "position": "fixed",
                 "top": 0,
-                "background-color": "rgba(0,0,0,0.8)",
+                "background-color": "rgba(25, 35, 45, 0.8)",
                 "border": "none",
                 "animation": "move .3s"
-            })
-            // $(".drop-menu").css({
-            //     "background-color": "rgba(0,0,0,0.8)",
-            // })
-            $(".navbar").css({
-                "border-bottom": "none",
             })
         } else {
             $("nav").css({
@@ -51,16 +65,5 @@ $(document).ready(function () {
                 "animation": "none"
             })
         }
-        // // Hiện nút gototop khi kéo xuống
-        // if ($(this).scrollTop() > 100) {
-        //     $("#gototop").css({
-        //         "transform": "translateY(-70%)"
-        //     })
-        // }
-        // else {
-        //     $("#gototop").css({
-        //         "transform": "translateY(100%)"
-        //     })
-        // }
     })
 })

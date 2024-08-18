@@ -4,51 +4,11 @@
     .header {
         min-height: 55vh !important;
     }
-    /* CSS cho nav  */
-    /* Huỷ navbar cũ */
-    /* .navbar > .nav-info, .navbar > .nav-menu {
-        display: none;
-    } */
-    /* Hiển thị lại nút menu */
-    /* .menu-btn {
-        display: block !important;
-    } */
-    /* Hiển thị thanh search */
-    /* .search {
-        margin: 1rem 0;
-    }
-    
-    .drop-menu {
-        position: absolute;
-        right: 2rem;
-        top: 5rem;
-        width: 240px;
-        list-style-type: none;
-        background-color: rgba(255,255,255,.6);
-        backdrop-filter: blur(15px);
-        text-align: center;
-        padding: 1rem;
-        border-radius: 0.75rem;
-        border: 1px solid rgba(255,255,255,.3);
-    }
-
-    .drop-menu li {
-        padding: 0.6rem;
-    }
-
-    .drop-menu ul {
-        list-style-type: none;
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .drop-menu li a{
-        color: #333;
-    } */
 
     /* CSS lại cho header */
     section.header-container {
         padding: 5rem 1rem !important;
+        flex-direction: column;
     }
     section.header-container > h4 {
         font-size: 1.5rem !important;
@@ -56,6 +16,10 @@
     section.header-container > h1 {
         font-size: 4rem !important;
         line-height: 5rem !important;
+    }
+
+    .plane {
+        display: none;
     }
     /* CSS lại cho điểm đến */
     .suggest-item {
@@ -77,10 +41,6 @@
     .rate  {
         height: 105vh !important;
     }
-    /* CSS lại phần footer */
-    /* .footer-contact > ul {
-        width: 40% !important;
-    } */
 }
 
 /* Responsive cho mobile */
@@ -89,60 +49,24 @@
     .header {
         min-height: 10vh !important;
     }
-     /* CSS cho nav */ 
-    /* Huỷ navbar cũ */
-    /* .navbar > .nav-info, .navbar > .nav-menu {
-        display: none;
-    } */
-    /* Hiển thị lại nút menu */
-    /* .menu-btn {
-        display: block !important;
-    } */
-    /* Hiển thị thanh search */
-    /* .search {
-        width: 90% !important;
-        margin: auto;
-    }
-
-    .drop-menu {
-        position: absolute;
-        right: 5%;
-        top: 5rem;
-        width: 90%;
-        list-style-type: none;
-        background-color: rgba(255,255,255,.6);
-        backdrop-filter: blur(15px);
-        text-align: center;
-        padding: 1rem;
-        border-radius: 0.75rem;
-        border: 1px solid rgba(255,255,255,.3);
-        z-index: 1000;
-    }
-    .drop-menu li {
-        padding: 0.6rem;
-    }
-    .drop-menu li a {
-        color: #333;
-    }
-    .drop-menu ul {
-        list-style-type: none;
-        display: flex;
-        justify-content: space-around;
-    } */
     /* CSS lại cho header */
     section.header-container {
         padding: 3rem 1rem !important;
+        flex-direction: column;
     }
     section.header-container > h4 {
         font-size: 1rem !important;
         margin-bottom: 1rem !important;
     }
-    section.header-container > h1 {
+    section.header-container h1 {
         font-size: 3rem !important;
         line-height: 4rem !important;
     }
-    section.header-container > p {
+    section.header-container p {
         font-size: .875rem;
+    }
+    .plane {
+        display: none;
     }
     /* CSS lại cho điểm đến */
     .suggest-item {
@@ -187,20 +111,4 @@
     .slide-buttons {
         padding: 1rem !important;
     }
-    /* CSS lại phần footer */
-    /* .footer-contact > ul {
-        width: 70% !important;
-    }
-    .footer-list {
-        flex-direction: column;
-    }
-    .footer-item {
-        padding: 1rem;
-    }
-    .footer-discription {
-        padding: 1rem 3rem !important;
-    }
-    .footer-copyright {
-        font-size: 0.85rem !important;
-    } */
 }
