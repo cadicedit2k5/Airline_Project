@@ -78,7 +78,7 @@
 
 .input-box i {
     position: relative;
-    top: -38px;
+    top: -34px;
     left: 15px;
 }
 
@@ -93,6 +93,28 @@
 .input-field[type=submit]:hover {
     background-color: #fff;
     color: #f6ba58;
+}
+
+.remember-forget {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    align-items: center;
+    height: 24px;
+    position: relative;
+    margin-bottom: 1rem;
+}
+.remember-forget span {
+    padding-left: 25px;
+}
+
+.remember-forget span input {
+    width: 20px;
+    height: 20px;
+    left: 10px;
+    top: 2px;
+    position: absolute;
 }
 
 .policy {

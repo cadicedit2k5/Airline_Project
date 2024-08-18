@@ -1,45 +1,5 @@
 $(document).ready(function () {
-    // // Ẩn hiện menu con
-    // $(".menu-btn").click(function () {
-    //     // Hiển thị menu khi responsive
-    //     $("div.drop-menu").toggleClass("active")
-    //     // Thay đổi icon menu
-    //     $(".menu-btn i").toggleClass("ri-menu-3-fill")
-    //     $(".menu-btn i").toggleClass("ri-close-large-line")
-    // })
-    // // Xử lý sự kiện khi nhấn nút search
-    // $("#search").click(function () {
-    //     $(".nav-info .search").toggleClass("show")
-    //     $(".nav-menu").toggleClass("hide");
-    //     // Thay dổi icon search
-    //     $("#search i").toggleClass("ri-search-line")
-    //     $("#search i").toggleClass("ri-close-large-line")
-    // })
-
     $(window).scroll(function () {
-        // // Fixed navbar khi scroll
-        // if ($(this).scrollTop() > 100) {
-        //     $("nav").css({
-        //         "position": "fixed",
-        //         "top": 0,
-        //         "background-color": "rgba(0,0,0,0.6)",
-        //         "border": "none",
-        //         "animation": "move .3s"
-        //     })
-        //     // $(".drop-menu").css({
-        //     //     "background-color": "rgba(0,0,0,0.8)",
-        //     // })
-        //     $(".navbar").css({
-        //         "border-bottom": "none",
-        //     })
-        // } else {
-        //     $("nav").css({
-        //         "position": "relative",
-        //         "background-color": "transparent",
-        //         "backdrop-filter": "none",
-        //         "animation": "none"
-        //     })
-        // }
         // Hiện nút gototop khi kéo xuống
         if ($(this).scrollTop() > 100) {
             $("#gototop").css({
@@ -217,70 +177,10 @@ $(document).ready(function () {
     rateSlider(".rate-container", ".rate-content", "#rate-prev", "#rate-next");
     dealSlider(".deal-list", ".deal-item", "#deal-prev", "#deal-next");
 
-    //     let index = 0;
-    //     const slideLenght = $(".rate-container .rate-content").length - 2;
-    //     $("#next").click(function () {
-    //         console.log(isSliding);
-    //         // Hủy hiệu ứng trượt tự động
-    //         if (isSliding) {
-    //             console.log(isSliding);
-    //             return;
-    //         } // Ngăn không cho nhấn khi đang trượt
-    //         clearInterval(autoSlideInterval);
-    //         isSliding = true;
-    //         console.log(isSliding);
-    //         if (index + 1 == slideLenght + 1) {
-    //             // Thay đổi content không có hiệu ứng để đánh lừa rằng content vô hạn=))
-    //             setTimeout(function () {
-    //                 $($(".rate-content").css({
-    //                     "transition": "none",
-    //                     "transform": `translateX(${-(1 * ($(".rate-content").outerWidth(true)))}px)`
-    //                 }))
-    //             }, 1000)//set thời gian bằng với thời gian hiệu ứng để khi slide sau chạy xong thì slide này sẽ được nạp lên thay thế
-    //             slideX(index + 1);
-    //             index = 0;
-    //         } else {
-    //             index += 1;
-    //             slideX(index);
-    //         }
-    //         //Reset lại hiệu ứng trượt tụ động
-    //         autoSlideInterval = setInterval(autoSlide, 5000);
-    //         setTimeout(isSliding = false, 1000);
-    //     })
-    //     $("#prev").click(function () {
-    //         //Hủy hiệu ứng trượt tự động
-    //         clearInterval(autoSlideInterval);
-    //         if (index == 0) {
-    //             setTimeout(function () {
-    //                 // Thay đổi content không có hiệu ứng để đánh lừa rằng content vô hạn=))
-    //                 $($(".rate-content").css({
-    //                     "transition": "none",
-    //                     "transform": `translateX(${-(slideLenght * ($(".rate-content").outerWidth(true)))}px)`
-    //                 }))
-    //             }, 1000)//set thời gian bằng với thời gian hiệu ứng để khi slide sau chạy xong thì slide này sẽ được nạp lên thay thế
-    //             slideX(index);
-    //             index = slideLenght;
-    //         } else {
-    //             index -= 1;
-    //             slideX(index);
-    //         }
-    //         autoSlideInterval = setInterval(autoSlide, 5000);
-    //     })
-
-    //     function slideX(i) {
-    //         // Lấy width của container ra để trượt vì width của content không phải 100%
-    //         // hoặc dùng outWidth lấy width của content cũng được
-    //         $(".rate-content").css({
-    //             "transition": "1s",
-    //             "transform": `translateX(${-(i * ($(".rate-content").outerWidth(true)))}px)`
-    //         })
-    //     }
-
-    //     // Xử lý việc tự động trượt
-    //     // Hàm này dùng để tự động click vào nút next
-    //     function autoSlide() {
-    //         $("#next").click()
-    //     }
-
-    //     autoSlideInterval = setInterval(autoSlide, 5000);
+    //Xử lý để hiển thị nội dung câu hỏi
+    $(".question-content").click(function () {
+        $(this).next().toggleClass("show")
+        //Thay đổi nút cộng trừ
+        $(this).children("span").toggleClass("active");
+    })
 })

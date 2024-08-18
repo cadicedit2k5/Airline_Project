@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WeBay | Login and Registration</title>
+    <title>Page Not Found</title>
     <link rel="stylesheet" href="../static/css/common_use/commonuse.css">
-    <link rel="stylesheet" href="../static/css/login.css">
+    <link rel="stylesheet" href="../static/css/error.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
         integrity="sha512-MqL4+Io386IOPMKKyplKII0pVW5e+kb+PI/I3N87G3fHIfrgNNsRpzIXEi+0MQC0sR9xZNqZqCYVcC61fL5+Vg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -75,61 +75,17 @@
         </div>
     </nav>
 
-    <!-- Main Login & Registration -->
-    <div class="box-forms">
-        <!-- Phần đăng Ký -->
-        <div class="register-container" id="register">
-            <div class="top">
-                <span>Đã có tài khoản? <a href="#" class="registerToLogin">Đăng Nhập</a></span>
-                <h1>Đăng Ký Tài Khoản</h1>
-            </div>
-            <div class="two-forms">
-                <div class="input-box">
-                    <input type="text" class="input-field" id="resgiter-lastname" placeholder="Họ">
-                    <i class="ri-user-line"></i>
-                </div>
-                <div class="input-box">
-                    <input type="text" class="input-field" id="resgiter-firstname" placeholder="Tên">
-                    <i class="ri-user-line"></i>
-                </div>
-            </div>
-            <div class="input-box">
-                <input type="email" class="input-field" id="resgiter-email" placeholder="Email">
-                <i class="ri-mail-line"></i>
-            </div>
-            <div class="input-box">
-                <input type="password" class="input-field" id="resgiter-password" placeholder="Password">
-                <i class="ri-lock-2-line"></i>
-            </div>
-            <div class="input-box">
-                <input type="submit" class="input-field" id="resgiter-btn" value="Đăng Ký">
-            </div>
-            <a href="#" class="policy">Điều Khoản và Dịch Vụ</a>
+    <main class="error">
+        <div class="error-content">
+            <h1>404</h1>
+            <h2>Opps! Page Not Found</h2>
+            <p>Trang bạn đang tìm kiếm đã bị di chuyển, xóa, đổi tên hoặc có thể chưa bao giờ tồn tại.</p>
+            <a class="error-btn" href="../index.html">Trang chủ</a>
         </div>
-        <!-- Phần Đăng nhập -->
-        <div class="login-container" id="login">
-            <div class="top">
-                <span>Chưa có tài khoản? <a href="#" class="loginToRegister">Đăng Ký</a></span>
-                <h1>Đăng Nhập</h1>
-            </div>
-            <div class="input-box">
-                <input type="email" class="input-field" id="login-email" placeholder="Email">
-                <i class="ri-mail-line"></i>
-            </div>
-            <div class="input-box">
-                <input type="password" class="input-field" id="login-password" placeholder="Password">
-                <i class="ri-lock-2-line"></i>
-            </div>
-            <div class="remember-forget">
-                <span><input type="checkbox">Nhớ mật khẩu</span>
-                <a href="../Error_Page/index.html">Quên mật khẩu?</a>
-            </div>
-            <div class="input-box">
-                <input type="submit" class="input-field" id="login-btn" value="Đăng Nhập">
-            </div>
-            <a href="#" class="policy">Điều Khoản và Dịch Vụ</a>
+        <div class="error-thumb">
+            <img src="../static/images/somthing_wrong.png" alt="">
         </div>
-    </div>
+    </main>
 
     <!-- HTML phần footer -->
     <footer class="footer">
@@ -169,7 +125,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/7b1fd1d3b9.js" crossorigin="anonymous"></script>
     <script src="../static/js/Common_Use/commonuse.js"></script>
-    <script src="../static/js/login.js"></script>
 </body>
 
 </html>
