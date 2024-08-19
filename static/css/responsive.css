@@ -41,6 +41,24 @@
     .rate  {
         height: 105vh !important;
     }
+    /* CSS lại cho phần blog post */
+    .blog-container {
+        flex-direction: column-reverse;
+        padding: 1rem;
+    }
+
+    .blog-left {
+        width: 100% !important;
+        padding: 2rem;
+    }
+
+    .blog-right {
+        width: 100% !important;
+    }
+
+    .blog-right-content:last-child {
+        padding: 2rem;
+    }
 }
 
 /* Responsive cho mobile */
@@ -110,5 +128,29 @@
     }
     .slide-buttons {
         padding: 1rem !important;
+    }
+
+    /* CSS lại cho phần blog post */
+    .blog-container {
+        flex-direction: column-reverse;
+        padding: 1rem;
+    }
+
+    .blog-left {
+        width: 100% !important;
+        padding: 2rem;
+    }
+
+    .blog-right {
+        width: 100% !important;
+        flex-direction: column;
+    }
+
+    .blog-right-content {
+        width: 100% !important;
+    }
+
+    .blog-right-content {
+        padding: 2rem;
     }
 }
