@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 * {
     padding: 0;
@@ -195,7 +195,8 @@ main {
 }
 
 /* Css chung cho thẻ tiêu đề */
-.suggest-place .title, .deal-title, .benefit-title, .question-title, .rate-title {
+.suggest-place .title, .deal-title, .benefit-title,
+.question-title, .rate-title, .blog-title {
     color: #333;
     font-weight: 500;
     font-size: 2rem;
@@ -205,7 +206,8 @@ main {
 }
 
 .suggest-place .title::after, .deal-title::after,
-.benefit-title::after, .question-title::after, .rate-title::after {
+.benefit-title::after, .question-title::after,
+.rate-title::after, .blog-title::after {
     content: "";
     position: absolute;
     bottom: -15%;
@@ -565,7 +567,7 @@ main {
     background-color: #fff;
     padding: 4rem;
     border-radius: 3rem;
-    transform: translateX(calc(100%)*5/3);
+    /* transform: translateX(calc(100%)*5/3); */
 }
 
 .rate-content img {
@@ -615,71 +617,88 @@ main {
     background-color: #333;
 }
 
-/* CSS cho footer */
-/* .footer {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #e0b061;
+/* CSS cho mục blog post */
+.blog {
+    max-width: 1200px;
+    margin: 4rem auto;
+}
+
+.blog-container {
+    display: flex;
+}
+
+.blog-left {
+    width: 33.33%;
+}
+
+.blog-left-content {
+    margin-top: 1rem;
+}
+
+.blog-vision {
+    font-size: .8rem;
+    margin-top: 2rem;
+}
+
+.blog-vision .blog-date{
+    text-decoration: none;
+    color: #1E1F2D;
+    opacity: .75;
+    font-family: 'Merriweather';
+}
+
+.blog-vision .i, .blog-vision .eye, .blog-vision .comment{
+    margin-left: 1rem;
+    color: #1E1F2D;
+    opacity: .75;
+    font-family: 'Merriweather';
+}
+
+.blog-vision i  {
+    color: #f1b14a;
+}
+
+.blog-vision .blog-header {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+    margin-top: .5rem;
+    transition: all .4s;
+}
+
+.blog-vision .blog-header:hover {
+    color: #d5aa64;
+}
+
+.blog-vision .blog-text{
+    margin-top: .75rem;
+}
+
+.blog-vision .blog-text p {
+    font-size: .9rem;
+    line-height: 1.5rem;
+    color: #1E1F2D;
+    opacity: .75;
+    font-family: 'Merriweather';
+}
+
+.blog-right {
+    width: 66.66%;
+    display: flex;
+}
+
+.blog-right-content {
+    width: 50%;
+    padding-left: 2rem;
+    padding-top: 2rem;
+}
+
+.blog-right-content .blog-thumb img{
+    border-radius: 25px;
+}
+
+.blog .blog-btn {
+    margin-top: 4rem;
     text-align: center;
 }
-
-.footer-header {
-    max-width: 80%;
-    margin: 0 auto;
-    padding: 3rem;
-    border-bottom: 1px solid #ccc;
-}
-
-.footer-list {
-    display: flex;
-    list-style-type: none;
-    justify-content: space-around;
-}
-
-.footer-item {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #FFF;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
-.footer-discription {
-    font-size: 1rem;
-    padding:  1rem 7rem;
-    color: #fff;
-}
-
-.footer-contact > ul {
-    list-style-type: none;
-    display: flex;
-    width: 25%;
-    margin: 0 auto;
-    justify-content: space-around;
-    padding: 1rem;
-}
-
-.footer-contact > ul > li > a {
-    border: 1px solid #fff;
-    border-radius: 50%;
-    display: inline-flex;
-    text-decoration: none;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    transition: all ease .3s;
-}
-
-.footer-contact > ul > li > a:hover {
-    color: #e0b061;
-    background-color: #fff;
-}
-
-.footer-copyright {
-    color: #fff;
-    font-size: 1rem;
-    background-color: #a77c3c;
-    padding: 1.5rem;
-} */
