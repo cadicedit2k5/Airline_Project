@@ -15,818 +15,953 @@
 </head>
 
 <body>
-    <div id="gototop" class="gototop">
-        <i class="ri-plane-line"></i>
-        <span>Top</span>
+    <!-- Loading khi vừa vào -->
+    <div class="loading">
+        <div>
+            <div class="loading-plane">
+                <img src="../static/images/plane-load.png">
+            </div>
+        </div>
+        <div class="loading-bar">
+            <div class="loading-bar-text">Loading...</div>
+            <div class="progress-bar">
+                <span>0%</span>
+                <div class="progress"></div>
+            </div>
+        </div>
     </div>
-    <!-- Tạo một header mục đích để tạo background chung cho cả navbar và phần nội dung mở đầu -->
-    <header class="header">
-        <!-- COPY TỪ PHẦN NÀY ĐỂ TẠO THANH NAVBAR DÙNG CHUNG ->> ĐẾN (BÊN DƯỚI)-->
-        <div class="overlay"></div>
-        <nav>
-            <div class="navbar">
-                <h1 class="nav-logo"><a href="#">We<span>Bay</span></a></h1>
-                <ul class="nav-menu">
-                    <li class="menu-item"><a href="#">Trang chủ</a></li>
-                    <li class="menu-item"><a href="javascrip:;">Về chúng tôi</a></li>
-                    <li class="menu-item"><a href="javascrip:;">Tin tức</a></li>
-                    <li class="menu-item"><a href="javascrip:;">Liên hệ</a></li>
-                </ul>
-                <ul class="nav-info">
-                    <div class="search">
-                        <a href="javascrip:;" class="info-item"><i class="ri-search-2-line"></i></a>
-                        <input type="search" placeholder="Search">
-                    </div>
-                    <li>
-                        <a href="javascrip:;" class="info-item" id="search">
-                            <i class="ri-search-line"></i>
-                        </a>
-                    </li>
-                    <li class="sign-in-btn">
-                        <a href="Login_Page/index.html">
-                            Đăng Nhập
-                        </a>
-                    </li>
-                    <li class="bell">
-                        <a href="javascrip:;" class="info-item">
-                            <i class="ri-notification-line"></i>
-                        </a>
-                        <!-- Tạo menu thông báo -->
-                        <div class="noti-drop">
-                            <div class="noti-top">
-                                <h2>Thông Báo</h2>
-                            </div>
-                            <div class="noti-main">
-                                <ul class="noti-contents">
-                                    <li class="noti-content">
-                                        <div class="noti-text">
-                                            <a href="#"><span>Larel</span> is felling great and she say haha with your
-                                                blog</a>
-                                            <p>1 day ago</p>
-                                        </div>
-                                        <img src="static/images/bg.avif">
-                                    </li>
-                                    <li class="noti-content">
-                                        <div class="noti-text">
-                                            <a href="#"><span>Larel</span> is felling great and she say haha with your
-                                                blog</a>
-                                            <p>1 day ago</p>
-                                        </div>
-                                        <img src="static/images/bg.avif">
-                                    </li>
-                                    <li class="noti-content">
-                                        <div class="noti-text">
-                                            <a href="#"><span>Larel</span> is felling great and she say haha with your
-                                                blog</a>
-                                            <p>1 day ago</p>
-                                        </div>
-                                        <img src="static/images/bg.avif">
-                                    </li>
-                                    <li class="noti-content">
-                                        <div class="noti-text">
-                                            <a href="#"><span>Larel</span> is felling great and she say haha with your
-                                                blog</a>
-                                            <p>1 day ago</p>
-                                        </div>
-                                        <img src="static/images/bg.avif">
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="noti-bottom"></div>
+    <!-- Phần nội dung chính -->
+    <div class="main">
+        <div id="gototop" class="gototop">
+            <i class="ri-plane-line"></i>
+            <span>Top</span>
+        </div>
+        <!-- Tạo một header mục đích để tạo background chung cho cả navbar và phần nội dung mở đầu -->
+        <header class="header">
+            <!-- COPY TỪ PHẦN NÀY ĐỂ TẠO THANH NAVBAR DÙNG CHUNG ->> ĐẾN (BÊN DƯỚI)-->
+            <div class="overlay"></div>
+            <nav>
+                <div class="navbar">
+                    <h1 class="nav-logo"><a href="#">We<span>Bay</span></a></h1>
+                    <ul class="nav-menu">
+                        <li class="menu-item"><a href="#">Trang chủ</a></li>
+                        <li class="menu-item"><a href="Error_Page/index.html">Về chúng tôi</a></li>
+                        <li class="menu-item"><a href="#blog">Tin tức</a></li>
+                        <li class="menu-item"><a href="Contact_Page/index.html">Liên hệ</a></li>
+                    </ul>
+                    <ul class="nav-info">
+                        <div class="search">
+                            <a href="javascrip:;" class="info-item"><i class="ri-search-2-line"></i></a>
+                            <input type="search" placeholder="Search">
                         </div>
-                    </li>
-                    <li class="user">
-                        <a href="javascrip:;" class="info-item">
-                            <i class="ri-user-3-line"></i>
-                        </a>
-                        <!-- Tạo Menu Profile Người dùng -->
-                        <div class="user-drop">
-                            <div class="user-top">
-                                <img src="static/images/avatar1.avif">
-                                <span>Admin</span>
-                            </div>
-                            <div class="user-bottom">
-                                <ul class="user-features">
-                                    <li class="user-feature">
-                                        <i class="ri-user-3-line"></i>
-                                        <a href="#">Hồ sơ của tôi</a>
-                                    </li>
-                                    <li class="user-feature">
-                                        <i class="ri-edit-box-line"></i>
-                                        <a href="#">Chỉnh sửa hồ sơ</a>
-                                    </li>
-                                    <li class="user-feature">
-                                        <i class="ri-mail-line"></i>
-                                        <a href="#">Liên hệ</a>
-                                    </li>
-                                    <li class="user-feature">
-                                        <i class="ri-settings-2-line"></i>
-                                        <a href="#">Cài đặt</a>
-                                    </li>
-                                    <li class="user-feature">
-                                        <i class="ri-question-line"></i>
-                                        <a href="#">Trợ giúp</a>
-                                    </li>
-                                    <li class="user-feature" id="sign-out-btn">
-                                        <i class="ri-logout-box-line"></i>
-                                        <a href="#">Đăng xuất</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <!-- icon sử dụng để thay đổi khi nhấp vào menu -->
-                <!-- <i class="ri-close-large-line"></i> -->
-                <a class="menu-btn">
-                    <i class="ri-menu-3-fill"></i>
-                </a>
-                <div class="drop-menu">
-                    <li class="menu-item"><a href="#">Trang chủ</a></li>
-                    <li class="menu-item"><a href="#">Về chúng tôi</a></li>
-                    <li class="menu-item"><a href="#">Tin tức</a></li>
-                    <li class="menu-item"><a href="#">Liên hệ</a></li>
-                    <ul>
                         <li>
-                            <a href="#" class="info-item">
+                            <a href="javascrip:;" class="info-item" id="search">
+                                <i class="ri-search-line"></i>
+                            </a>
+                        </li>
+                        <li class="sign-in-btn">
+                            <a href="Login_Page/index.html">
+                                Đăng Nhập
+                            </a>
+                        </li>
+                        <li class="bell">
+                            <a href="javascrip:;" class="info-item">
                                 <i class="ri-notification-line"></i>
                             </a>
+                            <!-- Tạo menu thông báo -->
+                            <div class="noti-drop">
+                                <div class="noti-top">
+                                    <h2>Thông Báo</h2>
+                                </div>
+                                <div class="noti-main">
+                                    <ul class="noti-contents">
+                                        <li class="noti-content">
+                                            <div class="noti-text">
+                                                <a href="#"><span>Larel</span> is felling great and she say haha with
+                                                    your
+                                                    blog</a>
+                                                <p>1 day ago</p>
+                                            </div>
+                                            <img src="static/images/bg.avif">
+                                        </li>
+                                        <li class="noti-content">
+                                            <div class="noti-text">
+                                                <a href="#"><span>Larel</span> is felling great and she say haha with
+                                                    your
+                                                    blog</a>
+                                                <p>1 day ago</p>
+                                            </div>
+                                            <img src="static/images/bg.avif">
+                                        </li>
+                                        <li class="noti-content">
+                                            <div class="noti-text">
+                                                <a href="#"><span>Larel</span> is felling great and she say haha with
+                                                    your
+                                                    blog</a>
+                                                <p>1 day ago</p>
+                                            </div>
+                                            <img src="static/images/bg.avif">
+                                        </li>
+                                        <li class="noti-content">
+                                            <div class="noti-text">
+                                                <a href="#"><span>Larel</span> is felling great and she say haha with
+                                                    your
+                                                    blog</a>
+                                                <p>1 day ago</p>
+                                            </div>
+                                            <img src="static/images/bg.avif">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="noti-bottom"></div>
+                            </div>
                         </li>
-                        <li>
-                            <a href="#" class="info-item">
+                        <li class="user">
+                            <a href="javascrip:;" class="info-item">
                                 <i class="ri-user-3-line"></i>
                             </a>
+                            <!-- Tạo Menu Profile Người dùng -->
+                            <div class="user-drop">
+                                <div class="user-top">
+                                    <img src="static/images/avatar1.avif">
+                                    <span>Admin</span>
+                                </div>
+                                <div class="user-bottom">
+                                    <ul class="user-features">
+                                        <li class="user-feature">
+                                            <i class="ri-user-3-line"></i>
+                                            <a href="#">Hồ sơ của tôi</a>
+                                        </li>
+                                        <li class="user-feature">
+                                            <i class="ri-edit-box-line"></i>
+                                            <a href="#">Chỉnh sửa hồ sơ</a>
+                                        </li>
+                                        <li class="user-feature">
+                                            <i class="ri-briefcase-4-fill"></i>
+                                            <a href="Search_Booking/index.html">Quản lý chuyến bay</a>
+                                        </li>
+                                        <li class="user-feature">
+                                            <i class="ri-mail-line"></i>
+                                            <a href="#">Liên hệ</a>
+                                        </li>
+                                        <li class="user-feature">
+                                            <i class="ri-settings-2-line"></i>
+                                            <a href="#">Cài đặt</a>
+                                        </li>
+                                        <li class="user-feature">
+                                            <i class="ri-question-line"></i>
+                                            <a href="#">Trợ giúp</a>
+                                        </li>
+                                        <li class="user-feature" id="sign-out-btn">
+                                            <i class="ri-logout-box-line"></i>
+                                            <a href="#">Đăng xuất</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </li>
                     </ul>
-                    <div class="search">
-                        <a href="#" class="info-item"><i class="ri-search-2-line"></i></a>
-                        <input type="search" placeholder="Search">
+                    <!-- icon sử dụng để thay đổi khi nhấp vào menu -->
+                    <!-- <i class="ri-close-large-line"></i> -->
+                    <a class="menu-btn">
+                        <i class="ri-menu-3-fill"></i>
+                    </a>
+                    <div class="drop-menu">
+                        <li class="menu-item"><a href="#">Trang chủ</a></li>
+                        <li class="menu-item"><a href="Error_Page/">Về chúng tôi</a></li>
+                        <li class="menu-item"><a href="#blog">Tin tức</a></li>
+                        <li class="menu-item"><a href="Contact_Page/index.html">Liên hệ</a></li>
+                        <ul>
+                            <li>
+                                <a href="#" class="info-item">
+                                    <i class="ri-notification-line"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="info-item">
+                                    <i class="ri-user-3-line"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="search">
+                            <a href="#" class="info-item"><i class="ri-search-2-line"></i></a>
+                            <input type="search" placeholder="Search">
+                        </div>
                     </div>
                 </div>
-            </div>
-        </nav> <!-- ĐẾNNNNNN ĐÂYYYYY -->
+            </nav> <!-- ĐẾNNNNNN ĐÂYYYYY -->
 
-        <section class="header-container">
-            <div>
-                <!-- <h4>Tận hưởng niềm vui của những chuyến bay cùng chúng tôi!</h4> -->
-                <h1><span>Đặt ngay</span> chuyến bay trong hôm nay</h1>
-                <p>
-                    Hãy để mỗi chuyến bay của bạn trở nên đặc biệt. Với dịch vụ tận tâm và trải nghiệm bay thoải mái,
-                    chúng tôi luôn sẵn sàng đưa bạn đến mọi điểm đến một cách an toàn và trọn vẹn. Cùng WeBay, mọi hành
-                    trình đều là một kỷ niệm đáng nhớ.
-                </p>
-                <div><a class="header-btn">
-                        <i class="fa-solid fa-chevron-right"></i>
-                        Đặt Vé Ngay
-                    </a></div>
-            </div>
-            <div>
-                <div class="plane">
-                    <img src="static/images/plane.png" alt="Planes">
-                </div>
-            </div>
-
-        </section>
-    </header>
-    <!-- ==== Main Content ==== -->
-    <main>
-        <!-- Vùng HTML của phần Gợi ý điểm đến -->
-        <section class="suggest-place">
-            <h1 class="title">Điểm đến hàng đầu</h1>
-            <div class="suggest-list">
-                <div class="suggest-item">
-                    <img src="static/images/tokyo.jpg" alt="Tokyo">
-                    <div class="list-info">
-                        <h2>Tokyo</h2>
-                        <p>Thủ đô của hiện đại và truyền thống</p>
-                        <button>Khám phá</button>
-                    </div>
-                </div>
-                <div class="suggest-item">
-                    <img src="static/images/London.webp" alt="Tokyo">
-                    <div class="list-info">
-                        <h2>London</h2>
-                        <p>Thành phố sương mù của xứ sở Anh Quốc</p>
-                        <button>Khám phá</button>
-                    </div>
-                </div>
-                <div class="suggest-item">
-                    <img src="static/images/Bangkok.jpg" alt="Tokyo">
-                    <div class="list-info">
-                        <h2>Bangkok</h2>
-                        <p>Thiên đường ăn chơi và mua sắm Đông Nam Á</p>
-                        <button>Khám phá</button>
-                    </div>
-                </div>
-                <div class="suggest-item">
-                    <img src="static/images/Phu_quoc.jpg" alt="Tokyo">
-                    <div class="list-info">
-                        <h2>Phú Quốc</h2>
-                        <p>Hòn Ngọc Quý</p>
-                        <button>Khám phá</button>
-                    </div>
-                </div>
-                <div class="suggest-item">
-                    <img src="static/images/Da_Lat.jpg" alt="Tokyo">
-                    <div class="list-info">
-                        <h2>Đà lạt</h2>
-                        <p>Một Paris thu nhỏ</p>
-                        <button>Khám phá</button>
-                    </div>
-                </div>
-                <div class="suggest-item">
-                    <img src="static/images/Sanfransisco.webp" alt="Tokyo">
-                    <div class="list-info">
-                        <h2>San Francisco</h2>
-                        <p>Cánh cổng vàng dẫn tới giấc mơ Mỹ</p>
-                        <button>Khám phá</button>
-                    </div>
-                </div>
-            </div>
-            <a href="Error_Page/index.html" class="suggest-btn">
-                Khám phá tất cả điểm đến
-            </a>
-        </section>
-        <!-- Vùng HTML của phần ưu đãi -->
-        <section class="deal">
-            <h1 class="deal-title">Ưu đãi dành riêng cho bạn</h1>
-            <div class="deal-list">
-                <div class="deal-item">
-                    <div class="deal-thumb">
-                        <img src="static/images/deal1.png">
-                    </div>
-                    <div class="deal-content">
-                        <h3 class="title"><a href="#">Hạng thương gia</a></h3>
-                        <span class="sub-title">Vé cao cấp với chỗ ngồi rộng rãi, có thể ngả thành giường, suất ăn cao
-                            cấp, và dịch vụ đặc biệt. Hành khách còn được quyền sử dụng phòng chờ VIP và ưu tiên lên máy
-                            bay.</span>
-                        <div class="deal-meta">
-                            <span class="seat">2-4 người</span>
-                            <span class="price">15.000$</span>
-                        </div>
-                        <div class="deal-btn">
-                            <a href="#">
-                                <i class="fa-solid fa-plane"></i>
-                                Đặt ngay bây giờ
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="deal-item">
-                    <div class="deal-thumb">
-                        <img src="static/images/deal1.png">
-                    </div>
-                    <div class="deal-content">
-                        <h3 class="title"><a href="#">Hạng phổ thông</a></h3>
-                        <span class="sub-title">Loại vé phổ biến và có giá thấp nhất. Hành khách được cung cấp chỗ ngồi
-                            tiêu chuẩn với không gian cơ bản và dịch vụ cơ bản như bữa ăn hoặc đồ uống.</span>
-                        <div class="deal-meta">
-                            <span class="seat">2-5 người</span>
-                            <span class="price">15.000$</span>
-                        </div>
-                        <div class="deal-btn">
-                            <a href="#">
-                                <i class="fa-solid fa-plane"></i>
-                                Đặt ngay bây giờ
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="deal-item">
-                    <div class="deal-thumb">
-                        <img src="static/images/deal1.png">
-                    </div>
-                    <div class="deal-content">
-                        <h3 class="title"><a href="#">Hạng phổ thông đặc biệt</a></h3>
-                        <span class="sub-title">Cung cấp chỗ ngồi rộng rãi hơn, dịch vụ nâng cao hơn so với vé phổ thông
-                            tiêu chuẩn, với khoảng cách ghế ngồi lớn hơn và các tiện ích như ưu tiên làm thủ tục.</span>
-                        <div class="deal-meta">
-                            <span class="seat">2-5 người</span>
-                            <span class="price">15.000$</span>
-                        </div>
-                        <div class="deal-btn">
-                            <a href="#">
-                                <i class="fa-solid fa-plane"></i>
-                                Đặt ngay bây giờ
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="deal-item">
-                    <div class="deal-thumb">
-                        <img src="static/images/deal1.png">
-                    </div>
-                    <div class="deal-content">
-                        <h3 class="title"><a href="#">Vé hạng nhất</a></h3>
-                        <span class="sub-title">Vé sang trọng nhất với ghế ngồi thành giường, không gian riêng tư, dịch
-                            vụ cá nhân hóa, và bữa ăn cao cấp. Hành khách được sử dụng phòng chờ VIP và có nhiều ưu tiên
-                            đặc biệt.
-                        </span>
-                        <div class="deal-meta">
-                            <span class="seat">2-5 người</span>
-                            <span class="price">15.000$</span>
-                        </div>
-                        <div class="deal-btn">
-                            <a href="#">
-                                <i class="fa-solid fa-plane"></i>
-                                Đặt ngay bây giờ
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="deal-item">
-                    <div class="deal-thumb">
-                        <img src="static/images/deal1.png">
-                    </div>
-                    <div class="deal-content">
-                        <h3 class="title"><a href="#">Vé linh hoạt</a></h3>
-                        <span class="sub-title">Loại vé này cho phép hành khách thay đổi lịch trình hoặc hoàn vé mà
-                            không bị phạt hoặc với mức phí rất thấp. Thường áp dụng cho cả hạng phổ thông, hạng thương
-                            gia, và hạng nhất.</span>
-                        <div class="deal-meta">
-                            <span class="seat">2-5 người</span>
-                            <span class="price">15.000$</span>
-                        </div>
-                        <div class="deal-btn">
-                            <a href="#">
-                                <i class="fa-solid fa-plane"></i>
-                                Đặt ngay bây giờ
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="deal-item">
-                    <div class="deal-thumb">
-                        <img src="static/images/deal1.png">
-                    </div>
-                    <div class="deal-content">
-                        <h3 class="title"><a href="#">Vé trẻ em và em bé</a></h3>
-                        <span class="sub-title">Giá vé giảm cho trẻ em (thường từ 2 đến 11 tuổi) và em bé (dưới 2 tuổi),
-                            với các dịch vụ phù hợp như suất ăn dành riêng cho trẻ em và nôi cho em bé.</span>
-                        <div class="deal-meta">
-                            <span class="seat">2-5 người</span>
-                            <span class="price">15.000$</span>
-                        </div>
-                        <div class="deal-btn">
-                            <a href="#">
-                                <i class="fa-solid fa-plane"></i>
-                                Đặt ngay bây giờ
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="deal-item">
-                    <div class="deal-thumb">
-                        <img src="static/images/deal1.png">
-                    </div>
-                    <div class="deal-content">
-                        <h3 class="title"><a href="#">Vé khuyến mãi</a></h3>
-                        <span class="sub-title">Vé có giá rẻ hơn nhưng thường kèm theo điều kiện hạn chế như không được
-                            đổi, hoàn vé, hoặc có thời gian sử dụng cụ thể. Đây là vé thường được hãng hàng không bán ra
-                            trong các đợt khuyến mãi.</span>
-                        <div class="deal-meta">
-                            <span class="seat">2-5 người</span>
-                            <span class="price">15.000$</span>
-                        </div>
-                        <div class="deal-btn">
-                            <a href="#">
-                                <i class="fa-solid fa-plane"></i>
-                                Đặt ngay bây giờ
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="deal-item">
-                    <div class="deal-thumb">
-                        <img src="static/images/deal1.png">
-                    </div>
-                    <div class="deal-content">
-                        <h3 class="title"><a href="#">Vé khứ hồi</a></h3>
-                        <span class="sub-title">Vé bao gồm cả chặng đi và chặng về, thường có giá ưu đãi hơn so với việc
-                            mua vé một chiều cho từng chặng riêng biệt.</span>
-                        <div class="deal-meta">
-                            <span class="seat">2-5 người</span>
-                            <span class="price">15.000$</span>
-                        </div>
-                        <div class="deal-btn">
-                            <a href="#">
-                                <i class="fa-solid fa-plane"></i>
-                                Đặt ngay bây giờ
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="deal-item">
-                    <div class="deal-thumb">
-                        <img src="static/images/deal1.png">
-                    </div>
-                    <div class="deal-content">
-                        <h3 class="title"><a href="#">Vé một chiều</a></h3>
-                        <span class="sub-title">Vé chỉ dành cho một chiều đi, thường được chọn bởi những người có lịch
-                            trình không cố định hoặc những người di chuyển vì công việc, du học.</span>
-                        <div class="deal-meta">
-                            <span class="seat">2-5 người</span>
-                            <span class="price">15.000$</span>
-                        </div>
-                        <div class="deal-btn">
-                            <a href="#">
-                                <i class="fa-solid fa-plane"></i>
-                                Đặt ngay bây giờ
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="deal-buttons">
-                <div class="deal-button" id="deal-prev">&#10094;</div>
-                <div class="deal-button" id="deal-next">&#10095;</div>
-            </div>
-        </section>
-        <!-- Vùng HTML về những ưu điểm -->
-        <section class="benefit">
-            <!-- Header -->
-            <div class="benefit-header">
-                <h1 class="benefit-title">GIÁ TRỊ ĐỘC QUYỀN KHI CHỌN CHÚNG TÔI</h1>
-                <p class="benefit-discription">Khi bay cùng WeBay, bạn không chỉ được di chuyển mà còn được trải nghiệm
-                    những dịch vụ tốt nhất với sự tiện nghi và thoải mái hàng đầu. Chúng tôi cam kết mang đến cho bạn
-                    một hành trình an toàn, thuận tiện và đáng nhớ. </p>
-            </div>
-            <!-- Container -->
-            <div class="benefit-container">
-                <div class="benefit-banner">
-                    <img src="static/images/banner.jpg">
-                </div>
-                <div class="benefit-contents">
-                    <div class="benefit-content">
-                        <i class="ri-armchair-line"></i>
-                        <h2>Sang trọng và thoải mái</h2>
-                        <p>Trải nghiệm không gian sang trọng và tiện nghi với các ghế ngồi rộng rãi, có thể ngả thành
-                            giường, cùng với dịch vụ cá nhân hóa. Bạn sẽ được tận hưởng sự thoải mái tuyệt đối suốt
-                            chuyến bay.</p>
-                    </div>
-                    <div class="benefit-content">
-                        <i class="ri-armchair-line"></i>
-                        <h2>Dịch vụ chuyên nghiệp</h2>
-                        <p>Đội ngũ nhân viên tận tâm, chuyên nghiệp luôn sẵn sàng phục vụ bạn với sự chu đáo từ lúc đặt
-                            vé cho đến khi hạ cánh, đảm bảo bạn có một chuyến đi suôn sẻ và hài lòng.</p>
-                    </div>
-                    <div class="benefit-content">
-                        <i class="ri-armchair-line"></i>
-                        <h2>Tiện ích hiện đại</h2>
-                        <p>Các tiện ích giải trí đa dạng, wifi miễn phí, cùng với những suất ăn gourmet và đồ uống cao
-                            cấp, giúp bạn thư giãn và tận hưởng chuyến bay một cách trọn vẹn nhất</p>
-                    </div>
-                    <div class="benefit-content">
-                        <i class="ri-armchair-line"></i>
-                        <h2>Ưu tiên và tiện lợi</h2>
-                        <p>Hành khách của chúng tôi được hưởng nhiều ưu tiên như làm thủ tục nhanh chóng, hành lý ký gửi
-                            miễn phí, và sử dụng phòng chờ VIP cao cấp tại các sân bay, giúp bạn tiết kiệm thời gian và
-                            tận hưởng sự thuận tiện.</p>
-                    </div>
-                </div>
-            </div>
-            <a href="Error_Page/index.html" class="suggest-btn">
-                Thêm thông tin
-            </a>
-        </section>
-        <!-- HTML phần câu hỏi thường gặp -->
-        <section class="question">
-            <div class="question-header">
-                <h1 class="question-title">NHỮNG CÂU HỎI THƯỜNG GẶP</h1>
-            </div>
-            <div class="question-contents">
-                <!-- Tại vì nó sẽ bị lỗi khi nhấn xem nội dung nên cho hai cái div hai bên để hai bên độc lập không liên quan tới nhau-->
+            <section class="header-container">
                 <div>
-                    <div class="question-content">
-                        <h3>Làm thế nào để đặt vé máy bay?</h3>
-                        <span class="active">&#10010;</span>
-                        <span>&#9866;</span>
-                    </div>
-                    <p class="question-paragraph">Bạn có thể đặt vé máy bay trực tuyến qua trang web của chúng tôi, qua
-                        ứng dụng di động, hoặc liên hệ với các đại lý vé máy bay. Để đặt vé, chỉ cần chọn điểm khởi
-                        hành, điểm đến, ngày bay và số lượng hành khách, sau đó làm theo hướng dẫn để hoàn tất đặt vé.
+                    <!-- <h4>Tận hưởng niềm vui của những chuyến bay cùng chúng tôi!</h4> -->
+                    <h1><span>Đặt ngay</span> chuyến bay trong hôm nay</h1>
+                    <p>
+                        Hãy để mỗi chuyến bay của bạn trở nên đặc biệt. Với dịch vụ tận tâm và trải nghiệm bay thoải
+                        mái,
+                        chúng tôi luôn sẵn sàng đưa bạn đến mọi điểm đến một cách an toàn và trọn vẹn. Cùng WeBay, mọi
+                        hành
+                        trình đều là một kỷ niệm đáng nhớ.
                     </p>
-
-                    <div class="question-content">
-                        <h3>Các chính sách hủy và đổi vé của hãng là gì?</h3>
-                        <span class="active">&#10010;</span>
-                        <span>&#9866;</span>
-                    </div>
-                    <p class="question-paragraph">Chính sách hủy và đổi vé phụ thuộc vào loại vé mà bạn đã mua. Vé có
-                        thể có các điều kiện khác nhau về việc hoàn tiền hoặc thay đổi lịch trình. Vui lòng kiểm tra
-                        thông tin chi tiết trên trang web của chúng tôi hoặc liên hệ với trung tâm dịch vụ khách hàng để
-                        biết thêm chi tiết.</p>
-
-                    <div class="question-content">
-                        <h3>Tôi có thể mang theo bao nhiêu hành lý miễn phí?</h3>
-                        <span class="active">&#10010;</span>
-                        <span>&#9866;</span>
-                    </div>
-                    <p class="question-paragraph">Số lượng hành lý miễn phí và quy định về kích thước và trọng lượng phụ
-                        thuộc vào loại vé và hạng ghế mà bạn đã chọn. Hành lý xách tay và hành lý ký gửi có thể có giới
-                        hạn khác nhau. Vui lòng tham khảo trang quy định về hành lý trên trang web của chúng tôi để biết
-                        thông tin cụ thể.</p>
+                    <div><a class="header-btn">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            Đặt Vé Ngay
+                        </a></div>
                 </div>
                 <div>
-                    <div class="question-content">
-                        <h3>Có dịch vụ cho hành khách đặc biệt không?</h3>
-                        <span class="active">&#10010;</span>
-                        <span>&#9866;</span>
+                    <div class="plane">
+                        <img src="static/images/plane.png" alt="Planes">
                     </div>
-                    <p class="question-paragraph">Chúng tôi cung cấp các dịch vụ đặc biệt cho hành khách với nhu cầu đặc
-                        biệt, bao gồm hỗ trợ di chuyển, dịch vụ cho người khuyết tật, và các yêu cầu khác. Vui lòng
-                        thông báo cho chúng tôi về nhu cầu của bạn ít nhất 48 giờ trước giờ khởi hành để chúng tôi có
-                        thể sắp xếp dịch vụ phù hợp.</p>
+                </div>
 
-                    <div class="question-content">
-                        <h3>Có chương trình khách hàng thân thiết không?</h3>
-                        <span class="active">&#10010;</span>
-                        <span>&#9866;</span>
+            </section>
+            <!-- Vùng HTML của phần Gợi ý điểm đến -->
+            <section class="suggest-place">
+                <div class="suggest-intro">
+                    <h3 class="title">Điểm đến hàng đầu</h3>
+                    <p>Hãy để WeBay dẫn bạn đến những điểm đến tuyệt vời nhất trên thế giới. Dù là một chuyến đi thư
+                        giãn,
+                        khám
+                        phá văn hóa, hay công tác, chúng tôi đều có những hành trình đặc biệt dành cho bạn.</p>
+                    <a href="Destination/index.html" class="suggest-btn">
+                        Khám phá
+                    </a>
+                </div>
+                <div class="suggest-list">
+                    <!-- Vùng clone đầu -->
+                    <div class="suggest-item">
+                        <a href="Destination/destination.html?id=5" class="suggest-img">
+                            <img src="static/images/PhuQuoc/Phu_quoc_scene.jpg">
+                            <div class="suggest-discr">
+                                <h4>Phu Quoc - Viet Nam</h4>
+                                <p>Depature: <span>17:50</span>Arrival: <span>22:42</span></p>
+                            </div>
+                        </a>
                     </div>
-                    <p class="question-paragraph">Có, chúng tôi có chương trình khách hàng thân thiết dành cho những
-                        hành khách bay thường xuyên. Tham gia chương trình để tích lũy điểm thưởng, nhận ưu đãi đặc
-                        biệt, và các dịch vụ cao cấp khác. Bạn có thể đăng ký chương trình và theo dõi điểm tích lũy qua
-                        trang web hoặc ứng dụng của chúng tôi.
-                    </p>
+                    <div class="suggest-item">
+                        <a href="Destination/destination.html?id=7" class="suggest-img">
+                            <img src="static/images/Tokyo/tokyo_scene.jpg">
+                            <div class="suggest-discr">
+                                <h4>Tokyo - Japan</h4>
+                                <p>Depature: <span>17:50</span>Arrival: <span>22:42</span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- End clone -->
+                    <div class="suggest-item">
+                        <a href="Destination/destination.html?id=2" class="suggest-img">
+                            <img src="static/images/LonDon/London_scene.webp">
+                            <div class="suggest-discr">
+                                <h4>London - England</h4>
+                                <p>Depature: <span>17:50</span>Arrival: <span>22:42</span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="suggest-item">
+                        <a href="Destination/destination.html?id=3" class="suggest-img">
+                            <img src="static/images/BangKok/Bangkok_scene.webp">
+                            <div class="suggest-discr">
+                                <h4>Bangkok - Thailand</h4>
+                                <p>Depature: <span>17:50</span>Arrival: <span>22:42</span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="suggest-item">
+                        <a href="Destination/destination.html?id=1" class="suggest-img">
+                            <img src="static/images/DienBien/DienBien-Scene.jpg">
+                            <div class="suggest-discr">
+                                <h4>Dien Bien - Viet Nam</h4>
+                                <p>Depature: <span>17:50</span>Arrival: <span>22:42</span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="suggest-item">
+                        <a href="Destination/destination.html?id=4" class="suggest-img">
+                            <img src="static/images/DaLat/Dalat_scene.webp">
+                            <div class="suggest-discr">
+                                <h4>Da Lat - Viet Nam</h4>
+                                <p>Depature: <span>17:50</span>Arrival: <span>22:42</span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="suggest-item">
+                        <a href="Destination/destination.html?id=6" class="suggest-img">
+                            <img src="static/images/SanFrancisco/Sanfrancisco_scene.webp">
+                            <div class="suggest-discr">
+                                <h4>San Francisco - California</h4>
+                                <p>Depature: <span>17:50</span>Arrival: <span>22:42</span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="suggest-item">
+                        <a href="Destination/destination.html?id=5" class="suggest-img">
+                            <img src="static/images/PhuQuoc/Phu_quoc_scene.jpg">
+                            <div class="suggest-discr">
+                                <h4>Phu Quoc - Viet Nam</h4>
+                                <p>Depature: <span>17:50</span>Arrival: <span>22:42</span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="suggest-item">
+                        <a href="Destination/destination.html?id=7" class="suggest-img">
+                            <img src="static/images/Tokyo/tokyo_scene.jpg">
+                            <div class="suggest-discr">
+                                <h4>Tokyo - Japan</h4>
+                                <p>Depature: <span>17:50</span>Arrival: <span>22:42</span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Vùng clone sau -->
+                    <div class="suggest-item">
+                        <a href="#" class="suggest-img">
+                            <img src="static/images/LonDon/London_scene.webp">
+                            <div class="suggest-discr">
+                                <h4>London - England</h4>
+                                <p>Depature: <span>17:50</span>Arrival: <span>22:42</span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="suggest-item">
+                        <a href="#" class="suggest-img">
+                            <img src="static/images/BangKok/Bangkok_scene.webp">
+                            <div class="suggest-discr">
+                                <h4>Bangkok - Thailand</h4>
+                                <p>Depature: <span>17:50</span>Arrival: <span>22:42</span></p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- End clone -->
+                    <div class="suggest-slider-button">
+                        <a href="javascript:;" id="suggest-prev"><i class="fa-solid fa-arrow-left"></i></a>
+                        <a href="javascript:;" id="suggest-next"><i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </section>
+        </header>
+        <!-- ==== Main Content ==== -->
+        <main>
+            <!-- Vùng HTML của phần ưu đãi -->
+            <section class="deal">
+                <h1 class="deal-title">Ưu đãi dành riêng cho bạn</h1>
+                <div class="deal-list">
+                    <div class="deal-item">
+                        <div class="deal-thumb">
+                            <img src="static/images/deal1.png">
+                        </div>
+                        <div class="deal-content">
+                            <h3 class="title"><a href="#">Hạng thương gia</a></h3>
+                            <span class="sub-title">Vé cao cấp với chỗ ngồi rộng rãi, có thể ngả thành giường, suất ăn
+                                cao
+                                cấp, và dịch vụ đặc biệt. Hành khách còn được quyền sử dụng phòng chờ VIP và ưu tiên lên
+                                máy
+                                bay.</span>
+                            <div class="deal-meta">
+                                <span class="seat">2-4 người</span>
+                                <span class="price">15.000$</span>
+                            </div>
+                            <div class="deal-btn">
+                                <a href="#">
+                                    <i class="fa-solid fa-plane"></i>
+                                    Đặt ngay bây giờ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deal-item">
+                        <div class="deal-thumb">
+                            <img src="static/images/deal1.png">
+                        </div>
+                        <div class="deal-content">
+                            <h3 class="title"><a href="#">Hạng phổ thông</a></h3>
+                            <span class="sub-title">Loại vé phổ biến và có giá thấp nhất. Hành khách được cung cấp chỗ
+                                ngồi
+                                tiêu chuẩn với không gian cơ bản và dịch vụ cơ bản như bữa ăn hoặc đồ uống.</span>
+                            <div class="deal-meta">
+                                <span class="seat">2-5 người</span>
+                                <span class="price">15.000$</span>
+                            </div>
+                            <div class="deal-btn">
+                                <a href="#">
+                                    <i class="fa-solid fa-plane"></i>
+                                    Đặt ngay bây giờ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deal-item">
+                        <div class="deal-thumb">
+                            <img src="static/images/deal1.png">
+                        </div>
+                        <div class="deal-content">
+                            <h3 class="title"><a href="#">Hạng phổ thông đặc biệt</a></h3>
+                            <span class="sub-title">Cung cấp chỗ ngồi rộng rãi hơn, dịch vụ nâng cao hơn so với vé phổ
+                                thông
+                                tiêu chuẩn, với khoảng cách ghế ngồi lớn hơn và các tiện ích như ưu tiên làm thủ
+                                tục.</span>
+                            <div class="deal-meta">
+                                <span class="seat">2-5 người</span>
+                                <span class="price">15.000$</span>
+                            </div>
+                            <div class="deal-btn">
+                                <a href="#">
+                                    <i class="fa-solid fa-plane"></i>
+                                    Đặt ngay bây giờ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deal-item">
+                        <div class="deal-thumb">
+                            <img src="static/images/deal1.png">
+                        </div>
+                        <div class="deal-content">
+                            <h3 class="title"><a href="#">Vé hạng nhất</a></h3>
+                            <span class="sub-title">Vé sang trọng nhất với ghế ngồi thành giường, không gian riêng tư,
+                                dịch
+                                vụ cá nhân hóa, và bữa ăn cao cấp. Hành khách được sử dụng phòng chờ VIP và có nhiều ưu
+                                tiên
+                                đặc biệt.
+                            </span>
+                            <div class="deal-meta">
+                                <span class="seat">2-5 người</span>
+                                <span class="price">15.000$</span>
+                            </div>
+                            <div class="deal-btn">
+                                <a href="#">
+                                    <i class="fa-solid fa-plane"></i>
+                                    Đặt ngay bây giờ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deal-item">
+                        <div class="deal-thumb">
+                            <img src="static/images/deal1.png">
+                        </div>
+                        <div class="deal-content">
+                            <h3 class="title"><a href="#">Vé linh hoạt</a></h3>
+                            <span class="sub-title">Loại vé này cho phép hành khách thay đổi lịch trình hoặc hoàn vé mà
+                                không bị phạt hoặc với mức phí rất thấp. Thường áp dụng cho cả hạng phổ thông, hạng
+                                thương
+                                gia, và hạng nhất.</span>
+                            <div class="deal-meta">
+                                <span class="seat">2-5 người</span>
+                                <span class="price">15.000$</span>
+                            </div>
+                            <div class="deal-btn">
+                                <a href="#">
+                                    <i class="fa-solid fa-plane"></i>
+                                    Đặt ngay bây giờ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deal-item">
+                        <div class="deal-thumb">
+                            <img src="static/images/deal1.png">
+                        </div>
+                        <div class="deal-content">
+                            <h3 class="title"><a href="#">Vé trẻ em và em bé</a></h3>
+                            <span class="sub-title">Giá vé giảm cho trẻ em (thường từ 2 đến 11 tuổi) và em bé (dưới 2
+                                tuổi),
+                                với các dịch vụ phù hợp như suất ăn dành riêng cho trẻ em và nôi cho em bé.</span>
+                            <div class="deal-meta">
+                                <span class="seat">2-5 người</span>
+                                <span class="price">15.000$</span>
+                            </div>
+                            <div class="deal-btn">
+                                <a href="#">
+                                    <i class="fa-solid fa-plane"></i>
+                                    Đặt ngay bây giờ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deal-item">
+                        <div class="deal-thumb">
+                            <img src="static/images/deal1.png">
+                        </div>
+                        <div class="deal-content">
+                            <h3 class="title"><a href="#">Vé khuyến mãi</a></h3>
+                            <span class="sub-title">Vé có giá rẻ hơn nhưng thường kèm theo điều kiện hạn chế như không
+                                được
+                                đổi, hoàn vé, hoặc có thời gian sử dụng cụ thể. Đây là vé thường được hãng hàng không
+                                bán ra
+                                trong các đợt khuyến mãi.</span>
+                            <div class="deal-meta">
+                                <span class="seat">2-5 người</span>
+                                <span class="price">15.000$</span>
+                            </div>
+                            <div class="deal-btn">
+                                <a href="#">
+                                    <i class="fa-solid fa-plane"></i>
+                                    Đặt ngay bây giờ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deal-item">
+                        <div class="deal-thumb">
+                            <img src="static/images/deal1.png">
+                        </div>
+                        <div class="deal-content">
+                            <h3 class="title"><a href="#">Vé khứ hồi</a></h3>
+                            <span class="sub-title">Vé bao gồm cả chặng đi và chặng về, thường có giá ưu đãi hơn so với
+                                việc
+                                mua vé một chiều cho từng chặng riêng biệt.</span>
+                            <div class="deal-meta">
+                                <span class="seat">2-5 người</span>
+                                <span class="price">15.000$</span>
+                            </div>
+                            <div class="deal-btn">
+                                <a href="#">
+                                    <i class="fa-solid fa-plane"></i>
+                                    Đặt ngay bây giờ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deal-item">
+                        <div class="deal-thumb">
+                            <img src="static/images/deal1.png">
+                        </div>
+                        <div class="deal-content">
+                            <h3 class="title"><a href="#">Vé một chiều</a></h3>
+                            <span class="sub-title">Vé chỉ dành cho một chiều đi, thường được chọn bởi những người có
+                                lịch
+                                trình không cố định hoặc những người di chuyển vì công việc, du học.</span>
+                            <div class="deal-meta">
+                                <span class="seat">2-5 người</span>
+                                <span class="price">15.000$</span>
+                            </div>
+                            <div class="deal-btn">
+                                <a href="#">
+                                    <i class="fa-solid fa-plane"></i>
+                                    Đặt ngay bây giờ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="deal-buttons">
+                    <div class="deal-button" id="deal-prev">&#10094;</div>
+                    <div class="deal-button" id="deal-next">&#10095;</div>
+                </div>
+            </section>
+            <!-- Vùng HTML về những ưu điểm -->
+            <section class="benefit">
+                <!-- Header -->
+                <div class="benefit-header">
+                    <h1 class="benefit-title">GIÁ TRỊ ĐỘC QUYỀN KHI CHỌN CHÚNG TÔI</h1>
+                    <p class="benefit-discription">Khi bay cùng WeBay, bạn không chỉ được di chuyển mà còn được trải
+                        nghiệm
+                        những dịch vụ tốt nhất với sự tiện nghi và thoải mái hàng đầu. Chúng tôi cam kết mang đến cho
+                        bạn
+                        một hành trình an toàn, thuận tiện và đáng nhớ. </p>
+                </div>
+                <!-- Container -->
+                <div class="benefit-container">
+                    <div class="benefit-banner">
+                        <img src="static/images/banner.jpg">
+                    </div>
+                    <div class="benefit-contents">
+                        <div class="benefit-content">
+                            <i class="ri-armchair-line"></i>
+                            <h2>Sang trọng và thoải mái</h2>
+                            <p>Trải nghiệm không gian sang trọng và tiện nghi với các ghế ngồi rộng rãi, có thể ngả
+                                thành
+                                giường, cùng với dịch vụ cá nhân hóa. Bạn sẽ được tận hưởng sự thoải mái tuyệt đối suốt
+                                chuyến bay.</p>
+                        </div>
+                        <div class="benefit-content">
+                            <i class="fa-brands fa-searchengin"></i>
+                            <h2>Dịch vụ chuyên nghiệp</h2>
+                            <p>Đội ngũ nhân viên tận tâm, chuyên nghiệp luôn sẵn sàng phục vụ bạn với sự chu đáo từ lúc
+                                đặt
+                                vé cho đến khi hạ cánh, đảm bảo bạn có một chuyến đi suôn sẻ và hài lòng.</p>
+                        </div>
+                        <div class="benefit-content">
+                            <i class="fa-solid fa-globe"></i>
+                            <h2>Tiện ích hiện đại</h2>
+                            <p>Các tiện ích giải trí đa dạng, wifi miễn phí, cùng với những suất ăn gourmet và đồ uống
+                                cao
+                                cấp, giúp bạn thư giãn và tận hưởng chuyến bay một cách trọn vẹn nhất</p>
+                        </div>
+                        <div class="benefit-content">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <h2>Ưu tiên và tiện lợi</h2>
+                            <p>Hành khách của chúng tôi được hưởng nhiều ưu tiên như làm thủ tục nhanh chóng, hành lý ký
+                                gửi
+                                miễn phí, và sử dụng phòng chờ VIP cao cấp tại các sân bay, giúp bạn tiết kiệm thời gian
+                                và
+                                tận hưởng sự thuận tiện.</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="Error_Page/index.html" class="btn">
+                    Thêm thông tin
+                </a>
+            </section>
+            <!-- HTML phần câu hỏi thường gặp -->
+            <section class="question" id="question">
+                <div class="question-header">
+                    <h1 class="question-title">NHỮNG CÂU HỎI THƯỜNG GẶP</h1>
+                </div>
+                <div class="question-contents">
+                    <!-- Tại vì nó sẽ bị lỗi khi nhấn xem nội dung nên cho hai cái div hai bên để hai bên độc lập không liên quan tới nhau-->
+                    <div>
+                        <div class="question-content">
+                            <h3>Làm thế nào để đặt vé máy bay?</h3>
+                            <span class="active">&#10010;</span>
+                            <span>&#9866;</span>
+                        </div>
+                        <p class="question-paragraph">Bạn có thể đặt vé máy bay trực tuyến qua trang web của chúng tôi,
+                            qua
+                            ứng dụng di động, hoặc liên hệ với các đại lý vé máy bay. Để đặt vé, chỉ cần chọn điểm khởi
+                            hành, điểm đến, ngày bay và số lượng hành khách, sau đó làm theo hướng dẫn để hoàn tất đặt
+                            vé.
+                        </p>
 
-                    <div class="question-content">
-                        <h3>Chính sách bảo mật không tin như thế nào?</h3>
-                        <span class="active">&#10010;</span>
-                        <span>&#9866;</span>
+                        <div class="question-content">
+                            <h3>Các chính sách hủy và đổi vé của hãng là gì?</h3>
+                            <span class="active">&#10010;</span>
+                            <span>&#9866;</span>
+                        </div>
+                        <p class="question-paragraph">Chính sách hủy và đổi vé phụ thuộc vào loại vé mà bạn đã mua. Vé
+                            có
+                            thể có các điều kiện khác nhau về việc hoàn tiền hoặc thay đổi lịch trình. Vui lòng kiểm tra
+                            thông tin chi tiết trên trang web của chúng tôi hoặc liên hệ với trung tâm dịch vụ khách
+                            hàng để
+                            biết thêm chi tiết.</p>
+
+                        <div class="question-content">
+                            <h3>Tôi có thể mang theo bao nhiêu hành lý miễn phí?</h3>
+                            <span class="active">&#10010;</span>
+                            <span>&#9866;</span>
+                        </div>
+                        <p class="question-paragraph">Số lượng hành lý miễn phí và quy định về kích thước và trọng lượng
+                            phụ
+                            thuộc vào loại vé và hạng ghế mà bạn đã chọn. Hành lý xách tay và hành lý ký gửi có thể có
+                            giới
+                            hạn khác nhau. Vui lòng tham khảo trang quy định về hành lý trên trang web của chúng tôi để
+                            biết
+                            thông tin cụ thể.</p>
                     </div>
-                    <p class="question-paragraph">Chúng tôi cam kết bảo mật thông tin cá nhân của bạn bằng cách tuân thủ
-                        các tiêu chuẩn bảo mật và quy định pháp luật hiện hành. Thông tin của bạn sẽ chỉ được sử dụng để
-                        phục vụ cho các mục đích liên quan đến dịch vụ của chúng tôi và không được chia sẻ với bên thứ
-                        ba mà không có sự đồng ý của bạn.</p>
+                    <div>
+                        <div class="question-content">
+                            <h3>Có dịch vụ cho hành khách đặc biệt không?</h3>
+                            <span class="active">&#10010;</span>
+                            <span>&#9866;</span>
+                        </div>
+                        <p class="question-paragraph">Chúng tôi cung cấp các dịch vụ đặc biệt cho hành khách với nhu cầu
+                            đặc
+                            biệt, bao gồm hỗ trợ di chuyển, dịch vụ cho người khuyết tật, và các yêu cầu khác. Vui lòng
+                            thông báo cho chúng tôi về nhu cầu của bạn ít nhất 48 giờ trước giờ khởi hành để chúng tôi
+                            có
+                            thể sắp xếp dịch vụ phù hợp.</p>
+
+                        <div class="question-content">
+                            <h3>Có chương trình khách hàng thân thiết không?</h3>
+                            <span class="active">&#10010;</span>
+                            <span>&#9866;</span>
+                        </div>
+                        <p class="question-paragraph">Có, chúng tôi có chương trình khách hàng thân thiết dành cho những
+                            hành khách bay thường xuyên. Tham gia chương trình để tích lũy điểm thưởng, nhận ưu đãi đặc
+                            biệt, và các dịch vụ cao cấp khác. Bạn có thể đăng ký chương trình và theo dõi điểm tích lũy
+                            qua
+                            trang web hoặc ứng dụng của chúng tôi.
+                        </p>
+
+                        <div class="question-content">
+                            <h3>Chính sách bảo mật không tin như thế nào?</h3>
+                            <span class="active">&#10010;</span>
+                            <span>&#9866;</span>
+                        </div>
+                        <p class="question-paragraph">Chúng tôi cam kết bảo mật thông tin cá nhân của bạn bằng cách tuân
+                            thủ
+                            các tiêu chuẩn bảo mật và quy định pháp luật hiện hành. Thông tin của bạn sẽ chỉ được sử
+                            dụng để
+                            phục vụ cho các mục đích liên quan đến dịch vụ của chúng tôi và không được chia sẻ với bên
+                            thứ
+                            ba mà không có sự đồng ý của bạn.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <section class="rate">
+            <div class="rate-header">
+                <h1 class="rate-title">KHÁCH HÀNG NÓI GÌ VỀ CHÚNG TÔI</h1>
+            </div>
+
+            <div class="rate-container">
+                <!-- Bản clone của slide cuối -->
+                <div class="rate-content">
+                    <img src="static/images/avatar1.avif">
+                    <p>Tôi rất ấn tượng với chất lượng dịch vụ và sự tiện nghi của chuyến bay. Hãng hàng không đã mang
+                        đến
+                        cho tôi một trải nghiệm bay thoải mái và đáng nhớ. Cảm ơn WeBay rất nhiều!</p>
+                    <i class="fa-solid fa-quote-left"></i>
+                    <h3>Lê Thị Mai</h3>
+                </div>
+                <div class="rate-content">
+                    <img src="static/images/avatar1.avif">
+                    <p>Dịch vụ tuyệt vời và trải nghiệm bay rất thoải mái! Đội ngũ nhân viên rất chuyên nghiệp và thân
+                        thiện. Tôi chắc chắn sẽ tiếp tục lựa chọn WeBay cho các chuyến đi của mình.</p>
+                    <i class="fa-solid fa-quote-left"></i>
+                    <h3>Nguyễn Thị Lan</h3>
+                </div>
+                <div class="rate-content">
+                    <img src="static/images/avatar1.avif">
+                    <p>Exceptional service and a truly luxurious experience. The comfort of the seats in business class
+                        was
+                        unmatched, and the staff made sure every need was met. Highly recommend!</p>
+                    <i class="fa-solid fa-quote-left"></i>
+                    <h3>John Smith</h3>
+                </div>
+                <div class="rate-content">
+                    <img src="static/images/avatar1.avif">
+                    <p>Hãng hàng không này đã làm cho chuyến bay của tôi trở nên dễ chịu hơn rất nhiều. Các tiện ích và
+                        dịch
+                        vụ đều rất tốt. Tôi rất hài lòng với sự chăm sóc của các tiếp viên.</p>
+                    <i class="fa-solid fa-quote-left"></i>
+                    <h3>Trần Minh Tuấn</h3>
+                </div>
+                <div class="rate-content">
+                    <img src="static/images/avatar1.avif">
+                    <p>The in-flight entertainment and meals were top-notch. I appreciated the extra space and the ease
+                        of
+                        check-in. WeBay has set a high standard for air travel.</p>
+                    <i class="fa-solid fa-quote-left"></i>
+                    <h3>Emma Johnson</h3>
+                </div>
+                <div class="rate-content">
+                    <img src="static/images/avatar1.avif">
+                    <p>Tôi rất ấn tượng với chất lượng dịch vụ và sự tiện nghi của chuyến bay. Hãng hàng không đã mang
+                        đến
+                        cho tôi một trải nghiệm bay thoải mái và đáng nhớ. Cảm ơn WeBay rất nhiều!</p>
+                    <i class="fa-solid fa-quote-left"></i>
+                    <h3>Lê Thị Mai</h3>
+                </div>
+                <!-- Bản clone của slide đầu -->
+                <div class="rate-content">
+                    <img src="static/images/avatar1.avif">
+                    <p>Dịch vụ tuyệt vời và trải nghiệm bay rất thoải mái! Đội ngũ nhân viên rất chuyên nghiệp và thân
+                        thiện. Tôi chắc chắn sẽ tiếp tục lựa chọn WeBay cho các chuyến đi của mình.</p>
+                    <i class="fa-solid fa-quote-left"></i>
+                    <h3>Nguyễn Thị Lan</h3>
+                </div>
+                <!-- Nút bấm để chuyển đổi ảnh -->
+                <div class="slide-buttons">
+                    <button id="rate-prev"><i class="ri-arrow-left-line"></i></button>
+                    <button id="rate-next"><i class="ri-arrow-right-line"></i></button>
                 </div>
             </div>
         </section>
-    </main>
-    <section class="rate">
-        <div class="rate-header">
-            <h1 class="rate-title">KHÁCH HÀNG NÓI GÌ VỀ CHÚNG TÔI</h1>
-        </div>
+        <!-- Blog -->
+        <section class="blog" id="blog">
+            <h1 class="blog-title">
+                TIN TỨC MỚI NHẤT
+            </h1>
+            <div class="blog-container">
+                <div class="blog-left">
+                    <div class="blog-left-content">
+                        <div class="blog-vision">
+                            <a href="#" class="blog-date">
+                                <span class="dt">
+                                    January 12, 2019
+                                </span>
+                            </a>
+                            <span class="i">|</span>
+                            <span class="eye">
+                                <i class="fa-regular fa-eye"></i>
+                                <span>1</span>
+                            </span>
+                            <span class="comment">
+                                <i class="fa-solid fa-comment-dots"></i>
+                                <span>0</span>
+                            </span>
+                            <a href="#" class="blog-header">
+                                <h3>In London, changed the terms of discounts for airlines to pay airport taxes</h3>
+                            </a>
+                            <div class="blog-text">
+                                <p>Integer maximus accumsan nunc, sit amet tempor lectus facilisis eu. Cras vel elit
+                                    felis.
+                                    Vestibulum convallis ipsum id a …</p>
+                            </div>
+                        </div>
+                        <div class="blog-vision">
+                            <a href="#" class="blog-date">
+                                <span class="dt">
+                                    January 12, 2019
+                                </span>
+                            </a>
+                            <span class="i">|</span>
+                            <span class="eye">
+                                <i class="fa-regular fa-eye"></i>
+                                <span>1</span>
+                            </span>
+                            <span class="comment">
+                                <i class="fa-solid fa-comment-dots"></i>
+                                <span>0</span>
+                            </span>
+                            <a href="#" class="blog-header">
+                                <h3>In London, changed the terms of discounts for airlines to pay airport taxes</h3>
+                            </a>
+                            <div class="blog-text">
+                                <p>Integer maximus accumsan nunc, sit amet tempor lectus facilisis eu. Cras vel elit
+                                    felis.
+                                    Vestibulum convallis ipsum id a …</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-right">
+                    <div class="blog-right-content">
+                        <div class="blog-thumb">
+                            <img src="static/images/banner.jpg">
+                        </div>
+                        <div class="blog-vision">
+                            <a href="#" class="blog-date">
+                                <span class="dt">
+                                    January 12, 2019
+                                </span>
+                            </a>
+                            <span class="i">|</span>
+                            <span class="eye">
+                                <i class="fa-regular fa-eye"></i>
+                                <span>1</span>
+                            </span>
+                            <span class="comment">
+                                <i class="fa-solid fa-comment-dots"></i>
+                                <span>0</span>
+                            </span>
+                            <a href="#" class="blog-header">
+                                <h3>In London, changed the terms of discounts for airlines to pay airport taxes</h3>
+                            </a>
+                            <div class="blog-text">
+                                <p>Integer maximus accumsan nunc, sit amet tempor lectus facilisis eu. Cras vel elit
+                                    felis.
+                                    Vestibulum convallis ipsum id a …</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-right-content">
+                        <div class="blog-thumb">
+                            <img src="static/images/banner.jpg">
+                        </div>
+                        <div class="blog-vision">
+                            <a href="#" class="blog-date">
+                                <span class="dt">
+                                    January 12, 2019
+                                </span>
+                            </a>
+                            <span class="i">|</span>
+                            <span class="eye">
+                                <i class="fa-regular fa-eye"></i>
+                                <span>1</span>
+                            </span>
+                            <span class="comment">
+                                <i class="fa-solid fa-comment-dots"></i>
+                                <span>0</span>
+                            </span>
+                            <a href="#" class="blog-header">
+                                <h3>In London, changed the terms of discounts for airlines to pay airport taxes</h3>
+                            </a>
+                            <div class="blog-text">
+                                <p>Integer maximus accumsan nunc, sit amet tempor lectus facilisis eu. Cras vel elit
+                                    felis.
+                                    Vestibulum convallis ipsum id a …</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-btn">
+                <a href="Error_Page/index.html" class="btn">
+                    Nhiều tin tức hơn &rightarrow;
+                </a>
+            </div>
+        </section>
 
-        <div class="rate-container">
-            <!-- Bản clone của slide cuối -->
-            <div class="rate-content">
-                <img src="static/images/avatar1.avif">
-                <p>Tôi rất ấn tượng với chất lượng dịch vụ và sự tiện nghi của chuyến bay. Hãng hàng không đã mang đến
-                    cho tôi một trải nghiệm bay thoải mái và đáng nhớ. Cảm ơn WeBay rất nhiều!</p>
-                <i class="fa-solid fa-quote-left"></i>
-                <h3>Lê Thị Mai</h3>
-            </div>
-            <div class="rate-content">
-                <img src="static/images/avatar1.avif">
-                <p>Dịch vụ tuyệt vời và trải nghiệm bay rất thoải mái! Đội ngũ nhân viên rất chuyên nghiệp và thân
-                    thiện. Tôi chắc chắn sẽ tiếp tục lựa chọn WeBay cho các chuyến đi của mình.</p>
-                <i class="fa-solid fa-quote-left"></i>
-                <h3>Nguyễn Thị Lan</h3>
-            </div>
-            <div class="rate-content">
-                <img src="static/images/avatar1.avif">
-                <p>Exceptional service and a truly luxurious experience. The comfort of the seats in business class was
-                    unmatched, and the staff made sure every need was met. Highly recommend!</p>
-                <i class="fa-solid fa-quote-left"></i>
-                <h3>John Smith</h3>
-            </div>
-            <div class="rate-content">
-                <img src="static/images/avatar1.avif">
-                <p>Hãng hàng không này đã làm cho chuyến bay của tôi trở nên dễ chịu hơn rất nhiều. Các tiện ích và dịch
-                    vụ đều rất tốt. Tôi rất hài lòng với sự chăm sóc của các tiếp viên.</p>
-                <i class="fa-solid fa-quote-left"></i>
-                <h3>Trần Minh Tuấn</h3>
-            </div>
-            <div class="rate-content">
-                <img src="static/images/avatar1.avif">
-                <p>The in-flight entertainment and meals were top-notch. I appreciated the extra space and the ease of
-                    check-in. WeBay has set a high standard for air travel.</p>
-                <i class="fa-solid fa-quote-left"></i>
-                <h3>Emma Johnson</h3>
-            </div>
-            <div class="rate-content">
-                <img src="static/images/avatar1.avif">
-                <p>Tôi rất ấn tượng với chất lượng dịch vụ và sự tiện nghi của chuyến bay. Hãng hàng không đã mang đến
-                    cho tôi một trải nghiệm bay thoải mái và đáng nhớ. Cảm ơn WeBay rất nhiều!</p>
-                <i class="fa-solid fa-quote-left"></i>
-                <h3>Lê Thị Mai</h3>
-            </div>
-            <!-- Bản clone của slide đầu -->
-            <div class="rate-content">
-                <img src="static/images/avatar1.avif">
-                <p>Dịch vụ tuyệt vời và trải nghiệm bay rất thoải mái! Đội ngũ nhân viên rất chuyên nghiệp và thân
-                    thiện. Tôi chắc chắn sẽ tiếp tục lựa chọn WeBay cho các chuyến đi của mình.</p>
-                <i class="fa-solid fa-quote-left"></i>
-                <h3>Nguyễn Thị Lan</h3>
-            </div>
-            <!-- Nút bấm để chuyển đổi ảnh -->
-            <div class="slide-buttons">
-                <button id="rate-prev"><i class="ri-arrow-left-line"></i></button>
-                <button id="rate-next"><i class="ri-arrow-right-line"></i></button>
-            </div>
-        </div>
-    </section>
-    <!-- Blog -->
-    <section class="blog" id="blog">
-        <h1 class="blog-title">
-            TIN TỨC MỚI NHẤT
-        </h1>
-        <div class="blog-container">
-            <div class="blog-left">
-                <div class="blog-left-content">
-                    <div class="blog-vision">
-                        <a href="#" class="blog-date">
-                            <span class="dt">
-                                January 12, 2019
-                            </span>
-                        </a>
-                        <span class="i">|</span>
-                        <span class="eye">
-                            <i class="fa-regular fa-eye"></i>
-                            <span>1</span>
-                        </span>
-                        <span class="comment">
-                            <i class="fa-solid fa-comment-dots"></i>
-                            <span>0</span>
-                        </span>
-                        <a href="#" class="blog-header">
-                            <h3>In London, changed the terms of discounts for airlines to pay airport taxes</h3>
-                        </a>
-                        <div class="blog-text">
-                            <p>Integer maximus accumsan nunc, sit amet tempor lectus facilisis eu. Cras vel elit felis.
-                                Vestibulum convallis ipsum id a …</p>
-                        </div>
-                    </div>
-                    <div class="blog-vision">
-                        <a href="#" class="blog-date">
-                            <span class="dt">
-                                January 12, 2019
-                            </span>
-                        </a>
-                        <span class="i">|</span>
-                        <span class="eye">
-                            <i class="fa-regular fa-eye"></i>
-                            <span>1</span>
-                        </span>
-                        <span class="comment">
-                            <i class="fa-solid fa-comment-dots"></i>
-                            <span>0</span>
-                        </span>
-                        <a href="#" class="blog-header">
-                            <h3>In London, changed the terms of discounts for airlines to pay airport taxes</h3>
-                        </a>
-                        <div class="blog-text">
-                            <p>Integer maximus accumsan nunc, sit amet tempor lectus facilisis eu. Cras vel elit felis.
-                                Vestibulum convallis ipsum id a …</p>
-                        </div>
-                    </div>
+        <!-- COPY NGUYÊN CÁI FOOTER -->
+        <!-- HTML phần footer -->
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-list">
+                    <h4>Địa chỉ</h4>
+                    <ul>
+                        <li><a href="#0">123 Đường Bay, Quận 1, TP. Hồ Chí Minh, Việt Nam</a></li>
+                        <li><a href="#0">+84 123 456 789</a></li>
+                        <li><a href="#0">support@webaycompany.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-news">
+                    <h4>Đăng ký nhận tin tức</h4>
+                    <p>Nhận thông tin mới nhất và ưu đãi đặc biệt từ WeBay</p>
+                    <input type="email" placeholder="Nhập email của bạn...">
+                    <button type="submit">
+                        Đăng ký
+                        <i class="ri-plane-fill plane-icon"></i>
+                    </button>
                 </div>
             </div>
-            <div class="blog-right">
-                <div class="blog-right-content">
-                    <div class="blog-thumb">
-                        <img src="static/images/banner.jpg">
-                    </div>
-                    <div class="blog-vision">
-                        <a href="#" class="blog-date">
-                            <span class="dt">
-                                January 12, 2019
-                            </span>
-                        </a>
-                        <span class="i">|</span>
-                        <span class="eye">
-                            <i class="fa-regular fa-eye"></i>
-                            <span>1</span>
-                        </span>
-                        <span class="comment">
-                            <i class="fa-solid fa-comment-dots"></i>
-                            <span>0</span>
-                        </span>
-                        <a href="#" class="blog-header">
-                            <h3>In London, changed the terms of discounts for airlines to pay airport taxes</h3>
-                        </a>
-                        <div class="blog-text">
-                            <p>Integer maximus accumsan nunc, sit amet tempor lectus facilisis eu. Cras vel elit felis.
-                                Vestibulum convallis ipsum id a …</p>
-                        </div>
-                    </div>
+            <div class="footer-container">
+                <div class="footer-list">
+                    <h4>Liên kết nhanh</h4>
+                    <ul>
+                        <li><a href="#">Trang chủ</a></li>
+                        <li><a href="Error_Page/index.html">Về chúng tôi</a></li>
+                        <li><a href="#blog">Tin tức</a></li>
+                        <li><a href="Contact_Page/index.html">Liên hệ</a></li>
+                    </ul>
                 </div>
-                <div class="blog-right-content">
-                    <div class="blog-thumb">
-                        <img src="static/images/banner.jpg">
-                    </div>
-                    <div class="blog-vision">
-                        <a href="#" class="blog-date">
-                            <span class="dt">
-                                January 12, 2019
-                            </span>
-                        </a>
-                        <span class="i">|</span>
-                        <span class="eye">
-                            <i class="fa-regular fa-eye"></i>
-                            <span>1</span>
-                        </span>
-                        <span class="comment">
-                            <i class="fa-solid fa-comment-dots"></i>
-                            <span>0</span>
-                        </span>
-                        <a href="#" class="blog-header">
-                            <h3>In London, changed the terms of discounts for airlines to pay airport taxes</h3>
-                        </a>
-                        <div class="blog-text">
-                            <p>Integer maximus accumsan nunc, sit amet tempor lectus facilisis eu. Cras vel elit felis.
-                                Vestibulum convallis ipsum id a …</p>
-                        </div>
-                    </div>
+                <div class="footer-list">
+                    <h4>Chính sách & quy định</h4>
+                    <ul>
+                        <li><a href="Error_Page/index.html">Điều khoản sử dụng</a></li>
+                        <li><a href="Error_Page/index.html">Chính sách bảo mật</a></li>
+                        <li><a href="Error_Page/index.html">Chính sách hành lý</a></li>
+                        <li><a href="Error_Page/index.html">Quy định vận chuyển</a></li>
+                    </ul>
+                </div>
+                <div class="footer-list">
+                    <h4>Hỗ trợ khách hàng</h4>
+                    <ul>
+                        <li><a href="Error_Page/index.html">Trung tâm hỗ trợ</a></li>
+                        <li><a href="#question">Câu hỏi thường gặp (FAQ)</a></li>
+                        <li><a href="Error_Page/index.html">Chính sách hoàn vé</a></li>
+                        <li><a href="Error_Page/index.html">Phản hồi và khiếu nại</a></li>
+                    </ul>
+                </div>
+                <div class="company">
+                    <h1 class="nav-logo"><a href="#">We<span>Bay</span></a></h1>
+                    <p>Bay cùng WeBay – Trải nghiệm đẳng cấp và tiện nghi, mang đến những chuyến đi an toàn
+                        và thoải mái nhất.</p>
                 </div>
             </div>
-        </div>
-        <div class="blog-btn">
-            <a href="Error_Page/index.html" class="suggest-btn">
-                Nhiều tin tức hơn &rightarrow;
-            </a>
-        </div>
-    </section>
-
-    <!-- COPY NGUYÊN CÁI FOOTER -->
-    <!-- HTML phần footer -->
-    <footer class="footer">
-        <div class="footer-top">
-            <div class="footer-list">
-                <h4>Địa chỉ</h4>
-                <ul>
-                    <li><a href="#0">123 Đường Bay, Quận 1, TP. Hồ Chí Minh, Việt Nam</a></li>
-                    <li><a href="#0">+84 123 456 789</a></li>
-                    <li><a href="#0">support@webaycompany.com</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <div class="footer-contact">
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/"><i class="fa-brands fa-github"></i></a>
+                        </li>
+                        <li>
+                            <a class="https://www.google.com.vn/?hl=vi"><i class="fa-brands fa-google"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <p class="footer-copyright">&copy; 2024 Copyright: Nguyễn Ngọc Linh - Đàm Thanh Tiến</p>
             </div>
-            <div class="footer-news">
-                <h4>Đăng ký nhận tin tức</h4>
-                <p>Nhận thông tin mới nhất và ưu đãi đặc biệt từ WeBay</p>
-                <input type="email" placeholder="Nhập email của bạn...">
-                <button type="submit">
-                    Đăng ký
-                    <i class="ri-plane-fill plane-icon"></i>
-                </button>
-            </div>
-        </div>
-        <div class="footer-container">
-            <div class="footer-list">
-                <h4>Liên kết nhanh</h4>
-                <ul>
-                    <li><a href="#0">Trang chủ</a></li>
-                    <li><a href="#0">Về chúng tôi</a></li>
-                    <li><a href="#0">Tin tức</a></li>
-                    <li><a href="#0">Liên hệ</a></li>
-                </ul>
-            </div>
-            <div class="footer-list">
-                <h4>Chính sách & quy định</h4>
-                <ul>
-                    <li><a href="#0">Điều khoản sử dụng</a></li>
-                    <li><a href="#0">Chính sách bảo mật</a></li>
-                    <li><a href="#0">Chính sách hành lý</a></li>
-                    <li><a href="#0">Quy định vận chuyển</a></li>
-                </ul>
-            </div>
-            <div class="footer-list">
-                <h4>Hỗ trợ khách hàng</h4>
-                <ul>
-                    <li><a href="#0">Trung tâm hỗ trợ</a></li>
-                    <li><a href="#0">Câu hỏi thường gặp (FAQ)</a></li>
-                    <li><a href="#0">Chính sách hoàn vé</a></li>
-                    <li><a href="#0">Phản hồi và khiếu nại</a></li>
-                </ul>
-            </div>
-            <div class="company">
-                <h1 class="nav-logo"><a href="#">We<span>Bay</span></a></h1>
-                <p>Bay cùng WeBay – Trải nghiệm đẳng cấp và tiện nghi, mang đến những chuyến đi an toàn
-                    và thoải mái nhất.</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="footer-contact">
-                <ul>
-                    <li>
-                        <a><i class="fa-brands fa-facebook-f"></i></a>
-                    </li>
-                    <li>
-                        <a><i class="fa-brands fa-github"></i></a>
-                    </li>
-                    <li>
-                        <a><i class="fa-brands fa-google"></i></a>
-                    </li>
-                    <li>
-                        <a><i class="fa-brands fa-instagram"></i></a>
-                    </li>
-                    <li>
-                        <a><i class="fa-brands fa-linkedin-in"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <p class="footer-copyright">&copy; 2024 Copyright: Nguyễn Ngọc Linh - Đàm Thanh Tiến</p>
-        </div>
-    </footer>
+        </footer>
+    </div>
     <script src="https://kit.fontawesome.com/7b1fd1d3b9.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="static/js/script.js"></script>

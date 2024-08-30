@@ -1,7 +1,7 @@
 /* CSS cho file Đăng nhập và đăng ký */
 .box-forms {
     width: 512px;
-    height: 400px;
+    height: 600px;
     max-width: 70%;
     margin: 6.5rem auto;
     position: relative;
@@ -125,6 +125,58 @@
 
 .policy:hover {
     color: #edac42;
+}
+
+.other {
+    position: relative;
+    width: 100%;
+}
+.other p {
+    color: #333;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 1.5rem;
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+}
+
+.other::before {
+    position: absolute;
+    content: "";
+    right: 1%;
+    height: 1px;
+    left: 1%;
+    top: 50%;
+    background-color: #333;
+    z-index: 0;
+}
+
+.socials {
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+    border: 1px solid rgba(0,0,0,.4);
+    border-radius: 15px;
+}
+
+.socials li {
+    width: 20%;
+    text-align: center;
+}
+
+.socials li .social {
+    display: block;
+    padding: 1rem;
+    border-right: 1px solid rgba(0,0,0,.4);
+}
+
+.socials li .social.last {
+    border-right: none;
+}
+
+.socials li .social img {
+    width: fit-content
 }
 
 /* Respoonsive cho mobile */

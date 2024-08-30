@@ -1,0 +1,452 @@
+.main-destination {
+    font-family: 'Roboto', sans-serif;
+} 
+
+/* CSS cho destination header */
+.destination-header {
+    position: relative;
+}
+.destination-header .banner {
+    position: relative;
+    height: 90vh;
+}
+
+.destination-header .banner::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.3);
+}
+
+.destination-header .banner img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.destination-header .header-section {
+    position: absolute;
+    left:0;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    margin: auto;
+    background-color: rgba(0,0,0,.5);
+    padding: 4rem 6rem;
+    border-radius: 25px;
+    text-align: center;
+    border: 2px solid rgba(255,255,255,.5);
+    width: 90%;
+}
+
+.destination-header .header-section .title {
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.destination-header .header-section .discr {
+    color: #ccc;
+    text-align: justify;
+    margin-bottom: 2rem;
+}
+
+.destination-header .header-section .read-more {
+    margin: 0 auto;
+    display: block;
+    width: fit-content;
+    padding: 1rem 3rem;
+    border-radius: 25px;
+    background-color: #f39c12;
+    color : #fff;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+.destination-header .header-section .read-more:hover {
+    background-color: #c7851b;
+}
+
+/* CSS destination container */
+.destination-container {
+    display: flex;
+    width: 1300px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+/* Container left */
+.destination-left {
+    width: 70%;
+}
+
+.destination-content {
+    padding: 4rem 1rem 4rem 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-title {
+    width: fit-content;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #3E4559;
+    position: relative;
+}
+
+.destination-content .content-image {
+    height: 430px;
+    overflow: hidden;
+}
+p.content-discr {
+    padding: 1rem 0;
+}
+
+/* Related destiation */
+.tours-contents {
+    display: flex;
+}
+.tours-content {
+    display: block;
+    width: 48%;
+    margin-right: 2%;
+    height: 380px;
+    background-image: url(../static/images/DienBien/DienBien-Scene.jpg);
+    background-size: 150%;
+    background-position: center;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+}
+
+.tours-content::before {
+    position: absolute;
+    content: "";
+    background-color: rgba(0,0,0,.3);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.tours-content:hover .tours-title{
+    color: #f39c12;
+}
+.tours-content .tours-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 2rem;
+}
+
+.rating {display: flex;}
+
+.rating .reviews {
+    color: #ccc;
+    margin-left: 1rem;
+}
+
+.tours-info .tours-title {
+    margin: .5rem 0;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 800;
+    transition: all .3s ease;
+}
+
+.tours-info .tours-days i {
+    color: #fff;
+    margin-right: 1rem;
+}
+
+.tours-info .tours-days span {
+    color: #ccc;
+}
+
+/* Comment */
+.comment-form .comment-field{
+    margin-bottom: 1rem;
+}
+
+.comment-form .comment-field p {
+    color: #ccc;
+    margin-bottom: .5rem;
+}
+
+.comment-form .comment-field input {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.comment-form .comment-field textarea {
+    width: 100%;
+    height: 200px;
+    padding: 1rem;
+    font-size: 1rem;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.stars {
+    display: flex;
+}
+
+.stars i{
+    color: #ddd;
+    cursor: pointer;
+}
+
+.stars i.active {
+    color: gold;
+}
+
+.comment-form button {
+    padding: 1rem 3rem;
+    background-color: #f39c12;
+    border: none;
+    border-radius: 25px;
+    margin-top: 1rem;
+    color: #FFF;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.comment-form button:hover {
+    background-color: #c7851b;
+}
+
+/* Comment Post */
+.comment-post {
+    display: flex;
+    padding: 3rem 0;
+}
+
+.comment-post:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+}
+
+.comment-post .avatar {
+    border-radius: 50%;
+    width: 15%;
+    overflow: hidden;
+}
+
+.comment-post .avatar img {
+    height: 100%;
+}
+
+.comment-post .comment-info {
+    width: 85%;
+    padding: 0 2rem;
+}
+
+.comment-post .comment-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: .5rem;
+}
+
+.comment-post .comment-info p {
+    color: #888;
+    margin-bottom: 1rem;
+}
+
+/* Tổng quan */
+.destination-right {
+    position: relative;
+    width: 30%;
+    padding: 4rem 2rem 2rem;
+    bottom: 0;
+}
+
+.overview {
+    margin-bottom: 3rem;
+}
+.overview h3 {
+    color: #000;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.overview h3::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 100%;
+    bottom: -.5rem;
+    background-color: #000;
+    height: 3px;
+}
+
+.overview ul {
+    list-style-type: decimal;
+    padding-left: 1rem;
+}
+
+.overview ul li a {
+    display: block;
+    text-decoration: none;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+    transition: all .3s ease;
+}
+
+.overview ul li a:hover {
+    color: #f39c12;
+}
+
+/* Booking */
+.booking {
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 2px 3px #888;
+}
+.booking .content{
+    background-image: url(../static/images/sidebar4.jpg );
+    background-position: center;
+    background-size: contain;
+    height: 150px;
+    border-radius: 25px 25px 0 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.booking .content .sale span {
+    border-radius: 20px;
+    padding: .5rem 1rem;
+    font-size: .85rem;
+    font-weight: 700;
+    color: #fff;
+    margin-right: 1rem;
+}
+
+.booking .content .sale span:first-child {
+    background-color: #EA2027;
+}
+
+.booking .content .sale span:last-child {
+    background-color: #009432;
+}
+
+.booking .book {
+    padding: 2rem;
+    font-size: 1.3rem;
+}
+
+.booking .book span {
+    text-decoration: line-through;
+    margin-left: .5rem;
+}
+
+.booking .book a {
+    display: block;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    background-color: #f39c12;
+    text-align: center;
+    margin-top: 1rem;
+    color: #fff;
+    border-radius: 35px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all .3s ease;
+}
+
+.booking .book a:hover {
+    background-color: #c7851b;
+}
+
+/* Responsive Code */
+@media screen and (min-width: 1024px){
+    /* chỉ áp dụng trên màn máy tính */
+    .right-content.fixed {
+        position: fixed;
+        top: 150px;
+        width: 22%;
+    }
+    
+    .right-content.absolute {
+        position: absolute;
+        bottom: 4rem;
+        width: 83%;
+    }
+    
+}
+@media screen and (min-width: 740px) and (max-width: 1023px) {
+    /* Css lại cho container */
+    .destination-container {
+        flex-direction: column-reverse;
+    }
+
+    /* Css lại cho side bar */
+    .destination-right {
+        width: 100% !important;
+    }
+
+    .right-content {
+        display: flex;
+    }
+
+    .right-content > * {
+        width: 50%;
+        padding: 1rem;
+    }
+
+    /* Css lại cho phần nội dung */
+    .destination-left {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .comment-post .avatar {
+        width: 100px !important;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 739px){
+    /* Css lại cho header */
+    .destination-header .header-section{
+        padding: 2rem;
+        max-height: 80vh;
+        overflow: auto;
+    }
+    /* Css lại cho container */
+    .destination-container {
+        flex-direction: column-reverse;
+    }
+
+    /* Css lại cho side bar */
+    .destination-right {
+        width: 500px;
+        max-width: 100% !important;
+    }
+    /* Css lại cho phần nội dung */
+    .destination-left {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    /* Css cho related destination */
+    .tours-contents {
+        flex-direction: column;
+    }
+
+    .tours-contents .tours-content {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    /* Css lại cho mục comment */
+    .comment-post .avatar {
+        width: 45px;
+        height: 45px;
+    }
+}

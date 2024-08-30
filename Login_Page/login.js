@@ -3,22 +3,26 @@ $(document).ready(function () {
     const passWord = "Abc123";
     const loginEmail = $("#login-email");
     const loginPassword = $("#login-password");
-    const resgiterFirstname = $("#resgiter-firstname");
-    const resgiterLastname = $("#resgiter-lastname");
-    const registerEmail = $("#resgiter-email");
-    const registerPassword = $("#resgiter-password");
+    const registerFirstname = $("#register-firstname");
+    const registerLastname = $("#register-lastname");
+    const registerEmail = $("#register-email");
+    const registerPassword = $("#register-password");
+    const confirmPassword = $("#confirm-password");
 
     //Kiểm tra xem có người dùng nào trong LocalStorage chưa
-    const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
+    let storedUsers = JSON.parse(localStorage.getItem('users'));
 
+    if (!Array.isArray(storedUsers)) {
+        storedUsers = [storedUsers];
+    }
     //Xử lý đăng ký tài khoản
-    function resgiter() {
-        if (resgiterFirstname.val() === '') {
+    function register() {
+        if (registerFirstname.val() === '') {
             setTimeout(function () {
                 alert("Tên người dùng không được để trống!");
             }, 200)
         }
-        else if (resgiterLastname.val() === '') {
+        else if (registerLastname.val() === '') {
             setTimeout(function () {
                 alert("Họ người dùng không được để trống!");
             }, 200)
@@ -43,14 +47,19 @@ $(document).ready(function () {
                     alert("Mật khẩu không được để trống!");
                 }, 200)
             } else {
-                storedUsers.push({
-                    email: registerEmail.val(),
-                    passWord: registerPassword.val(),
-                    firstname: resgiterFirstname.val(),
-                    lastname: resgiterLastname.val()
-                })
-                localStorage.setItem('users', JSON.stringify(storedUsers));
-                alert("Đăng ký thành công");
+                if (confirmPassword.val() !== registerPassword.val()) {
+                    alert("Xác nhận mật khẩu phải giống với mật khẩu ban đầu!");
+                } else {
+                    storedUsers.push({
+                        email: registerEmail.val(),
+                        passWord: registerPassword.val(),
+                        firstname: registerFirstname.val(),
+                        lastname: registerLastname.val()
+                    })
+                    localStorage.setItem('users', JSON.stringify(storedUsers));
+                    alert("Đăng ký thành công");
+                    $(".registerToLogin").click();
+                }
             }
         }
 
@@ -85,31 +94,10 @@ $(document).ready(function () {
         // Nếu email trong ô được lấy ra khác với email đã được set sẵn
         // sẽ xảy ra 2 trường hợp
         const user = storedUsers.find(function (user) {
-            return user.email === loginEmail.val()
+            return user.email === loginEmail.val();
         }
         );
 
-
-        // if (loginEmail.val() !== userEmail) {
-        //     // Xóa password trước
-        //     loginPassword.val("")
-        //     // Set border đỏ để báo hiệu nội dung có lỗi
-        //     loginEmail.css({
-        //         "border": "2px solid red"
-        //     })
-        //     // Email trống
-        //     if (loginEmail.val() === '') {
-        //         setTimeout(function () {
-        //             alert("Email không được để trống!");
-        //         }, 200)
-        //     }
-        //     // Email không đúng
-        //     else {
-        //         setTimeout(function () {
-        //             alert("Email không hợp lệ!");
-        //         }, 200)
-        //     }
-        // }
         if (!user) {
             // Xóa password trước
             loginPassword.val("")
@@ -136,7 +124,7 @@ $(document).ready(function () {
                 alert("Đăng nhập thành công!");
                 localStorage.setItem("isLogin", true); // Tạo một biến lưu trên local có thể đồng bộ hóa giữa nhiều file
                 localStorage.setItem("firstname", user.firstname); //Tạo một biến lưu tên người dùng
-                window.location.href = "../index.html";
+                window.history.back();
             }
         }
     }
@@ -151,6 +139,7 @@ $(document).ready(function () {
 
     // Nếu nhấn vào đăng nhập thì sẽ kiểm tra các điều kiện
     $("#login-btn").click(function () {
+        console.log('hello');
         login();
     })
 
@@ -163,7 +152,7 @@ $(document).ready(function () {
     })
 
     //Khi nhấn vào nút đăng ký
-    $("#resgiter-btn").click(function () {
-        resgiter();
+    $("#register-btn").click(function () {
+        register();
     })
 })

@@ -1,5 +1,14 @@
 // Nơi này dùng để chứa những file JavaScript dùng chung 
 $(document).ready(function () {
+    //Loading page
+    $(".main-page").fadeOut();
+    //Khi xử lý nhận ra là page sẽ load từ dưới lên
+    $(window).scrollTop();
+    setTimeout(function () {
+        $(".circle-loading").addClass("hide");
+        $(".main-page").fadeIn();
+    }, 1000);
+
     // Ẩn hiện menu con
     $(".menu-btn").click(function () {
         // Hiển thị menu khi responsive
@@ -53,7 +62,7 @@ $(document).ready(function () {
             $("nav").css({
                 "position": "fixed",
                 "top": 0,
-                "background-color": "rgba(25, 35, 45, 0.8)",
+                "background-color": "rgba(25, 35, 45, 0.8) !important !important",
                 "border": "none",
                 "animation": "move .3s"
             })
