@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .loading {
+            position: fixed;
+            background-color: #eaeaea;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+
+        .loading>div:first-child {}
+
+        @keyframes flyUp {
+            0% {
+                transform: translateY(0);
+            }
+
+            5% {
+                transform: translateY(-10px);
+            }
+
+            41.666666% {
+                transform: translateY(50px);
+            }
+
+            44% {
+                transform: translateY(50px);
+            }
+
+            100% {
+                transform: translateY(-100vh);
+            }
+        }
+
+        .loading-plane {
+            width: 120px;
+            position: relative;
+            animation: flying .2s ease infinite;
+        }
+
+        @keyframes flying {
+
+            0%,
+            100% {
+                transform: translate(-1px);
+            }
+
+            50% {
+                transform: translate(1px);
+            }
+        }
+
+        .loading-plane::after {
+            position: absolute;
+            content: "";
+            bottom: -101px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 120px;
+            width: 7px;
+            background: linear-gradient(#F79F1F, transparent);
+            animation: bootEngine 2.5s;
+            /* Thêm 4s cho progress bar*/
+        }
+
+        .loading-plane::before {
+            position: absolute;
+            content: "";
+            bottom: -101px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 120px;
+            width: 20px;
+            background: linear-gradient(#F79F1F, transparent);
+            filter: blur(10px);
+            animation: bootEngine 2.5s;
+            /* Thêm 4s cho progress bar*/
+        }
+
+        /* Vì không css cho thẻ giả được nên phải tính đúng % */
+        @keyframes bootEngine {
+            0% {
+                bottom: -101px;
+                height: 120px;
+                background: linear-gradient(#F79F1F, transparent);
+            }
+
+            75% {
+                bottom: -101px;
+                height: 120px;
+                background: linear-gradient(#F79F1F, transparent);
+            }
+
+            76% {
+                bottom: -181px;
+                height: 200px;
+                background: linear-gradient(#f71fe9, transparent);
+            }
+
+            100% {
+                bottom: -181px;
+                height: 200px;
+                background: linear-gradient(#f71fe9, transparent);
+            }
+
+        }
+
+        .loading i {
+            position: absolute;
+            background: rgba(0, 0, 0, .5);
+            top: -256px;
+            animation: cloudFly ease infinite;
+        }
+
+        @keyframes cloudFly {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(200vh);
+            }
+        }
+
+        /* Loading bar */
+        .loading-bar {
+            position: absolute;
+            width: 305px;
+            height: 100px;
+            text-align: center;
+            bottom: 0;
+        }
+
+        .progress-bar {
+            height: 20px;
+            background-color: #ccc;
+            border: 1px solid #bbb;
+            box-shadow: 0 0 1px #aaa;
+            border-radius: 10px;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .progress-bar span {
+            position: absolute;
+            left: 50%;
+            font-size: .85rem;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+
+        .progress {
+            position: absolute;
+            width: 300px;
+            height: 15px;
+            border-radius: 10px;
+            left: 2.5px;
+            right: -2.5px;
+            background-color: #F79F1F;
+            animation: progress 1.5s linear;
+        }
+
+        @keyframes progress {
+            0% {
+                width: 0;
+            }
+
+            15% {
+                width: 0;
+            }
+
+            17% {
+                width: calc(17*3px);
+            }
+
+            26% {
+                width: calc(17*3px);
+            }
+
+            28% {
+                width: calc(28*3px);
+            }
+
+            49% {
+                width: calc(28*3px);
+            }
+
+            51% {
+                width: calc(51*3px);
+            }
+
+            80% {
+                width: calc(51*3px);
+            }
+
+            92% {
+                width: calc(92*3px);
+            }
+
+            100% {
+                width: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loading">
+        <div>
+            <div class="loading-plane">
+                <img src="../static/images/plane-load.png">
+            </div>
+        </div>
+        <div class="loading-bar">
+            <div class="loading-bar-text">Loading...</div>
+            <div class="progress-bar">
+                <span>0%</span>
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        //Xử lý sự kiện load đầu trang
+        function loading() {
+            let element = $(".loading");
+            let count = 50;
+            let i = 0;
+            while (i < count) {
+                //Tạo thẻ i cho hiệu ứng bay
+                let cloud = $("<i></i>")
+                let l = Math.floor(Math.random() * window.innerWidth);
+                let duration = Math.random() * 2 + 1;
+                let h = Math.random() * 100 + 20;
+
+                cloud.css({
+                    "left": `${l}px`,
+                    "height": `${h}px`,
+                    "width": "1px",
+                    "animation-duration": `${duration}s`
+                })
+
+                element.append(cloud);
+                i++;
+            }
+
+            //Hàm để thay đổi % đẹp mắt hơn
+            function animateProgress(current, target, duration) {
+                //Tạo một vòng lặp sau một khoảng thời gian nhanh hơn 40ms để tăng giá trị % lên
+                let interval = setInterval(function () {
+                    current += 1;
+                    $(".progress-bar span").text(`${current}%`)
+                    if (current >= target) {
+                        clearInterval(interval);
+                    }
+                }, duration);
+            }
+
+            //Hiển thị thay đổi % load
+            per = 0;
+            //Thay đổi phần trăm dựa trên % trên keyframe progress
+            setTimeout(function () {
+                animateProgress(0, 17, 20);
+            }, 255 - (17 - 0) * 20);
+            setTimeout(function () {
+                animateProgress(17, 28, 20);
+            }, 420 - (28 - 17) * 20);
+            setTimeout(function () {
+                animateProgress(28, 51, 20);
+            }, 780 - (51 - 28) * 20);
+            setTimeout(function () {
+                animateProgress(51, 92, 20);
+            }, 1380 - (92 - 51) * 20);
+            setTimeout(function () {
+                animateProgress(92, 100, 20);
+            }, 1500);
+            //Sau khi load xong 4s
+            setTimeout(function () {
+                $(".loading>div:first-child").css({
+                    "animation": "flyUp 2s"
+                });
+                $(".loading-bar-text").text("Completed");
+            }, 1000)
+        }
+        loading();
+    </script>
+</body>
+
+</html>

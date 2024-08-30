@@ -21,6 +21,10 @@
     padding-bottom: 2rem;
 }
 
+.btn {
+    display: flex;
+}
+
 .error-btn {
     display: block;
     text-decoration: none;
@@ -31,7 +35,8 @@
     background-color: #f6ba58;
     border: 1px solid #f6ba58;
     border-radius: 5px;
-    padding: 1rem 0;
+    padding: 1rem;
+    margin: 1rem;
     text-align: center;
     width: 160px;
     transition: all .3s ease;

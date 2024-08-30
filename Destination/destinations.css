@@ -1,0 +1,713 @@
+body {
+    background-color: #000;;
+}
+
+header {
+    background: url(../static/images/destination-header.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+header::before {
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    position: absolute;
+    z-index: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0,0,0,.8));
+}
+
+nav {
+    position: relative !important;
+    background-color: transparent !important;
+}
+
+nav .navbar {
+    border-bottom: 1px solid rgba(255,255,255,.2);
+}
+
+/* CSS cho header destination */
+.destinations-top {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    width: 1200px;
+    max-width: 100%;
+    margin: 4rem auto;
+}
+
+.destinations-top h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.destinations-search {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.search-item {
+    width: 18%;
+}
+
+.search-item .search-title {
+    color: rgba(62, 69, 89, 0.35);
+    font-size: .85rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.search-item .search-input {
+    font-size: .8rem;
+    padding: 1.25rem;
+    margin: 0;
+    width: 100%;
+    border: 2px solid rgba(0,0,0,.1);
+    border-right: 0;
+}
+
+.search-input.first {
+    border-radius: 10px 0 0 10px;
+}
+
+.search-input.last {
+    border-right: 2px solid rgba(0,0,0,.1);
+    border-radius: 0 10px 10px 0 ;
+}
+
+.search-item .search-input > *{
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+/* Css cho select box */
+.select-btn {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+}
+
+.search-input span,
+.search-input i{
+    font-size: .85rem;
+    transition: all .3s ease;
+}
+
+.select-btn i.down {
+    transform: rotate(180deg);
+}
+
+.select-btn .select-options {
+    position: absolute;
+    left: -1.25rem;
+    right: -1.25rem;
+    background-color: #ffff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    list-style-type: none;
+    top: 3rem;
+    border-radius: 15px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    transition: all .3s ease;
+}
+
+.select-btn .select-options.down {
+    opacity: 1;
+    visibility: visible;
+}
+
+.select-option {
+    padding: 1rem;
+    width: 100%;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.select-option:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Css cho calendar */
+
+.calendar-btn {
+    position: relative;
+}
+
+.calendar-views {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+
+.calendar-header span {
+    font-size: 1.25rem;
+    font-weight: 500;
+    display: block;
+}
+
+.calendar-header .calendar-icons {
+    display: flex;
+}
+
+.calendar-header .calendar-icons i {
+    margin-left: .25rem;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.calendar-header .calendar-icons i:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.calendar-container {
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    width: 360px;
+    left: 50%;
+    transform: translateX(-180px);
+    top: 3rem;
+    background-color: #fff;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 2px #333;
+    border-radius: 10px;
+    padding: 1.5rem;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.calendar-container.down {
+    opacity: 1;
+    visibility: visible;
+}
+
+.calendar-days,
+.calendar-week {
+    text-align: center;
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.calendar-days li,
+.calendar-week li {
+    width: calc(100% / 7);
+    font-size: .9rem;
+    padding: .5rem;
+    transition: all .3s ease;
+}
+
+.calendar-days li {
+    cursor: pointer;
+}
+
+.calendar-week li {
+    font-weight: 500;
+}
+
+.calendar-days li.inactive {
+    color: #999;
+}
+
+
+.calendar-days li.active {
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.calendar-days li:hover {
+    border-radius: 10px;
+    background-color: #f3f3f3;
+}
+
+.destinations-search button {
+    padding: 1.25rem;
+    font-size: 1rem;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: none;
+    background-color: #f39c12;
+    color: #fff;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.destinations-search button:hover {
+    background-color: #8e631f;
+}
+
+/* CSS cho phần tất cả những hình điểm đến thu nhỏ */
+.destinations-places {
+    position: relative;
+    display: flex;
+    margin-bottom: 4rem;
+}
+
+.destinations-place {
+    display: block;
+    width: 16.66%;
+    padding: .5rem;
+    position: relative;
+}
+
+.destinations-place div {
+    height: calc(16vw - 1rem);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.destinations-place div img {
+    height: 100%;
+}
+
+.destinations-place h3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 900;
+    text-shadow: 0 0 10px #000;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Main destination */
+.destinations-container {
+    width: 1300px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.destinations-left {
+    font-family: 'Roboto', sans-serif;
+    width: 65%;
+    max-width: 100%;
+}
+
+.destinations-left .destinations-content {
+    background: url(../static/images/destination-backgound-1.jpg);
+    height: 430px;
+    text-decoration: none;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 30px 70px 65px;
+    position: relative;
+    margin: 1rem;
+}
+
+.destinations-left .destinations-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); 
+    z-index: 0; 
+    border-radius: 25px; 
+}
+
+.destinations-left .destinations-content:hover > .content-title {
+    color: #f39c12;
+}
+
+.destinations-left .destinations-content *{
+    z-index: 1;
+}
+
+.destinations-content .rating {
+    display: flex;
+    align-items: center;
+}
+
+.destinations-content .rating .stars i:not(:last-child) {
+    color: gold;
+}
+
+.destinations-content .rating .stars i:last-child {
+    color: #fff;
+}  
+
+.destinations-content .rating .reviews {
+    color: #ccc;
+    font-size: .9rem;
+    padding-left: 1rem;
+} 
+
+.destinations-content .content-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: .5rem;
+    transition: all .3s ease;
+}
+
+.destinations-content .content-discr {
+    font-style: italic;
+    color: #ccc;
+    font-size: 1.1rem;
+    margin-bottom: .5rem;
+}
+
+.destinations-content .content-days i{
+    color: #fff;
+    padding-right: 10px;
+}
+
+.destinations-content .content-days span{
+    color: #ccc;
+    font-size: 1.1rem;
+}
+
+
+
+.destinations-left .destinations-pagination ul {
+    list-style-type: none;
+    display: flex;
+    margin-bottom: 6rem;
+}
+
+.destinations-left .destinations-pagination ul li {
+    text-decoration: none;
+    background-color: rgba(255,255,255,.2);
+    color: #fff;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all .3s ease;
+}
+
+.destinations-left .destinations-pagination ul li:hover {
+    background-color: #ccc;
+    color: #f39c12;
+}
+
+.destinations-left .destinations-pagination ul li.current {
+    background-color: #f39c12;
+    color: #fff !important;
+}
+
+.destinations-left .destinations-pagination ul li.prev:hover,
+.destinations-left .destinations-pagination ul li.next:hover {
+    color: #3360dc;
+}
+
+/* CSS cho slide bar bên cạnh */
+.destinations-right {
+    font-family: 'Roboto', sans-serif;
+    width: 35%;
+    padding:1rem;
+}
+
+/* Lastest tours */
+.lastest-tours {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+}
+.lastest-tours .tours-title {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+} 
+
+.lastest-tours .tours-list .tours-item {
+    display: flex;
+    padding: 1rem 0;
+    text-decoration: none;
+}
+
+.lastest-tours .tours-list .tours-item:not(:last-child) {
+    border-bottom: 1px solid rgba(62, 69, 89, 0.2);
+}
+
+.tours-item .tours-img {
+    width: 30%;
+}
+
+.tours-item .tours-img img {
+    border-radius: 10px;
+}
+
+.tours-item .tours-info {
+    margin-left: 2rem;
+}
+
+.tours-info .title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: .5rem 0;
+    color: #000;
+}
+
+.tours-info .cost {
+    margin-bottom: .5rem;
+}
+
+.tours-info .cost b {
+    color: #f39c12;
+}
+
+.tours-info .cost .old-cost {
+    color: #333;
+    text-decoration: line-through;
+}
+
+
+.tours-info .days i {
+    color: #000;
+    margin-right: .5rem;
+}
+
+.tours-info .days span {
+    color: #888;
+}
+
+/* Recent articles */
+.recent-articles {
+    margin: 2rem 0;
+    padding: 2rem;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+.recent-articles .articles-title {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.articles-list .articles-item {
+    text-decoration: none;
+    display: flex;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+}
+
+.articles-list .articles-item .img {
+    width: 30%;
+    
+}
+
+.articles-list .articles-item .img img {
+    border-radius: 10px;
+}
+
+.articles-list .articles-item .articles-info {
+    width: 50%;
+    padding-left: 2rem;
+}
+
+.articles-info .title {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+}
+
+.articles-info .days i {
+    color: #fff;
+    margin-right: .5rem;
+}
+
+.articles-info .days span {
+    color: #ccc;
+}
+
+/* CSS slide bar get a question */
+.get-question {
+    background-color: #f39c12;
+    padding : 2rem;
+    border-radius: 15px;
+}
+
+.get-question .title {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+.get-question .discr {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.get-question a {
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    background-color: blue;
+    color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 0 5px lightskyblue;
+    transition: all .3s ease;
+}
+
+.get-question a:hover {
+    background-color: darkblue;
+}
+
+/* Responsive code */
+@media screen and (min-width: 740px) and (max-width: 1023px) {
+    /* CSS lại cho khung search */
+    .destinations-search .search-item{
+        width: 32%;
+    }
+
+    .destinations-search .search-item:nth-child(3) .search-input {
+        border-right: 2px solid rgba(0, 0, 0, 0.1);
+        border-radius: 0 10px 10px 0;
+    }
+
+    .destinations-search .search-item:nth-child(4) .search-input {
+        border-radius: 10px 0 0 10px;
+    }
+
+    .destinations-search .search-item:nth-child(5) .search-input {
+        border-radius: 0;
+        border-right: 0;
+    }
+
+    .destinations-search button {
+        width: 32%;
+        border-radius: 0 10px 10px 0;
+        margin-left: 0;
+        border: 2px solid #f39c12;
+    }
+
+    .destinations-search button:hover {
+        border: 2px solid #8e631f;
+    }
+    /* CSS cho những hình nhỏ */
+
+    .destinations-places {
+        flex-wrap: wrap;
+    }
+    .destinations-place {
+        width: 20%;
+    }
+
+    .destinations-place div {
+        height: calc(20vw - 1.5rem);
+    }
+
+    /* Css lại cho container */
+    .destinations-container {
+        flex-direction: column;
+    }
+
+    .destinations-left, .destinations-right {
+        width: 100% !important;
+    }
+
+    .tours-item .tours-img {
+        width: 10%;
+    }
+
+    .articles-list .articles-item .img {
+        width: 10%;
+    }
+}
+
+@media screen and (max-width: 739px) {
+    /* Css lại cho search header */
+    .destinations-search {
+        flex-direction: column;
+        margin: 0 1rem;
+    }
+
+    .destinations-search .search-item {
+        width: 100%;
+    }
+
+    .destinations-search .search-item .search-input {
+        border: 2px solid rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    .calendar-container {
+        width: 100%;    
+        left: 0 !important;
+        transform: translateX(0) !important;
+    }
+
+    .destinations-search button {
+        width: 100%;
+        border-radius: 10px;
+        margin-top: 2rem;
+    }
+
+    /* Css lại cho những hình nhỏ */
+    .destinations-places {
+        overflow: hidden;
+    }
+
+    .destinations-place {
+        min-width: 25%;
+    }
+    .destinations-place div {
+        height: calc(25vw - 1.5rem);
+    }
+    /* Css lại cho container */
+    .destinations-container {
+        flex-direction: column;
+    }
+
+    .destinations-left, .destinations-right {
+        width: 100% !important;
+    }
+
+    .tours-item .tours-img {
+        width: 10%;
+    }
+
+    .articles-list .articles-item .img {
+        width: 10%;
+    }
+}
