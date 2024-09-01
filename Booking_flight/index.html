@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found</title>
+    <title>Đặt vé máy bay | WeBay</title>
     <link rel="stylesheet" href="../static/css/common_use/commonuse.css">
-    <link rel="stylesheet" href="error.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
         integrity="sha512-MqL4+Io386IOPMKKyplKII0pVW5e+kb+PI/I3N87G3fHIfrgNNsRpzIXEi+0MQC0sR9xZNqZqCYVcC61fL5+Vg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="booking.css">
 </head>
 
 <body>
@@ -118,7 +118,7 @@
                                     </li>
                                     <li class="user-feature">
                                         <i class="ri-briefcase-4-fill"></i>
-                                        <a href="../Flight_Manager/index.html">Quản lý chuyến bay</a>
+                                        <a href="#">Quản lý chuyến bay</a>
                                     </li>
                                     <li class="user-feature">
                                         <i class="ri-mail-line"></i>
@@ -171,108 +171,162 @@
             </div>
         </nav>
 
-        <main class="error">
-            <div class="error-content">
-                <h1>404</h1>
-                <h2>Opps! Page Not Found</h2>
-                <p>Trang bạn đang tìm kiếm đã bị di chuyển, xóa, đổi tên hoặc có thể chưa bao giờ tồn tại.</p>
-                <div class="btn">
-                    <a class="error-btn" href="../index.html">Trang chủ</a>
-                    <a class="error-btn return-btn" href="#">Trở lại</a>
+        <!-- HTML đặt vé -->
+        <main class="booking">
+            <h1 class="booking-title">Đặt vé máy bay</h1>
+            <div class="booking-find-flight">
+                <div class="booking-nav">
+                    <ul class="booking-list">
+                        <li class="booking-item active" rel="round-trip">Vé khứ hồi</li>
+                        <li class="booking-item" rel="oneway">Vé một chiều</li>
+                    </ul>
                 </div>
+                <div class="booking-form active">
+                    <div class="input">
+                        <span>Nơi khởi hành: </span>
+                        <div class="input-field select">
+                            <div class="select-btn">
+                                <span class="from">Chọn điểm đi</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <ul class="options">
+                                <li class="option">Đà Lạt</li>
+                                <li class="option">Phú Quốc</li>
+                                <li class="option">London</li>
+                                <li class="option">Bangkok</li>
+                                <li class="option">Tokyo</li>
+                                <li class="option">Điện Biên</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <span>Nơi đến: </span>
+                        <div class="input-field select">
+                            <div class="select-btn">
+                                <span class="to">Chọn điểm đến</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <ul class="options">
+                                <li class="option">Đà Lạt</li>
+                                <li class="option">Phú Quốc</li>
+                                <li class="option">London</li>
+                                <li class="option">Bangkok</li>
+                                <li class="option">Tokyo</li>
+                                <li class="option">Điện Biên</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <span>Ngày khởi hành</span>
+                        <div class="input-field calendar-btn">
+                            <div class="calendar-views">
+                                <span class="day">dd-mm-yyyy</span>
+                                <i class="fa-regular fa-calendar"></i>
+                            </div>
+                            <div class="calendar-container">
+                                <div class="calendar-header">
+                                    <span>September 2024</span>
+                                    <div class="calendar-icons">
+                                        <i id="calendar-prev" class="fa-solid fa-chevron-left"></i>
+                                        <i id="calendar-next" class="fa-solid fa-chevron-right"></i>
+                                    </div>
+                                </div>
+                                <ul class="calendar-week">
+                                    <li>Sun</li>
+                                    <li>Mon</li>
+                                    <li>Tue</li>
+                                    <li>Wed</li>
+                                    <li>Thu</li>
+                                    <li>Fri</li>
+                                    <li>Sat</li>
+                                </ul>
+                                <ul class="calendar-days">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <span>Ngày về</span>
+                        <div class="input-field calendar-btn">
+                            <div class="calendar-views">
+                                <span class="day">dd-mm-yyyy</span>
+                                <i class="fa-regular fa-calendar"></i>
+                            </div>
+                            <div class="calendar-container">
+                                <div class="calendar-header">
+                                    <span>September 2024</span>
+                                    <div class="calendar-icons">
+                                        <i id="calendar-prev" class="fa-solid fa-chevron-left"></i>
+                                        <i id="calendar-next" class="fa-solid fa-chevron-right"></i>
+                                    </div>
+                                </div>
+                                <ul class="calendar-week">
+                                    <li>Sun</li>
+                                    <li>Mon</li>
+                                    <li>Tue</li>
+                                    <li>Wed</li>
+                                    <li>Thu</li>
+                                    <li>Fri</li>
+                                    <li>Sat</li>
+                                </ul>
+                                <ul class="calendar-days">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <span>Số hành khách</span>
+                        <div class="input-field select">
+                            <div class="select-btn">
+                                <span>1</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <ul class="options">
+                                <li class="option">1</li>
+                                <li class="option">2</li>
+                                <li class="option">3</li>
+                                <li class="option">4</li>
+                                <li class="option">5</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <span>Hạng vé</span>
+                        <div class="input-field select">
+                            <div class="select-btn">
+                                <span>Chọn hạng vé</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <ul class="options">
+                                <li class="option">Hạng thương gia</li>
+                                <li class="option">Hạng phổ thông</li>
+                                <li class="option">Hạng nhất</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <button>Kiểm tra</button>
+                    </div>
+                    <div class="display">
+
+                    </div>
+                </div>
+
             </div>
-            <div class="error-thumb">
-                <img src="../static/images/somthing_wrong.png" alt="">
+
+            <!-- Nhập thông tin người đặt vé -->
+            <div class="booking-fill-info">
+
             </div>
         </main>
-
-        <!-- HTML phần footer -->
-        <footer class="footer">
-            <div class="footer-top">
-                <div class="footer-list">
-                    <h4>Địa chỉ</h4>
-                    <ul>
-                        <li><a href="#0">123 Đường Bay, Quận 1, TP. Hồ Chí Minh, Việt Nam</a></li>
-                        <li><a href="#0">+84 123 456 789</a></li>
-                        <li><a href="#0">support@webaycompany.com</a></li>
-                    </ul>
-                </div>
-                <div class="footer-news">
-                    <h4>Đăng ký nhận tin tức</h4>
-                    <p>Nhận thông tin mới nhất và ưu đãi đặc biệt từ WeBay</p>
-                    <input type="email" placeholder="Nhập email của bạn...">
-                    <button type="submit">
-                        Đăng ký
-                        <i class="ri-plane-fill plane-icon"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="footer-container">
-                <div class="footer-list">
-                    <h4>Liên kết nhanh</h4>
-                    <ul>
-                        <li><a href="../index.html">Trang chủ</a></li>
-                        <li><a href="../Error_Page/index.html">Về chúng tôi</a></li>
-                        <li><a href="../index.html#blog">Tin tức</a></li>
-                        <li><a href="#">Liên hệ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-list">
-                    <h4>Chính sách & quy định</h4>
-                    <ul>
-                        <li><a href="../Error_Page/index.html">Điều khoản sử dụng</a></li>
-                        <li><a href="../Error_Page/index.html">Chính sách bảo mật</a></li>
-                        <li><a href="../Error_Page/index.html">Chính sách hành lý</a></li>
-                        <li><a href="../Error_Page/index.html">Quy định vận chuyển</a></li>
-                    </ul>
-                </div>
-                <div class="footer-list">
-                    <h4>Hỗ trợ khách hàng</h4>
-                    <ul>
-                        <li><a href="../Error_Page/index.html">Trung tâm hỗ trợ</a></li>
-                        <li><a href="../index.html#question">Câu hỏi thường gặp (FAQ)</a></li>
-                        <li><a href="../Error_Page/index.html">Chính sách hoàn vé</a></li>
-                        <li><a href="../Error_Page/index.html">Phản hồi và khiếu nại</a></li>
-                    </ul>
-                </div>
-                <div class="company">
-                    <h1 class="nav-logo"><a href="../index.html">We<span>Bay</span></a></h1>
-                    <p>Bay cùng WeBay – Trải nghiệm đẳng cấp và tiện nghi, mang đến những chuyến đi an toàn
-                        và thoải mái nhất.</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="footer-contact">
-                    <ul>
-                        <li>
-                            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/"><i class="fa-brands fa-github"></i></a>
-                        </li>
-                        <li>
-                            <a class="https://www.google.com.vn/?hl=vi"><i class="fa-brands fa-google"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <p class="footer-copyright">&copy; 2024 Copyright: Nguyễn Ngọc Linh - Đàm Thanh Tiến</p>
-            </div>
-        </footer>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <script src="https://kit.fontawesome.com/7b1fd1d3b9.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="../static/js/Common_Use/commonuse.js"></script>
-    <script>
-        $(".return-btn").click(function () {
-            window.history.back();
-        })
-    </script>
+    <script src="booking.js"></script>
 </body>
 
 </html>

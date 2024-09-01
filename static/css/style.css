@@ -379,6 +379,7 @@ section.header-container  p {
 }
 
 .header-btn {
+    text-decoration: none;
     padding: 1rem 2rem;
     background: transparent;
     border: 2px solid #f39c12;

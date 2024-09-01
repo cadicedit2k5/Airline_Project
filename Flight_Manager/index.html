@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found</title>
+    <title>Chuyến bay của bạn | WeBay</title>
     <link rel="stylesheet" href="../static/css/common_use/commonuse.css">
-    <link rel="stylesheet" href="error.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
         integrity="sha512-MqL4+Io386IOPMKKyplKII0pVW5e+kb+PI/I3N87G3fHIfrgNNsRpzIXEi+0MQC0sR9xZNqZqCYVcC61fL5+Vg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="manager.css">
 </head>
+
 
 <body>
     <!-- Loading -->
@@ -118,7 +119,7 @@
                                     </li>
                                     <li class="user-feature">
                                         <i class="ri-briefcase-4-fill"></i>
-                                        <a href="../Flight_Manager/index.html">Quản lý chuyến bay</a>
+                                        <a href="#">Quản lý chuyến bay</a>
                                     </li>
                                     <li class="user-feature">
                                         <i class="ri-mail-line"></i>
@@ -171,108 +172,48 @@
             </div>
         </nav>
 
-        <main class="error">
-            <div class="error-content">
-                <h1>404</h1>
-                <h2>Opps! Page Not Found</h2>
-                <p>Trang bạn đang tìm kiếm đã bị di chuyển, xóa, đổi tên hoặc có thể chưa bao giờ tồn tại.</p>
-                <div class="btn">
-                    <a class="error-btn" href="../index.html">Trang chủ</a>
-                    <a class="error-btn return-btn" href="#">Trở lại</a>
+        <!--  -->
+        <main class="manager">
+            <h1 class="manager-title">Quản lý chuyến bay</h1>
+            <div class="manager-nav">
+                <ul class="manager-nav-list">
+                    <li class="manager-nav-item active" rel="find">Tìm kiếm chuyến bay</li>
+                    <li class="manager-nav-item" rel="my">Chuyến bay của bạn</li>
+                </ul>
+            </div>
+            <div class="manager-find-flight active" id="find">
+                <div class="left">
+                    <div class="top">
+                        <h2>Chuyến bay của tôi</h2>
+                        <p>Bạn muốn xem chuyến bay đã đặt, đổi lịch trình bay hay mua thêm dịch vụ hành lý,
+                            chỗ
+                            ngồi, suất ăn..., vui lòng điền thông tin bên dưới:</p>
+                    </div>
+                    <div class="manager-form">
+                        <input id="flight-code" type="text" placeholder="Nhập mã đặt chỗ*">
+                        <input id="lastname" type="text" placeholder="Họ*">
+                        <input id="firstname" type="text" placeholder="Tên*">
+                        <div class="manager-btn">
+                            <button>Tìm kiếm</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <p>Nhập nội dung vào bên kia</p>
                 </div>
             </div>
-            <div class="error-thumb">
-                <img src="../static/images/somthing_wrong.png" alt="">
+            <!-- Chuyến bay của tôi -->
+            <div class="manager-my-flight" id="my">
+                <h1>Nothing Found</h1>
+                <p>Trang web này có vẻ chưa hoạt động</p>
             </div>
         </main>
-
-        <!-- HTML phần footer -->
-        <footer class="footer">
-            <div class="footer-top">
-                <div class="footer-list">
-                    <h4>Địa chỉ</h4>
-                    <ul>
-                        <li><a href="#0">123 Đường Bay, Quận 1, TP. Hồ Chí Minh, Việt Nam</a></li>
-                        <li><a href="#0">+84 123 456 789</a></li>
-                        <li><a href="#0">support@webaycompany.com</a></li>
-                    </ul>
-                </div>
-                <div class="footer-news">
-                    <h4>Đăng ký nhận tin tức</h4>
-                    <p>Nhận thông tin mới nhất và ưu đãi đặc biệt từ WeBay</p>
-                    <input type="email" placeholder="Nhập email của bạn...">
-                    <button type="submit">
-                        Đăng ký
-                        <i class="ri-plane-fill plane-icon"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="footer-container">
-                <div class="footer-list">
-                    <h4>Liên kết nhanh</h4>
-                    <ul>
-                        <li><a href="../index.html">Trang chủ</a></li>
-                        <li><a href="../Error_Page/index.html">Về chúng tôi</a></li>
-                        <li><a href="../index.html#blog">Tin tức</a></li>
-                        <li><a href="#">Liên hệ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-list">
-                    <h4>Chính sách & quy định</h4>
-                    <ul>
-                        <li><a href="../Error_Page/index.html">Điều khoản sử dụng</a></li>
-                        <li><a href="../Error_Page/index.html">Chính sách bảo mật</a></li>
-                        <li><a href="../Error_Page/index.html">Chính sách hành lý</a></li>
-                        <li><a href="../Error_Page/index.html">Quy định vận chuyển</a></li>
-                    </ul>
-                </div>
-                <div class="footer-list">
-                    <h4>Hỗ trợ khách hàng</h4>
-                    <ul>
-                        <li><a href="../Error_Page/index.html">Trung tâm hỗ trợ</a></li>
-                        <li><a href="../index.html#question">Câu hỏi thường gặp (FAQ)</a></li>
-                        <li><a href="../Error_Page/index.html">Chính sách hoàn vé</a></li>
-                        <li><a href="../Error_Page/index.html">Phản hồi và khiếu nại</a></li>
-                    </ul>
-                </div>
-                <div class="company">
-                    <h1 class="nav-logo"><a href="../index.html">We<span>Bay</span></a></h1>
-                    <p>Bay cùng WeBay – Trải nghiệm đẳng cấp và tiện nghi, mang đến những chuyến đi an toàn
-                        và thoải mái nhất.</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="footer-contact">
-                    <ul>
-                        <li>
-                            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/"><i class="fa-brands fa-github"></i></a>
-                        </li>
-                        <li>
-                            <a class="https://www.google.com.vn/?hl=vi"><i class="fa-brands fa-google"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <p class="footer-copyright">&copy; 2024 Copyright: Nguyễn Ngọc Linh - Đàm Thanh Tiến</p>
-            </div>
-        </footer>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <script src="https://kit.fontawesome.com/7b1fd1d3b9.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="../static/js/Common_Use/commonuse.js"></script>
-    <script>
-        $(".return-btn").click(function () {
-            window.history.back();
-        })
-    </script>
+    <script src="manager.js"></script>
 </body>
 
 </html>

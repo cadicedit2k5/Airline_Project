@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+body {
+    background-color: #f2f2f2;
+
+    height: 120vh;
+}
+
+/* CSS cho Main Manager */
+.manager {
+    max-width: 100%;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.manager-title {
+    font-size: 3rem;
+    text-align: center;
+    margin: 5rem auto;
+}
+
+.manager-nav{
+    background-color: transparent !important;
+}
+
+.manager-nav-list {
+    list-style-type: none;
+    display: flex;
+}
+
+.manager-nav-item {
+    color: #888;
+    font-size: .935rem;
+    font-weight: 600;
+    padding: 1rem 1rem;
+    margin: 0 .25rem 0 0;
+    cursor: pointer;
+    border-radius: 10px 10px 0 0;
+    transition: all .3s ease-in;
+}
+
+.manager-nav-item:active {
+    background-color: #f39c12;
+}
+
+.manager-nav-item.active {
+    color: #f39c12;
+    background-color: #f9f9f9;
+    box-shadow: 2px 0 rgba(0,0,0,.1);
+}
+
+/* Css cho tìm kiếm chuyến bay */
+.manager-find-flight {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 0 10px 10px 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.1);
+    display: none;
+}
+
+.manager-find-flight.active {
+    display: flex;
+}
+
+/* Content bên trái có form */
+.left {
+    width: 30%;
+}
+.left .top h2 {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.left .top p {
+    font-size: .9rem;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.manager-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.manager-form input {
+    padding: .5rem 1.5rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,.2);
+}
+
+.manager-form input:focus {
+    outline: 1px solid #f39c12;
+    background-color: #fff;
+}
+
+.manager-btn {
+    text-align: center;
+}
+
+.manager-form .manager-btn button {
+    padding: .75rem 2rem;
+    width: fit-content;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(-90deg, #f39c12, #EE5A24);
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+/* Css cho content bên phải */
+.right {
+    width: 70%;
+    padding-left: 2rem;
+}
+
+/* Thôn tin chuyến bay */
+.right .top h2 {
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+.top-content h3{
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.ticket {
+    background-color: #fff;
+    padding: 10px 35px 30px 49px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.2);
+    margin-bottom: 2rem;
+}
+
+.ticket-top {
+    font-size: .85rem;
+}
+
+.ticket-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ticket-container div h1 {
+    font-size: 2.5rem;
+}
+
+.ticket-container div span {
+    font-size: 2rem;
+    color: #555;
+}
+
+.ticket-container .mid {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.ticket-container .mid span {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.ticket-container .mid img {
+    height: 1rem;
+}
+
+/* CSS cho thông tin hành khách */
+.container {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.4);
+    padding: 1rem;
+}
+.container h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.container-contents {
+    display: flex;
+    gap: 1rem;
+}
+
+.container-content {
+    width: 100%;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 4px;
+}
+
+.container-content .btn {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0,0,0,.1);
+    padding: 10px;
+    border-radius: 4px 4px 0 0;
+}
+
+.container-content .btn i {
+    font-size: 1.5rem;
+    padding: 0 .5rem;
+}
+
+.container-content .btn h3 {
+    font-weight: 600;
+}
+
+.container-content .infos {
+    display: flex;
+}
+
+.container-content .info {
+    width: 50%;
+    padding: 1rem;
+}
+
+.container-content .info img{
+    width: 1rem;
+}
+
+.container-content .info span {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.container-content .info p {
+    font-size: 1.15rem;
+}
+
+/* Css cho chi tiết giá vé */
+.bottom {
+    padding-top: 1rem;
+}
+
+.bottom .bottom-container {
+    padding: 10px 16px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.4);
+}
+
+.bottom-container h2 {
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.bottom-container .btn {
+    background-color: rgba(0,0,0,.1);
+    padding: 10px 20px;
+    border-radius: 4px 4px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.bottom-container .btn i {
+    transform: rotate(0);
+}
+
+.bottom-container .btn i.active {
+    transform: rotate(180deg);
+}
+
+.bottom-contents {
+    display: flex;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 0 0 4px 4px;
+    height: 0;
+    overflow: hidden;
+}
+
+.bottom-contents.active {
+    height: auto;
+    overflow: visible;
+}
+
+.bottom-contents div {
+    display: flex;
+    justify-content: space-between;
+    margin: .25rem 0;
+}
+
+.bottom-content {
+    margin: 0 !important;
+    flex-direction: column;
+    width: 50%;
+    padding: 10px 16px;
+}
+
+.bottom-content:first-child {
+    border-right: 1px solid rgba(0,0,0,.1);
+}
+
+.bottom-content .title h4 {
+    color: #25A006;
+    font-weight: 500;
+}
+
+.bottom-content .cost {
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.bottom-content .total-cost {
+    font-size: 1.15rem;
+    font-weight: 700;
+    font-style: italic;
+    color: red;
+}
+
+/* Css cho chuyến bay của bạn */
+.manager-my-flight {
+    background-color: #f9f9f9;
+    border-radius: 0 10px 10px 10px;
+    padding: 10px 20px;
+    height: 70vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    display: none;
+}
+
+.manager-my-flight.active {
+    display: flex;
+}
+
+.manager-my-flight h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.manager-my-flight p {
+    font-size: 1.25rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 1023px) and (min-width: 740px) {
+    /* Tìm kiếm chuyến bay */
+    .manager-find-flight {
+        flex-direction: column !important;
+    }
+
+    .manager-find-flight .left {
+        width: 50%;
+        margin: 0 auto;
+    }
+    .manager-find-flight .right {
+        width: 100%;
+        padding : 0;
+    }
+}
+
+@media screen and (max-width: 739px) {
+    /* Header */
+    .manager-title {
+        font-size: 2rem;
+    }
+
+    /* nav */
+    .manager-nav-item {
+        width: 50%;
+        margin: 0;
+    }
+
+    /* Tìm kiếm chuyến bay */
+    .manager-find-flight {
+        flex-direction: column !important;
+    }
+
+    .manager-find-flight .left,
+    .manager-find-flight .right {
+        width: 100%;
+    }
+
+    /* Css lại cho vé */
+    .ticket-container div h1 {
+        font-size: 1.5rem;
+    }
+
+    .ticket-container div span {
+        font-size: 1.25rem;
+        color: #555;
+    }
+
+    .ticket-container .mid {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ticket-container .mid span {
+        font-size: .85rem;
+        font-weight: 500;
+    }
+
+    .manager-find-flight .right {
+        padding : 0;
+    }
+
+    /* Css lại cho thông tin hành khách */
+    .container .btn h3 {
+        font-size: 1rem !important;
+    }
+    .container-contents {
+        flex-direction: column;
+    }
+
+    .container-content {
+        width: 100%;
+    }
+    .container-content p {
+        font-size: .8rem !important;
+    }
+
+    /* Css lại cho chi tiết giá vé */
+    .bottom .btn h3 {
+        font-size: 1rem !important;
+    }
+    .bottom-contents {
+        flex-direction: column;
+    }
+
+    .bottom-content {
+        width: 100%;
+    }
+
+    .bottom-content:first-child {
+        border-right: none;
+        border-bottom: 1px solid rgba(0,0,0,.1);
+    }
+}

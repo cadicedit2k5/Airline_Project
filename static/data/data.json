@@ -127,5 +127,97 @@
             "activities-img": "static/images/",
             "activities-discription": ""
         }
+    ],
+    "flights": [
+        {
+            "flight-code": "WB01",
+            "last-name": "NGUYEN",
+            "first-name": "NGOC LINH",
+            "passenger": "Người lớn",
+            "flight": [
+                {
+                    "type": "Chuyến đi",
+                    "day": "T4, 28/8/2024",
+                    "from": "SGN",
+                    "time-to-go": "10:10",
+                    "to": "HAN",
+                    "time-arrive": "12:05",
+                    "seat": "01A",
+                    "prices": {
+                        "rank": 1010000,
+                        "VAT": 80800,
+                        "service": 215000,
+                        "sercurity": 100000,
+                        "bag": 200000
+                    }
+                },
+                {
+                    "type": "Chuyến về",
+                    "day": "T5, 29/8/2024",
+                    "from": "HAN",
+                    "time-to-go": "19:10",
+                    "to": "SGN",
+                    "time-arrive": "21:05",
+                    "seat": "01B",
+                    "prices": {
+                        "rank": 980000,
+                        "VAT": 80800,
+                        "service": 215000,
+                        "sercurity": 100000,
+                        "bag": 200000
+                    }
+                }
+            ]
+        }
+    ],
+    "bookings": [
+        {
+            "from": "SGN",
+            "to": "DLI",
+            "day": "5/9/2024",
+            "time-to-go": "11:20",
+            "time-arrive": "13:15",
+            "rank": 760000
+        },
+        {
+            "from": "SGN",
+            "to": "DIN",
+            "day": "5/9/2024",
+            "time-to-go": "11:20",
+            "time-arrive": "13:15",
+            "rank": 840000
+        },
+        {
+            "from": "HAN",
+            "to": "PQC",
+            "day": "6/9/2024",
+            "time-to-go": "19:10",
+            "time-arrive": "21:05",
+            "rank": 1700000
+        },
+        {
+            "from": "DLI",
+            "to": "DIN",
+            "day": "6/9/2024",
+            "time-to-go": "7:20",
+            "time-arrive": "9:15",
+            "rank": 900000
+        },
+        {
+            "from": "DIN",
+            "to": "DLI",
+            "day": "7/9/2024",
+            "time-to-go": "11:10",
+            "time-arrive": "13:05",
+            "rank": 800000
+        },
+        {
+            "from": "",
+            "to": "",
+            "day": "",
+            "time-to-go": "",
+            "time-arrive": "",
+            "rank": ""
+        }
     ]
 }
