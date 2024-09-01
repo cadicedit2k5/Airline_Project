@@ -16,11 +16,11 @@ $(document).ready(function () {
         'lastname': "Nguyen",
     }
 
-    localStorage.setItem('isLogin', false);
-    localStorage.setItem('users', JSON.stringify(adminUser));
-
     //Kiểm tra xem có người dùng nào trong LocalStorage chưa
     let storedUsers = JSON.parse(localStorage.getItem('users'));
+    if (storedUsers == null) {
+        localStorage.setItem('users', JSON.stringify(adminUser));
+    }
     if (!Array.isArray(storedUsers)) {
         storedUsers = [storedUsers];
     }
