@@ -162,7 +162,7 @@ $(window).ready(function () {
                 </a>
                 `);
                 $(`.destinations-content:nth-child(${data[i].id - 4 * (number - 1)})`).css({
-                    "background": `url(../../${data[i].banner})`
+                    "background": `url(../${data[i].banner})`
                 })
                 i++;
             } else {
