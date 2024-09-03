@@ -166,7 +166,7 @@ $(window).ready(function () {
                 })
                 i++;
             } else {
-                //Xử lý tạo nội dung trống
+                //Xử lý tạo nội dung trống (chưa làm)
                 break;
             }
         }

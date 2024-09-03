@@ -113,6 +113,7 @@
         width: 90% !important;
         margin: 0 auto;
         text-align: center;
+        padding-right: 0 !important;
     }
     .suggest-intro h3::after {
         left:50% !important;
@@ -129,6 +130,13 @@
     /* CSS lại cho phần ưu đãi */
     .deal-item {
         min-width: 50% !important;
+    }
+
+    .deal-item .deal-content .title {
+        height: 60px;
+    }
+    .deal-item .deal-content .title a {
+        font-size: 1.25rem !important;
     }
     .benefit-container {
         flex-direction: column;
@@ -149,6 +157,11 @@
         padding: 1rem !important;
     }
 
+    .question-paragraph {
+        font-size: .85rem;
+        height: 240px !important;
+    }
+
     /* CSS lại cho mục đánh giá */
     .rate  {
         height: 90vh !important;
@@ -165,11 +178,13 @@
     .slide-buttons {
         padding: 1rem !important;
     }
+    .slide-buttons button {
+        padding: .75rem !important;
+    }
 
     /* CSS lại cho phần blog post */
     .blog-container {
         flex-direction: column-reverse;
-        padding: 1rem;
     }
 
     .blog-left {

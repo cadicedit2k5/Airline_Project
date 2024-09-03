@@ -672,9 +672,9 @@ nav .navbar {
     }
 
     .calendar-container {
-        width: 100%;    
-        left: 0 !important;
-        transform: translateX(0) !important;
+        width: 280px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .destinations-search button {
@@ -689,10 +689,10 @@ nav .navbar {
     }
 
     .destinations-place {
-        min-width: 25%;
+        min-width: 33.33%;
     }
     .destinations-place div {
-        height: calc(25vw - 1.5rem);
+        height: calc(33.33vw - 1.5rem);
     }
     /* Css lại cho container */
     .destinations-container {
@@ -703,11 +703,57 @@ nav .navbar {
         width: 100% !important;
     }
 
-    .tours-item .tours-img {
-        width: 10%;
+    .destinations-left .destinations-content {
+        height: 260px;
+        padding: 20px;
     }
 
-    .articles-list .articles-item .img {
-        width: 10%;
+    .content-title {
+        font-size: 1.5rem !important;
+    }
+
+    .content-discr {
+        font-size: .9rem !important;
+    }
+
+    .destinations-pagination ul{
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .destinations-pagination li {
+        width: 45px !important;
+        height: 45px !important;
+        margin: 0 !important;
+    }
+    /* Css lai cho lastest tour */
+
+    .lastest-tours {
+        padding: 1.25rem;
+    }
+
+    .tours-item .tours-img {
+        width: 25%;
+    }
+
+    .tours-info {
+        margin-left: 1rem !important;
+    }
+
+    /* Css lai cho recent article */
+    .recent-articles {
+        padding: 1.25rem;
+    }
+
+    .articles-item .img {
+        width: 25%;
+    }
+
+    .articles-info .title{
+        font-size: .9rem !important;
+    }
+
+    .articles-info .days span {
+        font-size: .75rem;
     }
 }

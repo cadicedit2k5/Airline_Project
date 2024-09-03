@@ -138,7 +138,7 @@ $(document).ready(function () {
 
             // Kiểm tra vị trí hiện tại
             if (index + countDivInOneRow(container, contents) > slideLenght) {
-                alert('Bên này không còn gì');
+                index = 0;
             }
             else {
                 index += 1;
@@ -161,7 +161,7 @@ $(document).ready(function () {
 
             // Kiểm tra vị trí hiện tại
             if (index - 1 < 0) {
-                alert('Bên này không còn gì!');
+                index = slideLenght - countDivInOneRow(container, contents) + 1;
             }
             else {
                 index -= 1;

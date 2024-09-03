@@ -296,6 +296,9 @@ nav {
 
 .user-drop .user-bottom .user-features{
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
 }
 
 .user-features .user-feature {
@@ -327,6 +330,12 @@ nav {
     text-align: center;
     font-weight: 400;
     padding: 1rem;
+}
+
+.noti-contents {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
 }
 
 .noti-content {
@@ -626,8 +635,29 @@ nav {
         justify-content: space-around;
     }
 
+    .drop-menu ul .sign-in-btn a {
+        border: 1px solid #333;
+        background-color: #0000ff;
+        color: #FFF;
+        box-shadow: none;
+        margin: 1rem;
+        display: block;
+    }
+
+    .drop-menu ul .sign-in-btn a:hover {
+        background-color: #000099;
+    }
+
     .drop-menu li a{
         color: #333;
+    }
+    /* user-drop */
+    .user-drop::before {
+        right: 30px;
+    }
+
+    .noti-drop::before {
+        right: 30px;
     }
 
     /* CSS lại phần footer */
@@ -685,6 +715,32 @@ nav {
         list-style-type: none;
         display: flex;
         justify-content: space-around;
+    }
+
+    .drop-menu ul .sign-in-btn a {
+        border: 1px solid #333;
+        background-color: #0000ff;
+        color: #FFF;
+        box-shadow: none;
+        margin: 1rem;
+        display: block;
+    }
+
+    .drop-menu ul .sign-in-btn a:hover {
+        background-color: #000099;
+    }
+    /* user-drop */
+    .user-drop::before {
+        right: 30px;
+    }
+
+    /* noti-drop */
+    .noti-drop {
+        left: -200%;
+        max-width: 100vw;
+    }
+    .noti-drop::before {
+        display: none;
     }
     /* CSS lại phần footer */
     footer {

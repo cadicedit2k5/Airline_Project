@@ -40,7 +40,7 @@ $(document).ready(function () {
     }
 
     //Khi người dùng nhấn vào nút đăng xuất
-    $("#sign-out-btn").click(function () {
+    $(".sign-out-btn").click(function () {
         localStorage.setItem("isLogin", "false");
         //Nhận thấy khi thay đổi không tự reset về lại nên dùng window reload lun
         window.location.reload();

@@ -213,6 +213,7 @@ body {
 }
 
 .calendar-days {
+    padding-top: .5rem;
     display: flex;
     list-style-type: none;
     flex-wrap: wrap;
@@ -277,6 +278,7 @@ body {
 }
 
 .display .btn a {
+    margin-bottom: 1rem;
     margin-top: 1rem;
     display: block;
     text-decoration: none;
@@ -299,17 +301,53 @@ body {
 }
 
 @media screen and (max-width: 739px) {
+    .booking-title {
+        font-size: 2rem;
+    }
     .booking-item {
         width: 50%;
         margin-right: 0;
+        padding: 1rem;
+        text-align: center;
     }
 
     .booking-form {
         border-radius: 0 0 15px 15px;
+        padding: 1rem;
+    }
+
+    .calendar-container {
+        padding: 1rem;
+        width: 250px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .calendar-header span {
+        font-size: .9rem;
+    }
+
+    .calendar-icons i {
+        font-size: .75rem;
+        width: 25px;
+        height: 25px;
+    }
+
+    .calendar-week li {
+        font-size: .75rem;
+    }
+
+    .calendar-days li {
+        font-size: .75rem;
     }
 
     
     .booking-form .input {
         width: 100%;
+    }
+
+    .display {
+        width: 100%;
+        padding: 1rem;
     }
 }

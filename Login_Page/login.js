@@ -136,7 +136,9 @@ $(document).ready(function () {
                 alert("Đăng nhập thành công!");
                 localStorage.setItem("isLogin", true); // Tạo một biến lưu trên local có thể đồng bộ hóa giữa nhiều file
                 localStorage.setItem("firstname", user.firstname); //Tạo một biến lưu tên người dùng
-                window.history.back();
+                setTimeout(function () {
+                    window.history.back();
+                }, 100);
             }
         }
     }
