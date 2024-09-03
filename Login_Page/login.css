@@ -184,4 +184,13 @@
     .two-forms {
         flex-direction: column;
     }
+
+    .box-forms {
+        height: 700px;
+        max-width: 100%;
+    }
+
+    .register-container {
+        height: fit-content;
+    }
 }
