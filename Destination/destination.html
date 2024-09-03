@@ -14,401 +14,504 @@
 </head>
 
 <body>
-    <!-- NavBar -->
-    <div class="overlay"></div>
-    <!-- Navbar -->
-    <nav>
-        <div class="navbar">
-            <h1 class="nav-logo"><a href="../index.html">We<span>Bay</span></a></h1>
-            <ul class="nav-menu">
-                <li class="menu-item"><a href="../index.html">Trang chủ</a></li>
-                <li class="menu-item"><a href="../Error_Page/index.html">Về chúng tôi</a></li>
-                <li class="menu-item"><a href="../index.html#blog">Tin tức</a></li>
-                <li class="menu-item"><a href="../Contact_Page/index.html">Liên hệ</a></li>
-            </ul>
-            <ul class="nav-info">
-                <div class="search">
-                    <a href="javascrip:;" class="info-item"><i class="ri-search-2-line"></i></a>
-                    <input type="search" placeholder="Search">
-                </div>
-                <li>
-                    <a href="javascrip:;" class="info-item" id="search">
-                        <i class="ri-search-line"></i>
-                    </a>
-                </li>
-                <li class="sign-in-btn">
-                    <a href="../Login_Page/index.html">
-                        Đăng Nhập
-                    </a>
-                </li>
-                <li class="bell">
-                    <a href="javascrip:;" class="info-item">
-                        <i class="ri-notification-line"></i>
-                    </a>
-                    <!-- Tạo menu thông báo -->
-                    <div class="noti-drop">
-                        <div class="noti-top">
-                            <h2>Thông Báo</h2>
-                        </div>
-                        <div class="noti-main">
-                            <ul class="noti-contents">
-                                <li class="noti-content">
-                                    <div class="noti-text">
-                                        <a href="#"><span>Larel</span> is felling great and she say haha with your
-                                            blog</a>
-                                        <p>1 day ago</p>
-                                    </div>
-                                    <img src="static/images/bg.avif">
-                                </li>
-                                <li class="noti-content">
-                                    <div class="noti-text">
-                                        <a href="#"><span>Larel</span> is felling great and she say haha with your
-                                            blog</a>
-                                        <p>1 day ago</p>
-                                    </div>
-                                    <img src="static/images/bg.avif">
-                                </li>
-                                <li class="noti-content">
-                                    <div class="noti-text">
-                                        <a href="#"><span>Larel</span> is felling great and she say haha with your
-                                            blog</a>
-                                        <p>1 day ago</p>
-                                    </div>
-                                    <img src="static/images/bg.avif">
-                                </li>
-                                <li class="noti-content">
-                                    <div class="noti-text">
-                                        <a href="#"><span>Larel</span> is felling great and she say haha with your
-                                            blog</a>
-                                        <p>1 day ago</p>
-                                    </div>
-                                    <img src="static/images/bg.avif">
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="noti-bottom"></div>
+    <!-- Loading -->
+    <div class="circle-loading">
+        <div class="ring">
+            <span>
+                <i class="ri-plane-line"></i>
+            </span>
+        </div>
+    </div>
+    <div class="main-page">
+        <!-- NavBar -->
+        <div class="overlay"></div>
+        <!-- Navbar -->
+        <nav>
+            <div class="navbar">
+                <h1 class="nav-logo"><a href="../index.html">We<span>Bay</span></a></h1>
+                <ul class="nav-menu">
+                    <li class="menu-item"><a href="../index.html">Trang chủ</a></li>
+                    <li class="menu-item"><a href="../Error_Page/index.html">Về chúng tôi</a></li>
+                    <li class="menu-item"><a href="../index.html#blog">Tin tức</a></li>
+                    <li class="menu-item"><a href="../Contact_Page/index.html">Liên hệ</a></li>
+                </ul>
+                <ul class="nav-info">
+                    <div class="search">
+                        <a href="javascrip:;" class="info-item"><i class="ri-search-2-line"></i></a>
+                        <input type="search" placeholder="Search">
                     </div>
-                </li>
-                <li class="user">
-                    <a href="javascrip:;" class="info-item">
-                        <i class="ri-user-3-line"></i>
-                    </a>
-                    <!-- Tạo Menu Profile Người dùng -->
-                    <div class="user-drop">
-                        <div class="user-top">
-                            <img src="../static/images/avatar1.avif">
-                            <span>Admin</span>
-                        </div>
-                        <div class="user-bottom">
-                            <ul class="user-features">
-                                <li class="user-feature">
-                                    <i class="ri-user-3-line"></i>
-                                    <a href="#">Hồ sơ của tôi</a>
-                                </li>
-                                <li class="user-feature">
-                                    <i class="ri-edit-box-line"></i>
-                                    <a href="#">Chỉnh sửa hồ sơ</a>
-                                </li>
-                                <li class="user-feature">
-                                    <i class="ri-mail-line"></i>
-                                    <a href="#">Liên hệ</a>
-                                </li>
-                                <li class="user-feature">
-                                    <i class="ri-settings-2-line"></i>
-                                    <a href="#">Cài đặt</a>
-                                </li>
-                                <li class="user-feature">
-                                    <i class="ri-question-line"></i>
-                                    <a href="#">Trợ giúp</a>
-                                </li>
-                                <li class="user-feature" id="sign-out-btn">
-                                    <i class="ri-logout-box-line"></i>
-                                    <a href="#">Đăng xuất</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-            <!-- icon sử dụng để thay đổi khi nhấp vào menu -->
-            <!-- <i class="ri-close-large-line"></i> -->
-            <a class="menu-btn">
-                <i class="ri-menu-3-fill"></i>
-            </a>
-            <div class="drop-menu">
-                <li class="menu-item"><a href="../">Trang chủ</a></li>
-                <li class="menu-item"><a href="../Error_Page/">Về chúng tôi</a></li>
-                <li class="menu-item"><a href="../#blog">Tin tức</a></li>
-                <li class="menu-item"><a href="../Contact_Page/index.html">Liên hệ</a></li>
-                <ul>
                     <li>
-                        <a href="#" class="info-item">
+                        <a href="javascrip:;" class="info-item" id="search">
+                            <i class="ri-search-line"></i>
+                        </a>
+                    </li>
+                    <li class="sign-in-btn">
+                        <a href="../Login_Page/index.html">
+                            Đăng Nhập
+                        </a>
+                    </li>
+                    <li class="bell">
+                        <a href="javascrip:;" class="info-item">
                             <i class="ri-notification-line"></i>
                         </a>
+                        <!-- Tạo menu thông báo -->
+                        <div class="noti-drop">
+                            <div class="noti-top">
+                                <h2>Thông Báo</h2>
+                            </div>
+                            <div class="noti-main">
+                                <ul class="noti-contents">
+                                    <li class="noti-content">
+                                        <div class="noti-text">
+                                            <a href="#"><span>Larel</span> is felling great and she say haha with your
+                                                blog</a>
+                                            <p>1 day ago</p>
+                                        </div>
+                                        <img src="static/images/bg.avif">
+                                    </li>
+                                    <li class="noti-content">
+                                        <div class="noti-text">
+                                            <a href="#"><span>Larel</span> is felling great and she say haha with your
+                                                blog</a>
+                                            <p>1 day ago</p>
+                                        </div>
+                                        <img src="static/images/bg.avif">
+                                    </li>
+                                    <li class="noti-content">
+                                        <div class="noti-text">
+                                            <a href="#"><span>Larel</span> is felling great and she say haha with your
+                                                blog</a>
+                                            <p>1 day ago</p>
+                                        </div>
+                                        <img src="static/images/bg.avif">
+                                    </li>
+                                    <li class="noti-content">
+                                        <div class="noti-text">
+                                            <a href="#"><span>Larel</span> is felling great and she say haha with your
+                                                blog</a>
+                                            <p>1 day ago</p>
+                                        </div>
+                                        <img src="static/images/bg.avif">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="noti-bottom"></div>
+                        </div>
                     </li>
-                    <li>
-                        <a href="#" class="info-item">
+                    <li class="user">
+                        <a href="javascrip:;" class="info-item">
                             <i class="ri-user-3-line"></i>
                         </a>
-                    </li>
-                </ul>
-                <div class="search">
-                    <a href="#" class="info-item"><i class="ri-search-2-line"></i></a>
-                    <input type="search" placeholder="Search">
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Main Place -->
-    <main class="main-destination">
-        <div class="destination-header">
-            <div class="banner">
-                <img src="../static/images/DienBien/DienBien_banner.jpg" alt="Điện Biên">
-            </div>
-            <!-- Header - Giới thiệu -->
-            <div class="header-section">
-                <h1 class="title">Điện Biên - Xứ sở hoa ban trắng</h1>
-                <p class="discr">Điện Biên là mảnh đất lịch sử hào hùng, nơi ghi dấu chiến thắng Điện Biên Phủ vào năm
-                    1954,
-                    đánh dấu mốc
-                    son chói lọi trong cuộc kháng chiến chống Pháp của quân dân Việt Nam. Những cánh rừng hoa ban trải
-                    dài
-                    cùng những ngôi nhà sàn đơn sơ, mộc mạc giữa thiên nhiên đại ngàn đã trở thành nét đẹp đặc trưng của
-                    nơi
-                    đây. Đến với Điện Biên là đến với không gian lịch sử hào hùng mà thơ mộng, đa dạng màu sắc văn hóa
-                    lễ
-                    hội các dân tộc mà hiếm nơi nào có được.
-                </p>
-                <a class="read-more" href="#container">Thêm thông tin</a>
-            </div>
-        </div>
-        <!-- Main desination -->
-        <div class="destination-container">
-            <div class="destination-left" id="container">
-                <!-- Cảnh đẹp -->
-                <div class="destination-content" id="scene">
-                    <h1 class="content-title">
-                        Cảnh đẹp
-                    </h1>
-                    <div class="content-image">
-                        <img src="../static/images/DienBien/DienBien-Scene.jpg">
-                    </div>
-                    <p class="content-discr">
-                        <strong>Hoa ban:</strong>
-                        Đến Điện Biên vào những ngày tháng 3, bạn sẽ được chiêm ngưỡng hoa ban nở trắng các lưng đèo,
-                        khắp triền núi, nhìn từ trên cao tưởng như tấm lụa trắng uốn lượn giữa đất trời.
-                        <br>
-                        <strong>Cánh đồng Mường Thanh:</strong>
-                        Không chỉ nổi tiếng bởi sắc hoa ban, sắc vàng ruộm của cánh đồng lúa chín Mường Thanh cũng là vẻ
-                        đẹp níu chân du khách. Cánh đồng mênh mông, bát ngát thơm lừng hương lúa trải giữa núi rừng hùng
-                        vĩ như hát lên khúc ca lao động đầy vui tươi, phấn khởi của con người nơi đây. Thấp thoáng quanh
-                        đó là các bản làng dân tộc Thái, H’mông… với những mái nhà lợp tranh, nứa hay ngói đỏ đã nhuốm
-                        màu thời gian.
-                        <br>
-                        <strong>Điểm cực Tây A Pa Chải:</strong>
-                        Đặt những bước chân đầu tiên khám phá Điện Biên, bạn không thể bỏ qua cơ hội check-in tại A Pa
-                        Chải - điểm cực Tây Việt Nam. Đây là nơi đặt cột mốc phân chia biên giới Việt Nam - Lào - Trung
-                        Quốc, thường được mệnh danh là “một tiếng gà gáy cả ba nước đều nghe”. Từ đây phóng tầm mắt ra
-                        xa là không gian núi rừng hùng vĩ, trùng điệp.
-                        <br>
-                        <strong>Di tích lịch sử Chiến trường Điện Biên Phủ:</strong>
-                        Di tích lịch sử Chiến trường Điện Biên Phủ là niềm tự hào của Điện Biên, nơi ghi dấu chiến thắng
-                        hào hùng của dân tộc trên từng ngọn đồi, điểm pháo, hang động.
-                        <br>
-                        <strong>Đèo Pha Đin: </strong>
-                        Đèo Pha Đin là một trong tứ đại đỉnh đèo của Việt Nam. Giữa các cung đường uốn lượn, các khúc
-                        cua gấp nhìn xuống vực sâu thăm thẳm là cảnh quan núi rừng hùng vĩ trùng điệp, mây trời bồng
-                        bềnh nên thơ và bản làng thấp thoáng phía xa xa.
-                        <br>
-                    </p>
-                </div>
-                <!-- Ẩm thực -->
-                <div class="destination-content" id="food">
-                    <h1 class="content-title">
-                        Ẩm thực
-                    </h1>
-                    <div class="content-image">
-                        <img src="../static/images/DienBien/DienBien-Food.webp">
-                    </div>
-                    <p class="content-discr">
-                        Với cánh đồng lúa bạt ngàn giữa một vùng đất đai màu mỡ, Điện Biên là quê hương của những hạt
-                        gạo thơm ngon, mang trong mình vị ngọt, độ dẻo thơm, bùi bùi mà ít nơi sánh được. Tiêu biểu
-                        trong số đó là gạo nếp nương. Nếp nương là loại gạo dùng để đồ xôi, làm bánh, hạt gạo màu trắng
-                        sữa thon dài, mình mẩy, nấu lên có độ mềm dẻo, ngọt thơm.
-                        <br>
-                        Ẩm thực Điện Biên mang đậm bản sắc ẩm thực của rừng núi Tây Bắc, đặc biệt là ẩm thực của dân tộc
-                        Thái với các món xôi nếp nương, cá nướng, mắc khén, chẩm chéo. Xé một miếng cá nướng thơm phức
-                        chấm với chẩm chéo, ăn kèm bát xôi nếp nương bùi dẻo thì quả là tuyệt vời. Bạn sẽ cảm nhận vị
-                        ngọt của thịt cá quyện cùng chút đăng đắng của vết lửa xém, chút hăng cay, tê tê của hạt mắc
-                        khén. Mắc khén là linh hồn của ẩm thực Tây Bắc, được dùng trong hầu hết các món ăn của người
-                        Thái. Chúng có mùi thơm nồng độc đáo, vị cay tê tựa như hạt tiêu.
-                    </p>
-                </div>
-                <!-- Hoạt động -->
-                <div class="destination-content" id="activities">
-                    <h1 class="content-title">
-                        Hoạt động
-                    </h1>
-                    <div class="content-image">
-                        <img src="../static/images/DienBien/DienBien-active.webp">
-                    </div>
-                    <p class="content-discr">
-                        Điện Biên là một thiên đường trải nghiệm với nhiều hoạt động thú vị. Đến đây, bạn không thể bỏ
-                        qua kế hoạch đi bộ tới điểm cực Tây A Pa Chải. Đi bộ vài cây số đường dốc rồi leo thêm 500 bậc
-                        thang là đến đỉnh núi Khoang La Sơn, nơi đặt cột mốc ba cạnh phân chia ranh giới giữa ba nước
-                        Việt Nam - Lào - Trung Quốc.
-                        <br>
-                        Một điểm nhấn thu hút du khách đến với Điện Biên là du lịch cộng đồng tại các bản Mền, bản Ten,
-                        bản Co Mỵ, bản Phiên Lơi. Bạn sẽ được hòa mình trong không gian sinh sống của bà con dân tộc
-                        thiểu số (tiêu biểu là người Thái, H’mông) và tìm hiểu những giá trị văn hóa truyền thống đặc
-                        sắc của vùng cao Tây Bắc.
-                        <br>
-                        Đặc biệt, bạn có thể ghé Điện Biên vào dịp kỷ niệm Chiến thắng Điện Biên Phủ 7/5 hay lễ hội Hoa
-                        Ban vào trung tuần tháng 3, lễ hội Thành Bản Phủ vào 24 - 25/2 âm lịch. Đây là những dịp lễ lớn,
-                        tổ chức nhiều chương trình đặc sắc như: biểu diễn trang phục các dân tộc, các trò chơi dân gian,
-                        hoạt động thể thao…
-                    </p>
-                </div>
-                <!-- Related detination -->
-                <div class="destination-content" id="related-destination">
-                    <h1 class="content-title">Những điểm đến liên quan</h1>
-                    <div class="tours-contents">
-                        <a href="#" class="tours-content">
-                            <div class="tours-info">
-                                <div class="rating">
-                                    <div class="stars">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                    </div>
-                                    <div class="reviews">
-                                        (2 Reviews)
-                                    </div>
-                                </div>
-
-                                <h3 class="tours-title">Seychelles | from $300</h3>
-                                <div class="tours-days">
-                                    <i class="fa-regular fa-clock"></i>
-                                    <span>7 days</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="tours-content">
-                            <div class="tours-info">
-                                <div class="rating">
-                                    <div class="stars">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                    </div>
-                                    <div class="reviews">
-                                        (2 Reviews)
-                                    </div>
-                                </div>
-
-                                <h3 class="tours-title">Seychelles | from $300</h3>
-                                <div class="tours-days">
-                                    <i class="fa-regular fa-clock"></i>
-                                    <span>7 days</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!-- Comment -->
-                <div class="destination-content" id="comment">
-                    <h1 class="content-title">Viết Bình Luận</h1>
-                    <div class="comment-form">
-                        <div class="comment-field">
-                            <p>Tên của bạn</p>
-                            <input type="text">
-                        </div>
-                        <div class="comment-field">
-                            <p>Email</p>
-                            <input type="email">
-                        </div>
-                        <div class="comment-field">
-                            <p>Nội dung bình luận</p>
-                            <textarea placeholder="Nhập gì đó..."></textarea>
-                        </div>
-                        <div class="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <button type="submit">Gửi</button>
-                    </div>
-                </div>
-                <div class="destination-content">
-                    <h1 class="content-title">2 Bình luận</h1>
-                    <div class="comment-posts">
-                        <div class="comment-post">
-                            <div class="avatar">
+                        <!-- Tạo Menu Profile Người dùng -->
+                        <div class="user-drop">
+                            <div class="user-top">
                                 <img src="../static/images/avatar1.avif">
+                                <span>Admin</span>
                             </div>
-                            <div class="comment-info">
-                                <h3>Admin</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo laudantium delectus
-                                    libero deleniti repellendus dolore, cupiditate nesciunt illum quaerat tempora sunt,
-                                    quidem est vitae quibusdam beatae cum ad earum rerum?</p>
-                                <div class="stars">
-                                    <i class="fa-solid fa-star active"></i>
-                                    <i class="fa-solid fa-star active"></i>
-                                    <i class="fa-solid fa-star active"></i>
-                                    <i class="fa-solid fa-star active"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
+                            <div class="user-bottom">
+                                <ul class="user-features">
+                                    <li class="user-feature">
+                                        <i class="ri-user-3-line"></i>
+                                        <a href="#">Hồ sơ của tôi</a>
+                                    </li>
+                                    <li class="user-feature">
+                                        <i class="ri-edit-box-line"></i>
+                                        <a href="#">Chỉnh sửa hồ sơ</a>
+                                    </li>
+                                    <li class="user-feature">
+                                        <i class="ri-briefcase-4-fill"></i>
+                                        <a href="../Flight_Manager/index.html">Quản lý chuyến bay</a>
+                                    </li>
+                                    <li class="user-feature">
+                                        <i class="ri-mail-line"></i>
+                                        <a href="#">Liên hệ</a>
+                                    </li>
+                                    <li class="user-feature">
+                                        <i class="ri-settings-2-line"></i>
+                                        <a href="#">Cài đặt</a>
+                                    </li>
+                                    <li class="user-feature">
+                                        <i class="ri-question-line"></i>
+                                        <a href="#">Trợ giúp</a>
+                                    </li>
+                                    <li class="user-feature" id="sign-out-btn">
+                                        <i class="ri-logout-box-line"></i>
+                                        <a href="#">Đăng xuất</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="comment-post">
-                            <div class="avatar">
-                                <img src="../static/images/avatar1.avif">
+                    </li>
+                </ul>
+                <!-- icon sử dụng để thay đổi khi nhấp vào menu -->
+                <!-- <i class="ri-close-large-line"></i> -->
+                <a class="menu-btn">
+                    <i class="ri-menu-3-fill"></i>
+                </a>
+                <div class="drop-menu">
+                    <li class="menu-item"><a href="../">Trang chủ</a></li>
+                    <li class="menu-item"><a href="../Error_Page/">Về chúng tôi</a></li>
+                    <li class="menu-item"><a href="../#blog">Tin tức</a></li>
+                    <li class="menu-item"><a href="../Contact_Page/index.html">Liên hệ</a></li>
+                    <ul>
+                        <li class="sign-in-btn">
+                            <a href="../Login_Page/index.html">
+                                Đăng Nhập
+                            </a>
+                        </li>
+                        <li class="bell">
+                            <a href="#" class="info-item">
+                                <i class="ri-notification-line"></i>
+                            </a>
+                            <div class="noti-drop">
+                                <div class="noti-top">
+                                    <h2>Thông Báo</h2>
+                                </div>
+                                <div class="noti-main">
+                                    <ul class="noti-contents">
+                                        <li class="noti-content">
+                                            <div class="noti-text">
+                                                <a href="#"><span>Larel</span> is felling great and she say haha
+                                                    with
+                                                    your
+                                                    blog</a>
+                                                <p>1 day ago</p>
+                                            </div>
+                                            <img src="static/images/bg.avif">
+                                        </li>
+                                        <li class="noti-content">
+                                            <div class="noti-text">
+                                                <a href="#"><span>Larel</span> is felling great and she say haha
+                                                    with
+                                                    your
+                                                    blog</a>
+                                                <p>1 day ago</p>
+                                            </div>
+                                            <img src="static/images/bg.avif">
+                                        </li>
+                                        <li class="noti-content">
+                                            <div class="noti-text">
+                                                <a href="#"><span>Larel</span> is felling great and she say haha
+                                                    with
+                                                    your
+                                                    blog</a>
+                                                <p>1 day ago</p>
+                                            </div>
+                                            <img src="static/images/bg.avif">
+                                        </li>
+                                        <li class="noti-content">
+                                            <div class="noti-text">
+                                                <a href="#"><span>Larel</span> is felling great and she say haha
+                                                    with
+                                                    your
+                                                    blog</a>
+                                                <p>1 day ago</p>
+                                            </div>
+                                            <img src="static/images/bg.avif">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="noti-bottom"></div>
                             </div>
-                            <div class="comment-info">
-                                <h3>Admin</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo laudantium delectus
-                                    libero deleniti repellendus dolore, cupiditate nesciunt illum quaerat tempora sunt,
-                                    quidem est vitae quibusdam beatae cum ad earum rerum?</p>
-                                <div class="stars">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
+                        </li>
+                        <li class="user">
+                            <a href="#" class="info-item">
+                                <i class="ri-user-3-line"></i>
+                            </a>
+                            <!-- Tạo Menu Profile Người dùng -->
+                            <div class="user-drop">
+                                <div class="user-top">
+                                    <img src="../static/images/avatar1.avif">
+                                    <span>Admin</span>
+                                </div>
+                                <div class="user-bottom">
+                                    <ul class="user-features">
+                                        <li class="user-feature">
+                                            <i class="ri-user-3-line"></i>
+                                            <a href="#">Hồ sơ của tôi</a>
+                                        </li>
+                                        <li class="user-feature">
+                                            <i class="ri-edit-box-line"></i>
+                                            <a href="#">Chỉnh sửa hồ sơ</a>
+                                        </li>
+                                        <li class="user-feature">
+                                            <i class="ri-briefcase-4-fill"></i>
+                                            <a href="Flight_Manager/index.html">Quản lý chuyến bay</a>
+                                        </li>
+                                        <li class="user-feature">
+                                            <i class="ri-mail-line"></i>
+                                            <a href="#">Liên hệ</a>
+                                        </li>
+                                        <li class="user-feature">
+                                            <i class="ri-settings-2-line"></i>
+                                            <a href="#">Cài đặt</a>
+                                        </li>
+                                        <li class="user-feature">
+                                            <i class="ri-question-line"></i>
+                                            <a href="#">Trợ giúp</a>
+                                        </li>
+                                        <li class="user-feature sign-out-btn">
+                                            <i class="ri-logout-box-line"></i>
+                                            <a href="#">Đăng xuất</a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                        </div>
+                        </li>
+                    </ul>
+                    <div class="search">
+                        <a href="#" class="info-item"><i class="ri-search-2-line"></i></a>
+                        <input type="search" placeholder="Search">
                     </div>
                 </div>
             </div>
-            <!-- Thanh side bar bên phải -->
-            <div class="destination-right">
-                <div class="right-content">
-                    <div class="overview">
-                        <h3>Tổng quan</h3>
-                        <ul>
-                            <li><a href="#scene">Cảnh đẹp</a></li>
-                            <li><a href="#food">Ẩm thực</a></li>
-                            <li><a href="#activities">Hoạt động</a></li>
-                            <li><a href="#related-destination">Những địa điểm liên quan</a></li>
-                            <li><a href="#comment">Bình luận</a></li>
-                        </ul>
+        </nav>
+
+        <!-- Main Place -->
+        <main class="main-destination">
+            <div class="destination-header">
+                <div class="banner">
+                    <img src="../static/images/DienBien/DienBien_banner.jpg" alt="Điện Biên">
+                </div>
+                <!-- Header - Giới thiệu -->
+                <div class="header-section">
+                    <h1 class="title">Điện Biên - Xứ sở hoa ban trắng</h1>
+                    <p class="discr">Điện Biên là mảnh đất lịch sử hào hùng, nơi ghi dấu chiến thắng Điện Biên Phủ vào
+                        năm
+                        1954,
+                        đánh dấu mốc
+                        son chói lọi trong cuộc kháng chiến chống Pháp của quân dân Việt Nam. Những cánh rừng hoa ban
+                        trải
+                        dài
+                        cùng những ngôi nhà sàn đơn sơ, mộc mạc giữa thiên nhiên đại ngàn đã trở thành nét đẹp đặc trưng
+                        của
+                        nơi
+                        đây. Đến với Điện Biên là đến với không gian lịch sử hào hùng mà thơ mộng, đa dạng màu sắc văn
+                        hóa
+                        lễ
+                        hội các dân tộc mà hiếm nơi nào có được.
+                    </p>
+                    <a class="read-more" href="#container">Thêm thông tin</a>
+                </div>
+            </div>
+            <!-- Main desination -->
+            <div class="destination-container">
+                <div class="destination-left" id="container">
+                    <!-- Cảnh đẹp -->
+                    <div class="destination-content" id="scene">
+                        <h1 class="content-title">
+                            Cảnh đẹp
+                        </h1>
+                        <div class="content-image">
+                            <img src="../static/images/DienBien/DienBien-Scene.jpg">
+                        </div>
+                        <p class="content-discr">
+                            <strong>Hoa ban:</strong>
+                            Đến Điện Biên vào những ngày tháng 3, bạn sẽ được chiêm ngưỡng hoa ban nở trắng các lưng
+                            đèo,
+                            khắp triền núi, nhìn từ trên cao tưởng như tấm lụa trắng uốn lượn giữa đất trời.
+                            <br>
+                            <strong>Cánh đồng Mường Thanh:</strong>
+                            Không chỉ nổi tiếng bởi sắc hoa ban, sắc vàng ruộm của cánh đồng lúa chín Mường Thanh cũng
+                            là vẻ
+                            đẹp níu chân du khách. Cánh đồng mênh mông, bát ngát thơm lừng hương lúa trải giữa núi rừng
+                            hùng
+                            vĩ như hát lên khúc ca lao động đầy vui tươi, phấn khởi của con người nơi đây. Thấp thoáng
+                            quanh
+                            đó là các bản làng dân tộc Thái, H’mông… với những mái nhà lợp tranh, nứa hay ngói đỏ đã
+                            nhuốm
+                            màu thời gian.
+                            <br>
+                            <strong>Điểm cực Tây A Pa Chải:</strong>
+                            Đặt những bước chân đầu tiên khám phá Điện Biên, bạn không thể bỏ qua cơ hội check-in tại A
+                            Pa
+                            Chải - điểm cực Tây Việt Nam. Đây là nơi đặt cột mốc phân chia biên giới Việt Nam - Lào -
+                            Trung
+                            Quốc, thường được mệnh danh là “một tiếng gà gáy cả ba nước đều nghe”. Từ đây phóng tầm mắt
+                            ra
+                            xa là không gian núi rừng hùng vĩ, trùng điệp.
+                            <br>
+                            <strong>Di tích lịch sử Chiến trường Điện Biên Phủ:</strong>
+                            Di tích lịch sử Chiến trường Điện Biên Phủ là niềm tự hào của Điện Biên, nơi ghi dấu chiến
+                            thắng
+                            hào hùng của dân tộc trên từng ngọn đồi, điểm pháo, hang động.
+                            <br>
+                            <strong>Đèo Pha Đin: </strong>
+                            Đèo Pha Đin là một trong tứ đại đỉnh đèo của Việt Nam. Giữa các cung đường uốn lượn, các
+                            khúc
+                            cua gấp nhìn xuống vực sâu thăm thẳm là cảnh quan núi rừng hùng vĩ trùng điệp, mây trời bồng
+                            bềnh nên thơ và bản làng thấp thoáng phía xa xa.
+                            <br>
+                        </p>
                     </div>
-                    <div class="booking">
-                        <div class="content">
-                            <div class="sale">
-                                <span>20% off</span>
-                                <span>New</span>
+                    <!-- Ẩm thực -->
+                    <div class="destination-content" id="food">
+                        <h1 class="content-title">
+                            Ẩm thực
+                        </h1>
+                        <div class="content-image">
+                            <img src="../static/images/DienBien/DienBien-Food.webp">
+                        </div>
+                        <p class="content-discr">
+                            Với cánh đồng lúa bạt ngàn giữa một vùng đất đai màu mỡ, Điện Biên là quê hương của những
+                            hạt
+                            gạo thơm ngon, mang trong mình vị ngọt, độ dẻo thơm, bùi bùi mà ít nơi sánh được. Tiêu biểu
+                            trong số đó là gạo nếp nương. Nếp nương là loại gạo dùng để đồ xôi, làm bánh, hạt gạo màu
+                            trắng
+                            sữa thon dài, mình mẩy, nấu lên có độ mềm dẻo, ngọt thơm.
+                            <br>
+                            Ẩm thực Điện Biên mang đậm bản sắc ẩm thực của rừng núi Tây Bắc, đặc biệt là ẩm thực của dân
+                            tộc
+                            Thái với các món xôi nếp nương, cá nướng, mắc khén, chẩm chéo. Xé một miếng cá nướng thơm
+                            phức
+                            chấm với chẩm chéo, ăn kèm bát xôi nếp nương bùi dẻo thì quả là tuyệt vời. Bạn sẽ cảm nhận
+                            vị
+                            ngọt của thịt cá quyện cùng chút đăng đắng của vết lửa xém, chút hăng cay, tê tê của hạt mắc
+                            khén. Mắc khén là linh hồn của ẩm thực Tây Bắc, được dùng trong hầu hết các món ăn của người
+                            Thái. Chúng có mùi thơm nồng độc đáo, vị cay tê tựa như hạt tiêu.
+                        </p>
+                    </div>
+                    <!-- Hoạt động -->
+                    <div class="destination-content" id="activities">
+                        <h1 class="content-title">
+                            Hoạt động
+                        </h1>
+                        <div class="content-image">
+                            <img src="../static/images/DienBien/DienBien-active.webp">
+                        </div>
+                        <p class="content-discr">
+                            Điện Biên là một thiên đường trải nghiệm với nhiều hoạt động thú vị. Đến đây, bạn không thể
+                            bỏ
+                            qua kế hoạch đi bộ tới điểm cực Tây A Pa Chải. Đi bộ vài cây số đường dốc rồi leo thêm 500
+                            bậc
+                            thang là đến đỉnh núi Khoang La Sơn, nơi đặt cột mốc ba cạnh phân chia ranh giới giữa ba
+                            nước
+                            Việt Nam - Lào - Trung Quốc.
+                            <br>
+                            Một điểm nhấn thu hút du khách đến với Điện Biên là du lịch cộng đồng tại các bản Mền, bản
+                            Ten,
+                            bản Co Mỵ, bản Phiên Lơi. Bạn sẽ được hòa mình trong không gian sinh sống của bà con dân tộc
+                            thiểu số (tiêu biểu là người Thái, H’mông) và tìm hiểu những giá trị văn hóa truyền thống
+                            đặc
+                            sắc của vùng cao Tây Bắc.
+                            <br>
+                            Đặc biệt, bạn có thể ghé Điện Biên vào dịp kỷ niệm Chiến thắng Điện Biên Phủ 7/5 hay lễ hội
+                            Hoa
+                            Ban vào trung tuần tháng 3, lễ hội Thành Bản Phủ vào 24 - 25/2 âm lịch. Đây là những dịp lễ
+                            lớn,
+                            tổ chức nhiều chương trình đặc sắc như: biểu diễn trang phục các dân tộc, các trò chơi dân
+                            gian,
+                            hoạt động thể thao…
+                        </p>
+                    </div>
+                    <!-- Related detination -->
+                    <div class="destination-content" id="related-destination">
+                        <h1 class="content-title">Những điểm đến liên quan</h1>
+                        <div class="tours-contents">
+                            <a href="#" class="tours-content">
+                                <div class="tours-info">
+                                    <div class="rating">
+                                        <div class="stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div class="reviews">
+                                            (2 Reviews)
+                                        </div>
+                                    </div>
+
+                                    <h3 class="tours-title">Seychelles | from $300</h3>
+                                    <div class="tours-days">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <span>7 days</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="tours-content">
+                                <div class="tours-info">
+                                    <div class="rating">
+                                        <div class="stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div class="reviews">
+                                            (2 Reviews)
+                                        </div>
+                                    </div>
+
+                                    <h3 class="tours-title">Seychelles | from $300</h3>
+                                    <div class="tours-days">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <span>7 days</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Comment -->
+                    <div class="destination-content" id="comment">
+                        <h1 class="content-title">Viết Bình Luận</h1>
+                        <div class="comment-form">
+                            <div class="comment-field">
+                                <p>Tên của bạn</p>
+                                <input type="text">
                             </div>
-                            <div class="info">
-                                <div class="rating">
+                            <div class="comment-field">
+                                <p>Email</p>
+                                <input type="email">
+                            </div>
+                            <div class="comment-field">
+                                <p>Nội dung bình luận</p>
+                                <textarea placeholder="Nhập gì đó..."></textarea>
+                            </div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <button type="submit">Gửi</button>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h1 class="content-title">2 Bình luận</h1>
+                        <div class="comment-posts">
+                            <div class="comment-post">
+                                <div class="avatar">
+                                    <img src="../static/images/avatar1.avif">
+                                </div>
+                                <div class="comment-info">
+                                    <h3>Admin</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo laudantium delectus
+                                        libero deleniti repellendus dolore, cupiditate nesciunt illum quaerat tempora
+                                        sunt,
+                                        quidem est vitae quibusdam beatae cum ad earum rerum?</p>
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star active"></i>
+                                        <i class="fa-solid fa-star active"></i>
+                                        <i class="fa-solid fa-star active"></i>
+                                        <i class="fa-solid fa-star active"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-post">
+                                <div class="avatar">
+                                    <img src="../static/images/avatar1.avif">
+                                </div>
+                                <div class="comment-info">
+                                    <h3>Admin</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo laudantium delectus
+                                        libero deleniti repellendus dolore, cupiditate nesciunt illum quaerat tempora
+                                        sunt,
+                                        quidem est vitae quibusdam beatae cum ad earum rerum?</p>
                                     <div class="stars">
                                         <i class="fa-solid fa-star"></i>
                                         <i class="fa-solid fa-star"></i>
@@ -416,105 +519,139 @@
                                         <i class="fa-solid fa-star"></i>
                                         <i class="fa-solid fa-star"></i>
                                     </div>
-                                    <div class="reviews">
-                                        (2 Reviews)
-                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="book">
-                            <div class="price">
-                                <b>$3,500</b>
-                                <span>$3,880</span>
-                            </div>
-                            <a href="#" class="book-btn">Đặt ngay</a>
-                        </div>
                     </div>
                 </div>
+                <!-- Thanh side bar bên phải -->
+                <div class="destination-right">
+                    <div class="right-content">
+                        <div class="overview">
+                            <h3>Tổng quan</h3>
+                            <ul>
+                                <li><a href="#scene">Cảnh đẹp</a></li>
+                                <li><a href="#food">Ẩm thực</a></li>
+                                <li><a href="#activities">Hoạt động</a></li>
+                                <li><a href="#related-destination">Những địa điểm liên quan</a></li>
+                                <li><a href="#comment">Bình luận</a></li>
+                            </ul>
+                        </div>
+                        <div class="booking">
+                            <div class="content">
+                                <div class="sale">
+                                    <span>20% off</span>
+                                    <span>New</span>
+                                </div>
+                                <div class="info">
+                                    <div class="rating">
+                                        <div class="stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div class="reviews">
+                                            (2 Reviews)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="book">
+                                <div class="price">
+                                    <b>$3,500</b>
+                                    <span>$3,880</span>
+                                </div>
+                                <a href="#" class="book-btn">Đặt ngay</a>
+                            </div>
+                        </div>
+                    </div>
 
+                </div>
             </div>
-        </div>
-    </main>
+        </main>
 
 
-    <!-- HTML phần footer -->
-    <footer class="footer">
-        <div class="footer-top">
-            <div class="footer-list">
-                <h4>Địa chỉ</h4>
-                <ul>
-                    <li><a href="#0">123 Đường Bay, Quận 1, TP. Hồ Chí Minh, Việt Nam</a></li>
-                    <li><a href="#0">+84 123 456 789</a></li>
-                    <li><a href="#0">support@webaycompany.com</a></li>
-                </ul>
+        <!-- HTML phần footer -->
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-list">
+                    <h4>Địa chỉ</h4>
+                    <ul>
+                        <li><a href="#0">123 Đường Bay, Quận 1, TP. Hồ Chí Minh, Việt Nam</a></li>
+                        <li><a href="#0">+84 123 456 789</a></li>
+                        <li><a href="#0">support@webaycompany.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-news">
+                    <h4>Đăng ký nhận tin tức</h4>
+                    <p>Nhận thông tin mới nhất và ưu đãi đặc biệt từ WeBay</p>
+                    <input type="email" placeholder="Nhập email của bạn...">
+                    <button type="submit">
+                        Đăng ký
+                        <i class="ri-plane-fill plane-icon"></i>
+                    </button>
+                </div>
             </div>
-            <div class="footer-news">
-                <h4>Đăng ký nhận tin tức</h4>
-                <p>Nhận thông tin mới nhất và ưu đãi đặc biệt từ WeBay</p>
-                <input type="email" placeholder="Nhập email của bạn...">
-                <button type="submit">
-                    Đăng ký
-                    <i class="ri-plane-fill plane-icon"></i>
-                </button>
+            <div class="footer-container">
+                <div class="footer-list">
+                    <h4>Liên kết nhanh</h4>
+                    <ul>
+                        <li><a href="../index.html">Trang chủ</a></li>
+                        <li><a href="../Error_Page/index.html">Về chúng tôi</a></li>
+                        <li><a href="../index.html#blog">Tin tức</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-list">
+                    <h4>Chính sách & quy định</h4>
+                    <ul>
+                        <li><a href="../Error_Page/index.html">Điều khoản sử dụng</a></li>
+                        <li><a href="../Error_Page/index.html">Chính sách bảo mật</a></li>
+                        <li><a href="../Error_Page/index.html">Chính sách hành lý</a></li>
+                        <li><a href="../Error_Page/index.html">Quy định vận chuyển</a></li>
+                    </ul>
+                </div>
+                <div class="footer-list">
+                    <h4>Hỗ trợ khách hàng</h4>
+                    <ul>
+                        <li><a href="../Error_Page/index.html">Trung tâm hỗ trợ</a></li>
+                        <li><a href="../index.html#question">Câu hỏi thường gặp (FAQ)</a></li>
+                        <li><a href="../Error_Page/index.html">Chính sách hoàn vé</a></li>
+                        <li><a href="../Error_Page/index.html">Phản hồi và khiếu nại</a></li>
+                    </ul>
+                </div>
+                <div class="company">
+                    <h1 class="nav-logo"><a href="../index.html">We<span>Bay</span></a></h1>
+                    <p>Bay cùng WeBay – Trải nghiệm đẳng cấp và tiện nghi, mang đến những chuyến đi an toàn
+                        và thoải mái nhất.</p>
+                </div>
             </div>
-        </div>
-        <div class="footer-container">
-            <div class="footer-list">
-                <h4>Liên kết nhanh</h4>
-                <ul>
-                    <li><a href="../index.html">Trang chủ</a></li>
-                    <li><a href="../Error_Page/index.html">Về chúng tôi</a></li>
-                    <li><a href="../index.html#blog">Tin tức</a></li>
-                    <li><a href="#">Liên hệ</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <div class="footer-contact">
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/"><i class="fa-brands fa-github"></i></a>
+                        </li>
+                        <li>
+                            <a class="https://www.google.com.vn/?hl=vi"><i class="fa-brands fa-google"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <p class="footer-copyright">&copy; 2024 Copyright: Nguyễn Ngọc Linh - Đàm Thanh Tiến</p>
             </div>
-            <div class="footer-list">
-                <h4>Chính sách & quy định</h4>
-                <ul>
-                    <li><a href="../Error_Page/index.html">Điều khoản sử dụng</a></li>
-                    <li><a href="../Error_Page/index.html">Chính sách bảo mật</a></li>
-                    <li><a href="../Error_Page/index.html">Chính sách hành lý</a></li>
-                    <li><a href="../Error_Page/index.html">Quy định vận chuyển</a></li>
-                </ul>
-            </div>
-            <div class="footer-list">
-                <h4>Hỗ trợ khách hàng</h4>
-                <ul>
-                    <li><a href="../Error_Page/index.html">Trung tâm hỗ trợ</a></li>
-                    <li><a href="../index.html#question">Câu hỏi thường gặp (FAQ)</a></li>
-                    <li><a href="../Error_Page/index.html">Chính sách hoàn vé</a></li>
-                    <li><a href="../Error_Page/index.html">Phản hồi và khiếu nại</a></li>
-                </ul>
-            </div>
-            <div class="company">
-                <h1 class="nav-logo"><a href="../index.html">We<span>Bay</span></a></h1>
-                <p>Bay cùng WeBay – Trải nghiệm đẳng cấp và tiện nghi, mang đến những chuyến đi an toàn
-                    và thoải mái nhất.</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="footer-contact">
-                <ul>
-                    <li>
-                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/"><i class="fa-brands fa-github"></i></a>
-                    </li>
-                    <li>
-                        <a class="https://www.google.com.vn/?hl=vi"><i class="fa-brands fa-google"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <p class="footer-copyright">&copy; 2024 Copyright: Nguyễn Ngọc Linh - Đàm Thanh Tiến</p>
-        </div>
-    </footer>
+        </footer>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/7b1fd1d3b9.js" crossorigin="anonymous"></script>
     <script src="../static/js/Common_Use/commonuse.js"></script>

@@ -50,3 +50,13 @@
 .error-thumb {
     width: 50%;
 }
+
+@media screen and (max-width: 740px) {
+    .error {
+        flex-direction: column;
+    }
+
+    .error div {
+        width: 100%;
+    }
+}

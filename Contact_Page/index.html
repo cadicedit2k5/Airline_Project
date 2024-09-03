@@ -14,295 +14,408 @@
 </head>
 
 <body>
-    <div class="overlay"></div>
-    <header>
-        <nav>
-            <div class="navbar">
-                <h1 class="nav-logo"><a href="../index.html">We<span>Bay</span></a></h1>
-                <ul class="nav-menu">
-                    <li class="menu-item"><a href="../index.html">Trang chủ</a></li>
-                    <li class="menu-item"><a href="../Error_Page/">Về chúng tôi</a></li>
-                    <li class="menu-item"><a href="../#blog">Tin tức</a></li>
-                    <li class="menu-item"><a href="#">Liên hệ</a></li>
-                </ul>
-                <ul class="nav-info">
-                    <div class="search">
-                        <a href="javascrip:;" class="info-item"><i class="ri-search-2-line"></i></a>
-                        <input type="search" placeholder="Search">
-                    </div>
-                    <li>
-                        <a href="javascrip:;" class="info-item" id="search">
-                            <i class="ri-search-line"></i>
-                        </a>
-                    </li>
-                    <li class="sign-in-btn">
-                        <a href="../Login_Page/index.html">
-                            Đăng Nhập
-                        </a>
-                    </li>
-                    <li class="bell">
-                        <a href="javascrip:;" class="info-item">
-                            <i class="ri-notification-line"></i>
-                        </a>
-                        <!-- Tạo menu thông báo -->
-                        <div class="noti-drop">
-                            <div class="noti-top">
-                                <h2>Thông Báo</h2>
-                            </div>
-                            <div class="noti-main">
-                                <ul class="noti-contents">
-                                    <li class="noti-content">
-                                        <div class="noti-text">
-                                            <a href="#"><span>Larel</span> is felling great and she say haha with your
-                                                blog</a>
-                                            <p>1 day ago</p>
-                                        </div>
-                                        <img src="static/images/bg.avif">
-                                    </li>
-                                    <li class="noti-content">
-                                        <div class="noti-text">
-                                            <a href="#"><span>Larel</span> is felling great and she say haha with your
-                                                blog</a>
-                                            <p>1 day ago</p>
-                                        </div>
-                                        <img src="static/images/bg.avif">
-                                    </li>
-                                    <li class="noti-content">
-                                        <div class="noti-text">
-                                            <a href="#"><span>Larel</span> is felling great and she say haha with your
-                                                blog</a>
-                                            <p>1 day ago</p>
-                                        </div>
-                                        <img src="static/images/bg.avif">
-                                    </li>
-                                    <li class="noti-content">
-                                        <div class="noti-text">
-                                            <a href="#"><span>Larel</span> is felling great and she say haha with your
-                                                blog</a>
-                                            <p>1 day ago</p>
-                                        </div>
-                                        <img src="static/images/bg.avif">
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="noti-bottom"></div>
+    <!-- Loading -->
+    <div class="circle-loading">
+        <div class="ring">
+            <span>
+                <i class="ri-plane-line"></i>
+            </span>
+        </div>
+    </div>
+    <div class="main-page">
+        <div class="overlay"></div>
+        <header>
+            <nav>
+                <div class="navbar">
+                    <h1 class="nav-logo"><a href="../index.html">We<span>Bay</span></a></h1>
+                    <ul class="nav-menu">
+                        <li class="menu-item"><a href="../index.html">Trang chủ</a></li>
+                        <li class="menu-item"><a href="../Error_Page/">Về chúng tôi</a></li>
+                        <li class="menu-item"><a href="../#blog">Tin tức</a></li>
+                        <li class="menu-item"><a href="#">Liên hệ</a></li>
+                    </ul>
+                    <ul class="nav-info">
+                        <div class="search">
+                            <a href="javascrip:;" class="info-item"><i class="ri-search-2-line"></i></a>
+                            <input type="search" placeholder="Search">
                         </div>
-                    </li>
-                    <li class="user">
-                        <a href="javascrip:;" class="info-item">
-                            <i class="ri-user-3-line"></i>
-                        </a>
-                        <!-- Tạo Menu Profile Người dùng -->
-                        <div class="user-drop">
-                            <div class="user-top">
-                                <img src="../static/images/avatar1.avif">
-                                <span>Admin</span>
-                            </div>
-                            <div class="user-bottom">
-                                <ul class="user-features">
-                                    <li class="user-feature">
-                                        <i class="ri-user-3-line"></i>
-                                        <a href="#">Hồ sơ của tôi</a>
-                                    </li>
-                                    <li class="user-feature">
-                                        <i class="ri-edit-box-line"></i>
-                                        <a href="#">Chỉnh sửa hồ sơ</a>
-                                    </li>
-                                    <li class="user-feature">
-                                        <i class="ri-mail-line"></i>
-                                        <a href="#">Liên hệ</a>
-                                    </li>
-                                    <li class="user-feature">
-                                        <i class="ri-settings-2-line"></i>
-                                        <a href="#">Cài đặt</a>
-                                    </li>
-                                    <li class="user-feature">
-                                        <i class="ri-question-line"></i>
-                                        <a href="#">Trợ giúp</a>
-                                    </li>
-                                    <li class="user-feature" id="sign-out-btn">
-                                        <i class="ri-logout-box-line"></i>
-                                        <a href="#">Đăng xuất</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <!-- icon sử dụng để thay đổi khi nhấp vào menu -->
-                <!-- <i class="ri-close-large-line"></i> -->
-                <a class="menu-btn">
-                    <i class="ri-menu-3-fill"></i>
-                </a>
-                <div class="drop-menu">
-                    <li class="menu-item"><a href="../index.html">Trang chủ</a></li>
-                    <li class="menu-item"><a href="../Error_Page/">Về chúng tôi</a></li>
-                    <li class="menu-item"><a href="../index.html#blog">Tin tức</a></li>
-                    <li class="menu-item"><a href="#">Liên hệ</a></li>
-                    <ul>
                         <li>
-                            <a href="#" class="info-item">
+                            <a href="javascrip:;" class="info-item" id="search">
+                                <i class="ri-search-line"></i>
+                            </a>
+                        </li>
+                        <li class="sign-in-btn">
+                            <a href="../Login_Page/index.html">
+                                Đăng Nhập
+                            </a>
+                        </li>
+                        <li class="bell">
+                            <a href="javascrip:;" class="info-item">
                                 <i class="ri-notification-line"></i>
                             </a>
+                            <!-- Tạo menu thông báo -->
+                            <div class="noti-drop">
+                                <div class="noti-top">
+                                    <h2>Thông Báo</h2>
+                                </div>
+                                <div class="noti-main">
+                                    <ul class="noti-contents">
+                                        <li class="noti-content">
+                                            <div class="noti-text">
+                                                <a href="#"><span>Larel</span> is felling great and she say haha with
+                                                    your
+                                                    blog</a>
+                                                <p>1 day ago</p>
+                                            </div>
+                                            <img src="static/images/bg.avif">
+                                        </li>
+                                        <li class="noti-content">
+                                            <div class="noti-text">
+                                                <a href="#"><span>Larel</span> is felling great and she say haha with
+                                                    your
+                                                    blog</a>
+                                                <p>1 day ago</p>
+                                            </div>
+                                            <img src="static/images/bg.avif">
+                                        </li>
+                                        <li class="noti-content">
+                                            <div class="noti-text">
+                                                <a href="#"><span>Larel</span> is felling great and she say haha with
+                                                    your
+                                                    blog</a>
+                                                <p>1 day ago</p>
+                                            </div>
+                                            <img src="static/images/bg.avif">
+                                        </li>
+                                        <li class="noti-content">
+                                            <div class="noti-text">
+                                                <a href="#"><span>Larel</span> is felling great and she say haha with
+                                                    your
+                                                    blog</a>
+                                                <p>1 day ago</p>
+                                            </div>
+                                            <img src="static/images/bg.avif">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="noti-bottom"></div>
+                            </div>
                         </li>
-                        <li>
-                            <a href="#" class="info-item">
+                        <li class="user">
+                            <a href="javascrip:;" class="info-item">
                                 <i class="ri-user-3-line"></i>
                             </a>
+                            <!-- Tạo Menu Profile Người dùng -->
+                            <div class="user-drop">
+                                <div class="user-top">
+                                    <img src="../static/images/avatar1.avif">
+                                    <span>Admin</span>
+                                </div>
+                                <div class="user-bottom">
+                                    <ul class="user-features">
+                                        <li class="user-feature">
+                                            <i class="ri-user-3-line"></i>
+                                            <a href="#">Hồ sơ của tôi</a>
+                                        </li>
+                                        <li class="user-feature">
+                                            <i class="ri-edit-box-line"></i>
+                                            <a href="#">Chỉnh sửa hồ sơ</a>
+                                        </li>
+                                        <li class="user-feature">
+                                            <i class="ri-briefcase-4-fill"></i>
+                                            <a href="../Flight_Manager/index.html">Quản lý chuyến bay</a>
+                                        </li>
+                                        <li class="user-feature">
+                                            <i class="ri-mail-line"></i>
+                                            <a href="#">Liên hệ</a>
+                                        </li>
+                                        <li class="user-feature">
+                                            <i class="ri-settings-2-line"></i>
+                                            <a href="#">Cài đặt</a>
+                                        </li>
+                                        <li class="user-feature">
+                                            <i class="ri-question-line"></i>
+                                            <a href="#">Trợ giúp</a>
+                                        </li>
+                                        <li class="user-feature" id="sign-out-btn">
+                                            <i class="ri-logout-box-line"></i>
+                                            <a href="#">Đăng xuất</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </li>
                     </ul>
-                    <div class="search">
-                        <a href="#" class="info-item"><i class="ri-search-2-line"></i></a>
-                        <input type="search" placeholder="Search">
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <!-- HTML contact -->
-        <section class="contact">
-            <div class="contact-header">
-                <h1 class="contact-title">LIÊN HỆ VỚI CHÚNG TÔI</h1>
-                <p>Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn. Nếu bạn có bất kỳ câu hỏi hoặc yêu cầu nào, vui
-                    lòng
-                    liên hệ với chúng tôi qua các kênh dưới đây.</p>
-            </div>
-            <div class="contact-container">
-                <div class="contact-content">
-                    <div>
-                        <h1>Dịch vụ 24h</h1>
-                    </div>
-                    <div class="contact-info">
-                        <span>PRIVATE JET CALL CENTER</span>
-                        <ul class="contact-list">
-                            <li class="contact-item">CALL: <strong>(03) 9745 3789</strong></li>
-                            <li class="contact-item">EMAIL: <strong>sales@curlyairline.com</strong></li>
-                            <li class="contact-item">ADDRESS: <strong>123 đường abc, tỉnh xyz, thành phối h3</strong>
+                    <!-- icon sử dụng để thay đổi khi nhấp vào menu -->
+                    <!-- <i class="ri-close-large-line"></i> -->
+                    <a class="menu-btn">
+                        <i class="ri-menu-3-fill"></i>
+                    </a>
+                    <div class="drop-menu">
+                        <li class="menu-item"><a href="../index.html">Trang chủ</a></li>
+                        <li class="menu-item"><a href="../Error_Page/">Về chúng tôi</a></li>
+                        <li class="menu-item"><a href="../index.html#blog">Tin tức</a></li>
+                        <li class="menu-item"><a href="#">Liên hệ</a></li>
+                        <ul>
+                            <li class="sign-in-btn">
+                                <a href="../Login_Page/index.html">
+                                    Đăng Nhập
+                                </a>
+                            </li>
+                            <li class="bell">
+                                <a href="#" class="info-item">
+                                    <i class="ri-notification-line"></i>
+                                </a>
+                                <div class="noti-drop">
+                                    <div class="noti-top">
+                                        <h2>Thông Báo</h2>
+                                    </div>
+                                    <div class="noti-main">
+                                        <ul class="noti-contents">
+                                            <li class="noti-content">
+                                                <div class="noti-text">
+                                                    <a href="#"><span>Larel</span> is felling great and she say haha
+                                                        with
+                                                        your
+                                                        blog</a>
+                                                    <p>1 day ago</p>
+                                                </div>
+                                                <img src="static/images/bg.avif">
+                                            </li>
+                                            <li class="noti-content">
+                                                <div class="noti-text">
+                                                    <a href="#"><span>Larel</span> is felling great and she say haha
+                                                        with
+                                                        your
+                                                        blog</a>
+                                                    <p>1 day ago</p>
+                                                </div>
+                                                <img src="static/images/bg.avif">
+                                            </li>
+                                            <li class="noti-content">
+                                                <div class="noti-text">
+                                                    <a href="#"><span>Larel</span> is felling great and she say haha
+                                                        with
+                                                        your
+                                                        blog</a>
+                                                    <p>1 day ago</p>
+                                                </div>
+                                                <img src="static/images/bg.avif">
+                                            </li>
+                                            <li class="noti-content">
+                                                <div class="noti-text">
+                                                    <a href="#"><span>Larel</span> is felling great and she say haha
+                                                        with
+                                                        your
+                                                        blog</a>
+                                                    <p>1 day ago</p>
+                                                </div>
+                                                <img src="static/images/bg.avif">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="noti-bottom"></div>
+                                </div>
+                            </li>
+                            <li class="user">
+                                <a href="#" class="info-item">
+                                    <i class="ri-user-3-line"></i>
+                                </a>
+                                <!-- Tạo Menu Profile Người dùng -->
+                                <div class="user-drop">
+                                    <div class="user-top">
+                                        <img src="../static/images/avatar1.avif">
+                                        <span>Admin</span>
+                                    </div>
+                                    <div class="user-bottom">
+                                        <ul class="user-features">
+                                            <li class="user-feature">
+                                                <i class="ri-user-3-line"></i>
+                                                <a href="#">Hồ sơ của tôi</a>
+                                            </li>
+                                            <li class="user-feature">
+                                                <i class="ri-edit-box-line"></i>
+                                                <a href="#">Chỉnh sửa hồ sơ</a>
+                                            </li>
+                                            <li class="user-feature">
+                                                <i class="ri-briefcase-4-fill"></i>
+                                                <a href="Flight_Manager/index.html">Quản lý chuyến bay</a>
+                                            </li>
+                                            <li class="user-feature">
+                                                <i class="ri-mail-line"></i>
+                                                <a href="#">Liên hệ</a>
+                                            </li>
+                                            <li class="user-feature">
+                                                <i class="ri-settings-2-line"></i>
+                                                <a href="#">Cài đặt</a>
+                                            </li>
+                                            <li class="user-feature">
+                                                <i class="ri-question-line"></i>
+                                                <a href="#">Trợ giúp</a>
+                                            </li>
+                                            <li class="user-feature sign-out-btn">
+                                                <i class="ri-logout-box-line"></i>
+                                                <a href="#">Đăng xuất</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
+                        <div class="search">
+                            <a href="#" class="info-item"><i class="ri-search-2-line"></i></a>
+                            <input type="search" placeholder="Search">
+                        </div>
                     </div>
-                    <div class="contact-info">
-                        <span>KHUNG GIỜ HOẠT ĐỘNG</span>
-                        <ul class="contact-list">
-                            <li class="contact-item">Monday to Friday: <strong>9.30am–5pm</strong> </li>
-                            <li class="contact-item">Saturday: <strong>10.30am–5pm</strong></li>
-                            <li class="contact-item">Sunday: <strong>10.30am–4pm</strong></strong></li>
+                </div>
+            </nav>
+            <!-- HTML contact -->
+            <section class="contact">
+                <div class="contact-header">
+                    <h1 class="contact-title">LIÊN HỆ VỚI CHÚNG TÔI</h1>
+                    <p>Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn. Nếu bạn có bất kỳ câu hỏi hoặc yêu cầu nào, vui
+                        lòng
+                        liên hệ với chúng tôi qua các kênh dưới đây.</p>
+                </div>
+                <div class="contact-container">
+                    <div class="contact-content">
+                        <div>
+                            <h1>Dịch vụ 24h</h1>
+                        </div>
+                        <div class="contact-info">
+                            <span>PRIVATE JET CALL CENTER</span>
+                            <ul class="contact-list">
+                                <li class="contact-item">CALL: <strong>(03) 9745 3789</strong></li>
+                                <li class="contact-item">EMAIL: <strong>sales@curlyairline.com</strong></li>
+                                <li class="contact-item">ADDRESS: <strong>123 đường abc, tỉnh xyz, thành phối
+                                        h3</strong>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="contact-info">
+                            <span>KHUNG GIỜ HOẠT ĐỘNG</span>
+                            <ul class="contact-list">
+                                <li class="contact-item">Monday to Friday: <strong>9.30am–5pm</strong> </li>
+                                <li class="contact-item">Saturday: <strong>10.30am–5pm</strong></li>
+                                <li class="contact-item">Sunday: <strong>10.30am–4pm</strong></strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="contact-btn">
+                        <a href="javascript:;">Liên hệ nhanh &rightarrow;</a>
+                    </div>
+                </div>
+            </section>
+        </header>
+        <section class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3052538189!2d106.69853011802454!3d10.787916345211293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f35590959bf%3A0xff5a9da7c5a6849e!2sPh%C3%B2ng%20V%C3%A9%20Vietnam%20Airlines!5e0!3m2!1svi!2s!4v1724152830708!5m2!1svi!2s"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <div class="contact-form">
+            <i class="close-form fa-regular fa-circle-xmark"></i>
+            <h1>Contact Us</h1>
+            <input class="input-field" type="text" placeholder="Tên">
+            <input class="input-field" type="email" placeholder="Email">
+            <input class="input-field" type="text" placeholder="số điện thoại">
+            <div class="form-select">
+                <span>Chủ đề: </span>
+                <div class="select">
+                    <div class="select-btn">
+                        <span>Select Option</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                        <ul class="select-options">
+                            <li class="select-option">Đặt vé</li>
+                            <li class="select-option">Yêu cầu hỗ trợ</li>
+                            <li class="select-option">Phản hồi</li>
+                            <li class="select-option">Khác</li>
                         </ul>
                     </div>
                 </div>
-                <div class="contact-btn">
-                    <a href="javascript:;">Liên hệ nhanh &rightarrow;</a>
-                </div>
             </div>
-        </section>
-    </header>
-    <section class="map">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3052538189!2d106.69853011802454!3d10.787916345211293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f35590959bf%3A0xff5a9da7c5a6849e!2sPh%C3%B2ng%20V%C3%A9%20Vietnam%20Airlines!5e0!3m2!1svi!2s!4v1724152830708!5m2!1svi!2s"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
-    <div class="contact-form">
-        <i class="close-form fa-regular fa-circle-xmark"></i>
-        <h1>Contact Us</h1>
-        <input class="input-field" type="text" placeholder="Tên">
-        <input class="input-field" type="email" placeholder="Email">
-        <input class="input-field" type="text" placeholder="số điện thoại">
-        <div class="form-select">
-            <span>Chủ đề: </span>
-            <div class="select">
-                <div class="select-btn">
-                    <span>Select Option</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                    <ul class="select-options">
-                        <li class="select-option">Đặt vé</li>
-                        <li class="select-option">Yêu cầu hỗ trợ</li>
-                        <li class="select-option">Phản hồi</li>
-                        <li class="select-option">Khác</li>
+            <textarea name="message" class="input-field form-content" placeholder="Nội dung"></textarea>
+            <button type="submit">Gửi</button>
+        </div>
+        <!-- HTML phần footer -->
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-list">
+                    <h4>Địa chỉ</h4>
+                    <ul>
+                        <li><a href="#0">123 Đường Bay, Quận 1, TP. Hồ Chí Minh, Việt Nam</a></li>
+                        <li><a href="#0">+84 123 456 789</a></li>
+                        <li><a href="#0">support@webaycompany.com</a></li>
                     </ul>
                 </div>
+                <div class="footer-news">
+                    <h4>Đăng ký nhận tin tức</h4>
+                    <p>Nhận thông tin mới nhất và ưu đãi đặc biệt từ WeBay</p>
+                    <input type="email" placeholder="Nhập email của bạn...">
+                    <button type="submit">
+                        Đăng ký
+                        <i class="ri-plane-fill plane-icon"></i>
+                    </button>
+                </div>
             </div>
-        </div>
-        <textarea name="message" class="input-field form-content" placeholder="Nội dung"></textarea>
-        <button type="submit">Gửi</button>
+            <div class="footer-container">
+                <div class="footer-list">
+                    <h4>Liên kết nhanh</h4>
+                    <ul>
+                        <li><a href="../index.html">Trang chủ</a></li>
+                        <li><a href="../Error_Page/index.html">Về chúng tôi</a></li>
+                        <li><a href="../index.html#blog">Tin tức</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-list">
+                    <h4>Chính sách & quy định</h4>
+                    <ul>
+                        <li><a href="../Error_Page/index.html">Điều khoản sử dụng</a></li>
+                        <li><a href="../Error_Page/index.html">Chính sách bảo mật</a></li>
+                        <li><a href="../Error_Page/index.html">Chính sách hành lý</a></li>
+                        <li><a href="../Error_Page/index.html">Quy định vận chuyển</a></li>
+                    </ul>
+                </div>
+                <div class="footer-list">
+                    <h4>Hỗ trợ khách hàng</h4>
+                    <ul>
+                        <li><a href="../Error_Page/index.html">Trung tâm hỗ trợ</a></li>
+                        <li><a href="../index.html#question">Câu hỏi thường gặp (FAQ)</a></li>
+                        <li><a href="../Error_Page/index.html">Chính sách hoàn vé</a></li>
+                        <li><a href="../Error_Page/index.html">Phản hồi và khiếu nại</a></li>
+                    </ul>
+                </div>
+                <div class="company">
+                    <h1 class="nav-logo"><a href="../index.html">We<span>Bay</span></a></h1>
+                    <p>Bay cùng WeBay – Trải nghiệm đẳng cấp và tiện nghi, mang đến những chuyến đi an toàn
+                        và thoải mái nhất.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-contact">
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/"><i class="fa-brands fa-github"></i></a>
+                        </li>
+                        <li>
+                            <a class="https://www.google.com.vn/?hl=vi"><i class="fa-brands fa-google"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <p class="footer-copyright">&copy; 2024 Copyright: Nguyễn Ngọc Linh - Đàm Thanh Tiến</p>
+            </div>
+        </footer>
     </div>
-    <!-- HTML phần footer -->
-    <footer class="footer">
-        <div class="footer-top">
-            <div class="footer-list">
-                <h4>Địa chỉ</h4>
-                <ul>
-                    <li><a href="#0">123 Đường Bay, Quận 1, TP. Hồ Chí Minh, Việt Nam</a></li>
-                    <li><a href="#0">+84 123 456 789</a></li>
-                    <li><a href="#0">support@webaycompany.com</a></li>
-                </ul>
-            </div>
-            <div class="footer-news">
-                <h4>Đăng ký nhận tin tức</h4>
-                <p>Nhận thông tin mới nhất và ưu đãi đặc biệt từ WeBay</p>
-                <input type="email" placeholder="Nhập email của bạn...">
-                <button type="submit">
-                    Đăng ký
-                    <i class="ri-plane-fill plane-icon"></i>
-                </button>
-            </div>
-        </div>
-        <div class="footer-container">
-            <div class="footer-list">
-                <h4>Liên kết nhanh</h4>
-                <ul>
-                    <li><a href="../index.html">Trang chủ</a></li>
-                    <li><a href="../Error_Page/index.html">Về chúng tôi</a></li>
-                    <li><a href="../index.html#blog">Tin tức</a></li>
-                    <li><a href="#">Liên hệ</a></li>
-                </ul>
-            </div>
-            <div class="footer-list">
-                <h4>Chính sách & quy định</h4>
-                <ul>
-                    <li><a href="../Error_Page/index.html">Điều khoản sử dụng</a></li>
-                    <li><a href="../Error_Page/index.html">Chính sách bảo mật</a></li>
-                    <li><a href="../Error_Page/index.html">Chính sách hành lý</a></li>
-                    <li><a href="../Error_Page/index.html">Quy định vận chuyển</a></li>
-                </ul>
-            </div>
-            <div class="footer-list">
-                <h4>Hỗ trợ khách hàng</h4>
-                <ul>
-                    <li><a href="../Error_Page/index.html">Trung tâm hỗ trợ</a></li>
-                    <li><a href="../index.html#question">Câu hỏi thường gặp (FAQ)</a></li>
-                    <li><a href="../Error_Page/index.html">Chính sách hoàn vé</a></li>
-                    <li><a href="../Error_Page/index.html">Phản hồi và khiếu nại</a></li>
-                </ul>
-            </div>
-            <div class="company">
-                <h1 class="nav-logo"><a href="../index.html">We<span>Bay</span></a></h1>
-                <p>Bay cùng WeBay – Trải nghiệm đẳng cấp và tiện nghi, mang đến những chuyến đi an toàn
-                    và thoải mái nhất.</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="footer-contact">
-                <ul>
-                    <li>
-                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/"><i class="fa-brands fa-github"></i></a>
-                    </li>
-                    <li>
-                        <a class="https://www.google.com.vn/?hl=vi"><i class="fa-brands fa-google"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <p class="footer-copyright">&copy; 2024 Copyright: Nguyễn Ngọc Linh - Đàm Thanh Tiến</p>
-        </div>
-    </footer>
     <script src="https://kit.fontawesome.com/7b1fd1d3b9.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="../static/js/Common_Use/commonuse.js"></script>

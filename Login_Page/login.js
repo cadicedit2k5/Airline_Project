@@ -9,9 +9,18 @@ $(document).ready(function () {
     const registerPassword = $("#register-password");
     const confirmPassword = $("#confirm-password");
 
+    const adminUser = {
+        'email': "admin@nnl.dtt.com",
+        'password': "Abc123",
+        'firstname': "Admin",
+        'lastname': "Nguyen",
+    }
+
     //Kiểm tra xem có người dùng nào trong LocalStorage chưa
     let storedUsers = JSON.parse(localStorage.getItem('users'));
-
+    if (storedUsers == null) {
+        localStorage.setItem('users', JSON.stringify(adminUser));
+    }
     if (!Array.isArray(storedUsers)) {
         storedUsers = [storedUsers];
     }
@@ -33,34 +42,37 @@ $(document).ready(function () {
             }, 200)
         } else if (registerEmail.val() !== '') {
             //Kiểm tra sự tồn tại của email
-            const user = storedUsers.find(function (user) {
-                return user.email === registerEmail.val()
-            })
-            console.log(user);
-            if (user) {
-                setTimeout(function () {
-                    alert("Email đã tồn tại!");
-                }, 200)
-            }
-            else if (registerPassword.val() === '') {
-                setTimeout(function () {
-                    alert("Mật khẩu không được để trống!");
-                }, 200)
-            } else {
-                if (confirmPassword.val() !== registerPassword.val()) {
-                    alert("Xác nhận mật khẩu phải giống với mật khẩu ban đầu!");
+            if (storedUsers != null) {
+                const user = storedUsers.find(function (user) {
+                    return user.email === registerEmail.val()
+                });
+                console.log(user);
+                if (user) {
+                    setTimeout(function () {
+                        alert("Email đã tồn tại!");
+                    }, 200)
+                }
+                else if (registerPassword.val() === '') {
+                    setTimeout(function () {
+                        alert("Mật khẩu không được để trống!");
+                    }, 200)
                 } else {
-                    storedUsers.push({
-                        email: registerEmail.val(),
-                        passWord: registerPassword.val(),
-                        firstname: registerFirstname.val(),
-                        lastname: registerLastname.val()
-                    })
-                    localStorage.setItem('users', JSON.stringify(storedUsers));
-                    alert("Đăng ký thành công");
-                    $(".registerToLogin").click();
+                    if (confirmPassword.val() !== registerPassword.val()) {
+                        alert("Xác nhận mật khẩu phải giống với mật khẩu ban đầu!");
+                    } else {
+                        storedUsers.push({
+                            email: registerEmail.val(),
+                            password: registerPassword.val(),
+                            firstname: registerFirstname.val(),
+                            lastname: registerLastname.val()
+                        })
+                        localStorage.setItem('users', JSON.stringify(storedUsers));
+                        alert("Đăng ký thành công");
+                        $(".registerToLogin").click();
+                    }
                 }
             }
+
         }
 
 
@@ -110,7 +122,7 @@ $(document).ready(function () {
             }, 200)
         }
         else {
-            if (loginPassword.val() !== user.passWord) {
+            if (loginPassword.val() !== user.password) {
                 // Xóa password trước
                 loginPassword.val("")
                 // Set border đỏ để báo hiệu nội dung có lỗi
@@ -124,7 +136,9 @@ $(document).ready(function () {
                 alert("Đăng nhập thành công!");
                 localStorage.setItem("isLogin", true); // Tạo một biến lưu trên local có thể đồng bộ hóa giữa nhiều file
                 localStorage.setItem("firstname", user.firstname); //Tạo một biến lưu tên người dùng
-                window.history.back();
+                setTimeout(function () {
+                    window.history.back();
+                }, 100);
             }
         }
     }
@@ -139,7 +153,6 @@ $(document).ready(function () {
 
     // Nếu nhấn vào đăng nhập thì sẽ kiểm tra các điều kiện
     $("#login-btn").click(function () {
-        console.log('hello');
         login();
     })
 

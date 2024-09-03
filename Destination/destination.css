@@ -423,6 +423,10 @@ p.content-discr {
         flex-direction: column-reverse;
     }
 
+    .content-image {
+        height: 260px !important;
+    }
+
     /* Css lại cho side bar */
     .destination-right {
         width: 500px;
@@ -440,13 +444,30 @@ p.content-discr {
     }
 
     .tours-contents .tours-content {
+        height: 280px;
         width: 100%;
         margin-bottom: 2rem;
+    }
+
+    .stars i {
+        font-size: .85rem;
+    }
+
+    .reviews {
+        font-size: .85rem;
+    }
+
+    .tours-title {
+        font-size: 1.5rem !important;
     }
 
     /* Css lại cho mục comment */
     .comment-post .avatar {
         width: 45px;
         height: 45px;
+    }
+
+    .comment-info {
+        padding-right: 0 !important;
     }
 }

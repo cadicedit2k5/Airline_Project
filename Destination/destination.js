@@ -238,8 +238,10 @@ $(window).ready(function () {
         const sideBar = $(".right-content");
         const sideBarTop = sideBar.offset().top;
         $(window).on('scroll', (function () {
+            console.log($(window).scrollTop());
+            console.log(sideBarTop);
             let footerTop = document.querySelector("footer").getBoundingClientRect().top;
-            if ($(window).scrollTop() + 250 > sideBarTop && footerTop > $(window).height()) {
+            if ($(window).scrollTop() + 1000 > sideBarTop && footerTop > $(window).height()) {
                 sideBar.removeClass("absolute");
                 sideBar.addClass("fixed");
             }

@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+body {
+    background-color: #19232d;
+    background-image: url(../static/images/earth-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.booking {
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 120vh;
+}
+
+.booking-title {
+    text-align: center;
+    font-size: 3rem;
+    margin: 5rem 0;
+    color: #fff;
+}
+
+/* NavBar của form booking */
+.booking-list {
+    list-style-type: none;
+    display: flex;
+}
+
+.booking-item {
+    font-family: 'Barlow Condensed';
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 1rem 4rem;
+    background-color: #aa3f44;
+    color: #fff;
+    border-radius: 20px 20px 0 0;
+    cursor: pointer;
+    margin-right: .25rem;
+}
+
+.booking-item.active {
+    background-color: #F6F4EF;
+    color: #000;
+}
+
+
+/* Form đặt vé */
+.booking-form {
+    font-family: 'Merriweather';
+    background-color: #F6F4EF;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem 3rem;
+    border-radius: 0 15px 15px 15px;
+    display: none;
+}
+
+.booking-form.active {
+    display: flex;
+}
+
+.booking-form .input {
+    width: 50%;
+    padding: 1rem;
+    font-size: .9rem;
+}
+
+.booking-form .input > span {
+    color: #333;
+    font-size: .9rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.input-field {
+    background-color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 25px;
+    border: 1px solid rgba(0,0,0,.2);
+    outline: none;
+    width: 100%;
+}
+
+/* Select box */
+.select {
+    position: relative;
+}
+
+.select-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   cursor: pointer; 
+}
+
+.select-btn i {
+    color: #666;
+    transition: all .3s ease;
+}
+
+.select-btn i.active {
+    transform: rotate(180deg);
+}
+
+.options {
+    position: absolute;
+    list-style-type: none;
+    background-color: #fff;
+    left: 0;
+    right: 0;
+    top: 3.5rem;
+    border-radius: 15px;
+    border: 1px solid #333;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: all .3s ease;
+}
+
+.options.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+.option {
+    padding: 1rem 1.5rem;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.option:hover {
+    background-color: rgba(0,0,0,.1);
+}
+
+/* Calendar */
+.calendar-btn {
+    position: relative;
+}
+.calendar-views {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.calendar-views i {
+    color: #666;
+}
+
+.calendar-container {
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    right: 0;
+    top: 3.5rem;
+    border-radius: 15px;
+    border: 1px solid #333;
+    padding: 1rem 1.5rem;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.calendar-container.down {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+
+.calendar-header span {
+    color: #000;
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+
+.calendar-header .calendar-icons {
+    display: flex;
+}
+
+.calendar-icons i {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.calendar-icons i:hover {
+    background-color: rgba(0,0,0,.1);
+}
+
+.calendar-week {
+    display: flex;
+    list-style-type: none;
+}
+
+.calendar-week li {
+    width: calc(100%/7);
+    text-align: center;
+}
+
+.calendar-days {
+    padding-top: .5rem;
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+.calendar-days li {
+    width: calc(100%/7);
+    text-align: center;
+    padding: .25rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.calendar-days li:hover {
+    background-color: rgba(0,0,0,.1);
+}
+
+.calendar-days li.inactive {
+    color: rgba(0,0,0,.3)
+}
+
+.calendar-days li.active {
+    background-color: blueviolet;
+    color: #fff;
+}
+
+/* Button */
+.booking-form .btn {
+    width: 100%;
+    text-align: center;
+}
+.booking-form button {
+    font-family: 'Barlow Condensed';
+    padding: 1.25rem 5rem;
+    border-radius: 35px;
+    border: none;
+    font-size: 1rem;
+    margin-top: 2rem;
+    background-color: #f39c12;
+    color: #19232d;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.booking-form button:hover {
+    background-color: #19232d;
+    color: #fff;
+}
+
+/* Css cho vùn hiển thị */
+.display {
+    margin-top: 2rem;
+    width: 60%;
+}
+
+.display .content {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+}
+
+.display .btn a {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    display: block;
+    text-decoration: none;
+    border-radius: 25px;
+    padding: 1rem 2rem;
+    background-color: blue;
+    color: #fff;
+    transition: all .3s ease;   
+}
+
+.display .btn a:hover {
+    background-color: darkblue;
+}
+
+/* Responsive code */
+@media screen and (max-width: 1023px) {
+    .booking {
+        padding: 0 1rem;
+    }    
+}
+
+@media screen and (max-width: 739px) {
+    .booking-title {
+        font-size: 2rem;
+    }
+    .booking-item {
+        width: 50%;
+        margin-right: 0;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .booking-form {
+        border-radius: 0 0 15px 15px;
+        padding: 1rem;
+    }
+
+    .calendar-container {
+        padding: 1rem;
+        width: 250px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .calendar-header span {
+        font-size: .9rem;
+    }
+
+    .calendar-icons i {
+        font-size: .75rem;
+        width: 25px;
+        height: 25px;
+    }
+
+    .calendar-week li {
+        font-size: .75rem;
+    }
+
+    .calendar-days li {
+        font-size: .75rem;
+    }
+
+    
+    .booking-form .input {
+        width: 100%;
+    }
+
+    .display {
+        width: 100%;
+        padding: 1rem;
+    }
+}

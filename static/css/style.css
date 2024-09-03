@@ -379,6 +379,7 @@ section.header-container  p {
 }
 
 .header-btn {
+    text-decoration: none;
     padding: 1rem 2rem;
     background: transparent;
     border: 2px solid #f39c12;
@@ -737,6 +738,7 @@ main {
     overflow: hidden;
     background-color: #fff;
     border: 1px solid #e5e5e5;
+    height: fit-content;
 }
 
 .deal-content {
@@ -763,6 +765,7 @@ main {
     font-weight: 300;
     display: block;
     height: 90px;
+    overflow: auto;
 }
 
 .deal-meta {

@@ -105,7 +105,7 @@
             "header-title": "Tokyo - Thủ đô của hiện đại và truyền thống",
             "banner": "static/images/Tokyo/Tokyo_banner.jpg",
             "header-discription": "Nếu bạn yêu thích nền văn hóa của xứ sở mặt trời mọc, thì Tokyo chính là điểm đến trong mơ dành cho bạn. Với một Nhật Bản thu nhỏ được tái hiện trong một lần dừng chân, Tokyo khoác lên mình tấm áo hào nhoáng và lấp lánh của một siêu đô thị không ngủ, nhưng len lỏi trong những góc phố ồn ào nhất là cả những khoảng bình lặng và cổ điển. Hãy lập kế hoạch xách balo lên và đi thôi, vì từ tháng 9 đến tháng 11 sẽ là lúc thời tiết thuận lợi nhất cho một chuyến du lịch Tokyo trọn vẹn.",
-            "scene-img": "static/images/Tokyo/Tokyo_scene.jpg",
+            "scene-img": "static/images/Tokyo/tokyo_scene.jpg",
             "scene-discription": "<strong></strong>Đừng bỏ lỡ cơ hội được “bước chậm lại giữa thế gian vội vã” tại giao lộ Shibuya – một trong những biểu tượng của Tokyo sầm uất và năng động. Nhịp điệu nơi đây gắn liền với hoạt động của nhà ga Shibuya đưa đón hơn 3 triệu lượt khách du lịch Tokyo mỗi ngày và đây cũng là trung tâm mua sắm thời trang - giải trí cho giới trẻ với hàng trăm thương hiệu nổi tiếng. <br><strong>2. Asakusa:</strong>Rời xa bảng điện hào nhoáng và những tòa cao ốc của thế giới hiện đại khi du lịch quanh Tokyo, du khách có thể ngược dòng thời gian trở về một Tokyo cổ kính của thời Edo tại Asakusa. Con đường khám phá Asakusa thường bắt đầu từ bước chân qua Kaminarimon (Cổng sấm sét) – biểu tượng của thành phố, tản bộ qua khu phố Nakamise trong làn khói hương và thành tâm công đức đồng 5 Yên tại ngôi chùa Sensoji linh thiêng.",
             "food-img": "static/images/Tokyo/Tokyo_food.webp",
             "food-discription": "Được mệnh danh là kinh đô ẩm thực của thế giới, quán ăn ngon ở Tokyo trải dài từ những con phố ăn vặt cho đến nhà hàng đẳng cấp. Hãy trở thành những du khách hiếu kỳ khám phá đặc sản mỳ Nhật Bản trên con phố Ramen ở nhà ga Tokyo, hay để bản thân được lạc lối giữa Shinjuku tấp nập với “cuộc chiến mùi hương” từ những xe đẩy yakitori (xiên gà), takoyaki (bánh bạch tuộc), okonomiyaki (bánh xèo),… Tokyo còn là một thiên đường dành cho những người sành ăn với nhiều nhà hàng đạt sao Michelin nhất thế giới. Bạn có thể chiêu đãi giác quan của mình một bữa tiệc xa xỉ của tinh hoa ẩm thực Á-Âu ở Ginza – khu phố ẩm thực cao cấp bậc nhất Nhật Bản.<br>Một trải nghiệm cũng không thể bỏ lỡ khi du lịch Tokyo là tham gia buổi đấu giá cá ngừ lúc 3h sáng tại chợ cá Tsukiji và thưởng thức những miếng sushi hay sashimi tươi rói tại phiên chợ hải sản lớn nhất thế giới này.",
@@ -126,6 +126,98 @@
             "food-discription": "",
             "activities-img": "static/images/",
             "activities-discription": ""
+        }
+    ],
+    "flights": [
+        {
+            "flight-code": "WB01",
+            "last-name": "NGUYEN",
+            "first-name": "NGOC LINH",
+            "passenger": "Người lớn",
+            "flight": [
+                {
+                    "type": "Chuyến đi",
+                    "day": "T4, 28/8/2024",
+                    "from": "SGN",
+                    "time-to-go": "10:10",
+                    "to": "HAN",
+                    "time-arrive": "12:05",
+                    "seat": "01A",
+                    "prices": {
+                        "rank": 1010000,
+                        "VAT": 80800,
+                        "service": 215000,
+                        "sercurity": 100000,
+                        "bag": 200000
+                    }
+                },
+                {
+                    "type": "Chuyến về",
+                    "day": "T5, 29/8/2024",
+                    "from": "HAN",
+                    "time-to-go": "19:10",
+                    "to": "SGN",
+                    "time-arrive": "21:05",
+                    "seat": "01B",
+                    "prices": {
+                        "rank": 980000,
+                        "VAT": 80800,
+                        "service": 215000,
+                        "sercurity": 100000,
+                        "bag": 200000
+                    }
+                }
+            ]
+        }
+    ],
+    "bookings": [
+        {
+            "from": "SGN",
+            "to": "DLI",
+            "day": "5/9/2024",
+            "time-to-go": "11:20",
+            "time-arrive": "13:15",
+            "rank": 760000
+        },
+        {
+            "from": "SGN",
+            "to": "DIN",
+            "day": "5/9/2024",
+            "time-to-go": "11:20",
+            "time-arrive": "13:15",
+            "rank": 840000
+        },
+        {
+            "from": "HAN",
+            "to": "PQC",
+            "day": "6/9/2024",
+            "time-to-go": "19:10",
+            "time-arrive": "21:05",
+            "rank": 1700000
+        },
+        {
+            "from": "DLI",
+            "to": "DIN",
+            "day": "6/9/2024",
+            "time-to-go": "7:20",
+            "time-arrive": "9:15",
+            "rank": 900000
+        },
+        {
+            "from": "DIN",
+            "to": "DLI",
+            "day": "7/9/2024",
+            "time-to-go": "11:10",
+            "time-arrive": "13:05",
+            "rank": 800000
+        },
+        {
+            "from": "",
+            "to": "",
+            "day": "",
+            "time-to-go": "",
+            "time-arrive": "",
+            "rank": ""
         }
     ]
 }

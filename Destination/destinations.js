@@ -6,7 +6,7 @@ $(window).ready(function () {
     let selectOption = $(".select-option");
     let selectIcon = $(".select-btn i");
     let calendarBtn = $(".calendar-btn");
-    calendarViews = $(".calendar-views");
+    let calendarViews = $(".calendar-views");
     let calendarHeader = $(".calendar-container span");
     let daysContainer = $(".calendar-days");
     let calendarIcons = $(".calendar-icons i");
@@ -37,7 +37,7 @@ $(window).ready(function () {
 
     //Hiển thị calendar khi nhấn vào calendar button
     calendarViews.on("click", function () {
-        $(".calendar-container").toggleClass("down");
+        $(this).closest(".calendar-btn").find(".calendar-container").toggleClass("down");
     });
 
     //Tạo dynamic calendar
@@ -77,8 +77,8 @@ $(window).ready(function () {
                     month = new Date(currentYear, currentMonth + 1).getMonth();
                 }
             }
-            calendarViews.find("span").text(`${$(this).text()}-${month + 1}-${year}`);
-            calendarViews.click();
+            $(this).closest(".calendar-days").closest(".calendar-container").closest(".calendar-btn").find(".calendar-views span").text(`${$(this).text()}/${month + 1}/${year}`);
+            $(".calendar-container").removeClass("down");
         });
     }
 
@@ -162,11 +162,11 @@ $(window).ready(function () {
                 </a>
                 `);
                 $(`.destinations-content:nth-child(${data[i].id - 4 * (number - 1)})`).css({
-                    "background": `url(../../${data[i].banner})`
+                    "background": `url(../${data[i].banner})`
                 })
                 i++;
             } else {
-                //Xử lý tạo nội dung trống
+                //Xử lý tạo nội dung trống (chưa làm)
                 break;
             }
         }

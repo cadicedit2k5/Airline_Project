@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WeBay | Login and Registration</title>
+    <title>Chuyến bay của bạn | WeBay</title>
     <link rel="stylesheet" href="../static/css/common_use/commonuse.css">
-    <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
         integrity="sha512-MqL4+Io386IOPMKKyplKII0pVW5e+kb+PI/I3N87G3fHIfrgNNsRpzIXEi+0MQC0sR9xZNqZqCYVcC61fL5+Vg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="manager.css">
 </head>
+
 
 <body>
     <!-- Loading -->
@@ -21,7 +22,6 @@
             </span>
         </div>
     </div>
-    <!-- Main content -->
     <div class="main-page">
         <div class="overlay"></div>
         <!-- Navbar -->
@@ -45,7 +45,7 @@
                         </a>
                     </li>
                     <li class="sign-in-btn">
-                        <a href="#">
+                        <a href="../Login_Page/index.html">
                             Đăng Nhập
                         </a>
                     </li>
@@ -119,7 +119,7 @@
                                     </li>
                                     <li class="user-feature">
                                         <i class="ri-briefcase-4-fill"></i>
-                                        <a href="../Flight_Manager/index.html">Quản lý chuyến bay</a>
+                                        <a href="#">Quản lý chuyến bay</a>
                                     </li>
                                     <li class="user-feature">
                                         <i class="ri-mail-line"></i>
@@ -154,7 +154,7 @@
                     <li class="menu-item"><a href="../Contact_Page/index.html">Liên hệ</a></li>
                     <ul>
                         <li class="sign-in-btn">
-                            <a href="#">
+                            <a href="../Login_Page/index.html">
                                 Đăng Nhập
                             </a>
                         </li>
@@ -266,221 +266,48 @@
             </div>
         </nav>
 
-
-        <!-- Main Login & Registration -->
-        <div class="box-forms">
-            <!-- Phần đăng Ký -->
-            <div class="register-container" id="register">
-                <div class="top">
-                    <span>Đã có tài khoản? <a href="#" class="registerToLogin">Đăng Nhập</a></span>
-                    <h1>Đăng Ký Tài Khoản</h1>
-                </div>
-                <div class="two-forms">
-                    <div class="input-box">
-                        <input type="text" class="input-field" id="register-lastname" placeholder="Họ">
-                        <i class="ri-user-line"></i>
-                    </div>
-                    <div class="input-box">
-                        <input type="text" class="input-field" id="register-firstname" placeholder="Tên">
-                        <i class="ri-user-line"></i>
-                    </div>
-                </div>
-                <div class="input-box">
-                    <input type="email" class="input-field" id="register-email" placeholder="Email">
-                    <i class="ri-mail-line"></i>
-                </div>
-                <div class="input-box">
-                    <input type="password" class="input-field" id="register-password" placeholder="Password">
-                    <i class="ri-lock-2-line"></i>
-                </div>
-                <div class="input-box">
-                    <input type="password" class="input-field" id="confirm-password" placeholder="Confirm password">
-                    <i class="ri-lock-2-line"></i>
-                </div>
-                <div class="input-box">
-                    <input type="submit" class="input-field" id="register-btn" value="Đăng Ký">
-                </div>
-                <a href="#" class="policy">Điều Khoản và Dịch Vụ</a>
-                <div class="other">
-                    <p>Hoặc kết nối với chúng tôi qua</p>
-                </div>
-                <ul class="socials">
-                    <li>
-                        <a href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Ftakeout.google.com%2F%3Fhl%3Dvi%26pli%3D1&ec=GAlAwAE&hl=vi&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S-1140397904%3A1724564487176638&ddm=0"
-                            class="social">
-                            <img src="https://sso.techgate.vn/resources/uwx3x/login/custom-theme-keycloak/build/static/media/google-icon.95b74dafb19a0e8456fadf05a2128b1c.svg"
-                                alt="Google">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com/" class="social">
-                            <img src="https://sso.techgate.vn/resources/uwx3x/login/custom-theme-keycloak/build/static/media/facebook-icon.3b5930d921a997de582cb72610312ad6.svg"
-                                alt="facebook">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://teams.microsoft.com/" class="social">
-                            <img src="https://sso.techgate.vn/resources/uwx3x/login/custom-theme-keycloak/build/static/media/microsoft-team.a274494a09c8b42526597d4e01a8e7bd.svg"
-                                alt="Teams">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/" class="social">
-                            <img src="https://sso.techgate.vn/resources/uwx3x/login/custom-theme-keycloak/build/static/media/linkedIn-icon.f6ed07c85b2f83bdfe90ee245e823e87.svg"
-                                alt="Linkedin">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/" class="social last">
-                            <img src="https://sso.techgate.vn/resources/uwx3x/login/custom-theme-keycloak/build/static/media/github-icon.1bbdde4db5285353c4b43eba8ef5c6de.svg"
-                                alt="Github">
-                        </a>
-                    </li>
+        <!--  -->
+        <main class="manager">
+            <h1 class="manager-title">Quản lý chuyến bay</h1>
+            <div class="manager-nav">
+                <ul class="manager-nav-list">
+                    <li class="manager-nav-item active" rel="find">Tìm kiếm chuyến bay</li>
+                    <li class="manager-nav-item" rel="my">Chuyến bay của bạn</li>
                 </ul>
             </div>
-            <!-- Phần Đăng nhập -->
-            <div class="login-container" id="login">
-                <div class="top">
-                    <span>Chưa có tài khoản? <a href="#" class="loginToRegister">Đăng Ký</a></span>
-                    <h1>Đăng Nhập</h1>
+            <div class="manager-find-flight active" id="find">
+                <div class="left">
+                    <div class="top">
+                        <h2>Chuyến bay của tôi</h2>
+                        <p>Bạn muốn xem chuyến bay đã đặt, đổi lịch trình bay hay mua thêm dịch vụ hành lý,
+                            chỗ
+                            ngồi, suất ăn..., vui lòng điền thông tin bên dưới:</p>
+                    </div>
+                    <div class="manager-form">
+                        <input id="flight-code" type="text" placeholder="Nhập mã đặt chỗ*">
+                        <input id="lastname" type="text" placeholder="Họ*">
+                        <input id="firstname" type="text" placeholder="Tên*">
+                        <div class="manager-btn">
+                            <button>Tìm kiếm</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="input-box">
-                    <input type="email" class="input-field" id="login-email" placeholder="Email">
-                    <i class="ri-mail-line"></i>
-                </div>
-                <div class="input-box">
-                    <input type="password" class="input-field" id="login-password" placeholder="Password">
-                    <i class="ri-lock-2-line"></i>
-                </div>
-                <div class="remember-forget">
-                    <span><input type="checkbox">Nhớ mật khẩu</span>
-                    <a href="../Error_Page/index.html">Quên mật khẩu?</a>
-                </div>
-                <div class="input-box">
-                    <input type="submit" class="input-field" id="login-btn" value="Đăng Nhập">
-                </div>
-                <div class="other">
-                    <p>Hoặc đăng nhập bằng</p>
-                </div>
-                <ul class="socials">
-                    <li>
-                        <a href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Ftakeout.google.com%2F%3Fhl%3Dvi%26pli%3D1&ec=GAlAwAE&hl=vi&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S-1140397904%3A1724564487176638&ddm=0"
-                            class="social">
-                            <img src="https://sso.techgate.vn/resources/uwx3x/login/custom-theme-keycloak/build/static/media/google-icon.95b74dafb19a0e8456fadf05a2128b1c.svg"
-                                alt="Google">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com/" class="social">
-                            <img src="https://sso.techgate.vn/resources/uwx3x/login/custom-theme-keycloak/build/static/media/facebook-icon.3b5930d921a997de582cb72610312ad6.svg"
-                                alt="facebook">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://teams.microsoft.com/" class="social">
-                            <img src="https://sso.techgate.vn/resources/uwx3x/login/custom-theme-keycloak/build/static/media/microsoft-team.a274494a09c8b42526597d4e01a8e7bd.svg"
-                                alt="Teams">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/" class="social">
-                            <img src="https://sso.techgate.vn/resources/uwx3x/login/custom-theme-keycloak/build/static/media/linkedIn-icon.f6ed07c85b2f83bdfe90ee245e823e87.svg"
-                                alt="Linkedin">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/" class="social last">
-                            <img src="https://sso.techgate.vn/resources/uwx3x/login/custom-theme-keycloak/build/static/media/github-icon.1bbdde4db5285353c4b43eba8ef5c6de.svg"
-                                alt="Github">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- HTML phần footer -->
-        <footer class="footer">
-            <div class="footer-top">
-                <div class="footer-list">
-                    <h4>Địa chỉ</h4>
-                    <ul>
-                        <li><a href="#0">123 Đường Bay, Quận 1, TP. Hồ Chí Minh, Việt Nam</a></li>
-                        <li><a href="#0">+84 123 456 789</a></li>
-                        <li><a href="#0">support@webaycompany.com</a></li>
-                    </ul>
-                </div>
-                <div class="footer-news">
-                    <h4>Đăng ký nhận tin tức</h4>
-                    <p>Nhận thông tin mới nhất và ưu đãi đặc biệt từ WeBay</p>
-                    <input type="email" placeholder="Nhập email của bạn...">
-                    <button type="submit">
-                        Đăng ký
-                        <i class="ri-plane-fill plane-icon"></i>
-                    </button>
+                <div class="right">
+                    <p>Nhập nội dung vào bên kia</p>
                 </div>
             </div>
-            <div class="footer-container">
-                <div class="footer-list">
-                    <h4>Liên kết nhanh</h4>
-                    <ul>
-                        <li><a href="../index.html">Trang chủ</a></li>
-                        <li><a href="../Error_Page/index.html">Về chúng tôi</a></li>
-                        <li><a href="../index.html#blog">Tin tức</a></li>
-                        <li><a href="#">Liên hệ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-list">
-                    <h4>Chính sách & quy định</h4>
-                    <ul>
-                        <li><a href="../Error_Page/index.html">Điều khoản sử dụng</a></li>
-                        <li><a href="../Error_Page/index.html">Chính sách bảo mật</a></li>
-                        <li><a href="../Error_Page/index.html">Chính sách hành lý</a></li>
-                        <li><a href="../Error_Page/index.html">Quy định vận chuyển</a></li>
-                    </ul>
-                </div>
-                <div class="footer-list">
-                    <h4>Hỗ trợ khách hàng</h4>
-                    <ul>
-                        <li><a href="../Error_Page/index.html">Trung tâm hỗ trợ</a></li>
-                        <li><a href="../index.html#question">Câu hỏi thường gặp (FAQ)</a></li>
-                        <li><a href="../Error_Page/index.html">Chính sách hoàn vé</a></li>
-                        <li><a href="../Error_Page/index.html">Phản hồi và khiếu nại</a></li>
-                    </ul>
-                </div>
-                <div class="company">
-                    <h1 class="nav-logo"><a href="../index.html">We<span>Bay</span></a></h1>
-                    <p>Bay cùng WeBay – Trải nghiệm đẳng cấp và tiện nghi, mang đến những chuyến đi an toàn
-                        và thoải mái nhất.</p>
-                </div>
+            <!-- Chuyến bay của tôi -->
+            <div class="manager-my-flight" id="my">
+                <h1>Nothing Found</h1>
+                <p>Trang web này có vẻ chưa hoạt động</p>
             </div>
-            <div class="footer-bottom">
-                <div class="footer-contact">
-                    <ul>
-                        <li>
-                            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/"><i class="fa-brands fa-github"></i></a>
-                        </li>
-                        <li>
-                            <a class="https://www.google.com.vn/?hl=vi"><i class="fa-brands fa-google"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <p class="footer-copyright">&copy; 2024 Copyright: Nguyễn Ngọc Linh - Đàm Thanh Tiến</p>
-            </div>
-        </footer>
+        </main>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <script src="https://kit.fontawesome.com/7b1fd1d3b9.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="../static/js/Common_Use/commonuse.js"></script>
-    <script src="login.js"></script>
+    <script src="manager.js"></script>
 </body>
 
 </html>
