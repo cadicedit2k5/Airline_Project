@@ -1,0 +1,133 @@
+body {
+    width: 100%;
+    font-family: monospace;
+    font: Arial;
+}
+.slide-show {
+    height: 100%;
+}
+header {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+.news {
+    width: 50%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.news-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.news-item img {
+    width: 100%;
+    height: auto; 
+    object-fit: contain; 
+}
+
+.buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.buttons button {
+    background-color: #fff5;
+    border: none;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.news-description {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news-description:hover {
+    color: #007BFF;
+    text-decoration: underline;
+}
+
+
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.container > h1 {
+    color: #0078d7;
+    text-align: center;
+}
+
+.container > p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.containers{
+    display: flex;
+    
+}
+
+h2 {
+    font-weight: 600;
+    font-size: auto;
+}
+.news-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.news-list div {
+    width: 25%;
+    padding: .5rem;
+}
+
+.news-list div article {
+    background-color: #fff;
+    height: 400px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-list img {
+    width: 100%;
+    height: auto;
+}
+
+
+@media screen and (max-width: 1023px) {
+    .news-list div {
+        width: 33.33%;
+    }
+}
+
+
+@media screen and (max-width: 739px) {
+    .news-list div {
+        width: 50%;
+    }
+}
