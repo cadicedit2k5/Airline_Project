@@ -351,6 +351,7 @@ $(window).ready(function () {
                 "Điện Biên": "DIN",
                 "Hà Nội": "HAN",
                 "Sài Gòn": "SGN",
+                "Phú Quốc": "PQC"
             }
 
             fetch('../static/data/data.json').then(res => res.json()).then(data => {

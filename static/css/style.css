@@ -1141,6 +1141,10 @@ main {
     transition: all .4s;
 }
 
+.blog-header h3 {
+    font-weight: 600;
+}
+
 .blog-vision .blog-header:hover {
     color: #d5aa64;
 }
