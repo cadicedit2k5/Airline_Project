@@ -18,3 +18,5 @@ Trong trang chủ đã tạo sẵn header và footer. Phần này được dùng
 5. Đăng nhập/ Đăng ký
 
 Trước khi muốn code một trang web phải thảo luận trước về bố cục trang web để tránh bị ảnh hưởng lẫn nhau.
+
+Link Web Demo: https://cadicedit2k5.github.io/Airline_Project/
